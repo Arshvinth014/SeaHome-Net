@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export function Navbar() {
+  const [countriesOpen, setCountriesOpen] = useState(false);
+
   return (
     <nav className="w-full bg-white border-b border-slate-100 sticky top-0 z-50 px-6 py-3.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -14,7 +17,44 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-7 text-[13.5px] font-semibold text-slate-700">
           <Link to="/#buy" className="text-[#0066FF] border-b-2 border-[#0066FF] pb-1">Buy</Link>
           <Link to="/invest" className="hover:text-slate-900 transition-colors">Invest</Link>
-          <Link to="/#countries" className="hover:text-slate-900 transition-colors">Countries</Link>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setCountriesOpen((open) => !open)}
+              className="flex items-center gap-1 hover:text-slate-900 transition-colors focus:outline-none"
+              aria-expanded={countriesOpen}
+              aria-controls="countries-dropdown"
+            >
+              <span>Countries</span>
+              <span className="text-[10px] text-slate-400">▼</span>
+            </button>
+            <div
+              id="countries-dropdown"
+              className={`absolute left-0 top-full mt-2 min-w-[160px] rounded-2xl border border-slate-200 bg-white py-2 shadow-lg ${countriesOpen ? 'block' : 'hidden'}`}
+            >
+              <Link
+                to="/country/sri-lanka"
+                onClick={() => setCountriesOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                Sri Lanka
+              </Link>
+              <Link
+                to="/country/japan"
+                onClick={() => setCountriesOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                Japan
+              </Link>
+              <Link
+                to="/country/usa"
+                onClick={() => setCountriesOpen(false)}
+                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                USA
+              </Link>
+            </div>
+          </div>
           <Link to="/#agencies" className="hover:text-slate-900 transition-colors">Agencies</Link>
           <div className="relative group cursor-pointer flex items-center gap-1 hover:text-slate-900">
             <span>Resources</span>
