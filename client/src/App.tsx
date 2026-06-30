@@ -1,23 +1,20 @@
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './layouts/Navbar';
-import { HeroSection } from './features/home/components/HeroSection';
-import { PropertySections } from './features/home/components/PropertySections';
-import { InsightsAndTrust } from './features/home/components/InsightsAndTrust';
 import { Footer } from './layouts/Footer';
+import { HomePage } from './pages/HomePage';
+import { InvestPage } from './pages/InvestPage';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-800 antialiased font-sans selection:bg-blue-500 selection:text-white">
-      {/* Platform Fixed Header Layout */}
       <Navbar />
 
-      {/* Sequential Feature Assembly Pipeline */}
-      <main>
-        <HeroSection />
-        <PropertySections />
-        <InsightsAndTrust />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/invest" element={<InvestPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
 
-      {/* Structured Platform Bottom Close Banner */}
       <Footer />
     </div>
   );
