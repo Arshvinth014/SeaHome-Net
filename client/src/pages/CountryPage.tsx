@@ -1,80 +1,658 @@
-import { useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
+import {
+    ShieldCheck,
+    Handshake,
+    Lock,
+    MapPin,
+    Search,
+    SlidersHorizontal,
+    Heart,
+    Bed,
+    Bath,
+    Check,
+    HelpCircle,
+    Maximize2,
+    ChevronRight,
+    ArrowRight,
+    TrendingUp,
+    Users,
+    Building2,
+    Scale,
+    Compass,
+    Layers,
+    MessageSquare,
+    Globe,
+    ChevronDown
+} from 'lucide-react';
+import { SRI_LANKA_PROPERTIES, SRI_LANKA_PROJECTS, TOP_LOCATIONS } from '../config/sriLankaData';
 
-const COUNTRY_DETAILS: Record<string, { name: string; description: string }> = {
-  'sri-lanka': {
-    name: 'Sri Lanka',
-    description:
-      'Explore investment and property opportunities in Sri Lanka. Discover coastal developments, luxury villas, and trusted local agencies for seamless global transactions.',
-  },
-  japan: {
-    name: 'Japan',
-    description:
-      'Discover curated Japan property opportunities, from Tokyo apartments to resort developments. Connect with trusted partners and explore a stable investment market.',
-  },
-  usa: {
-    name: 'USA',
-    description:
-      'Explore US real estate investment options, including commercial and residential opportunities in major cities and growth markets across the country.',
-  },
-};
+// Custom lightweight SVG implementations for the removed Lucide brand icons
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+);
+
+const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+    </svg>
+);
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+);
+
+const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+        <path d="m10 15 5-3-5-3z" />
+    </svg>
+);
 
 export function CountryPage() {
-  const { countryId } = useParams<{ countryId: string }>();
+    const [activeFilterTab, setActiveFilterTab] = useState<'buy' | 'rent' | 'invest'>('buy');
 
-  const country = useMemo(() => {
-    if (!countryId) return null;
-    return COUNTRY_DETAILS[countryId.toLowerCase()];
-  }, [countryId]);
-
-  if (!country) {
     return (
-      <main className="min-h-screen bg-slate-50 text-slate-900 py-20 px-6">
-        <div className="mx-auto max-w-3xl rounded-3xl bg-white p-10 shadow-lg border border-slate-200">
-          <h1 className="text-3xl font-bold text-slate-900">Country not found</h1>
-          <p className="mt-4 text-sm text-slate-600">The page you requested does not exist.</p>
-          <Link to="/" className="mt-8 inline-flex rounded-full bg-[#0066FF] px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-all">
-            Back to Home
-          </Link>
+        <div className="w-full bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+            {/* HERO REGION CONTEXT CONTAINER */}
+            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center space-y-6 z-20 pointer-events-auto">
+
+                {/* Absolute Full-Bleed Background Image Panel */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1588598126284-a14df9cfbd1f?w=1800&auto=format&fit=crop&q=80"
+                        alt="Sri Lanka Sigiriya Rock Landscape Background"
+                        className="w-full h-full object-cover object-right"
+                    />
+                    {/* Soft Left-to-Right White Fade Layer to overlay readable text contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-50% to-transparent" />
+                </div>
+
+                <div className="max-w-7xl mx-auto w-full px-4 py-12 z-10 relative flex flex-col justify-between h-full gap-8">
+
+                    {/* 1. Breadcrumb Navigation Path */}
+                    <div className="text-[11px] font-bold text-slate-400 flex items-center gap-1.5">
+                        <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
+                        <ChevronRight className="w-3 h-3 text-slate-300" />
+                        <span className="hover:text-blue-600 cursor-pointer transition-colors">Countries</span>
+                        <ChevronRight className="w-3 h-3 text-slate-300" />
+                        <span className="text-[#0B1B3D]">Sri Lanka</span>
+                    </div>
+
+                    {/* 2. Content & Assistant Grid Context Frame */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center pt-0">
+
+                        {/* Left Narrative Text Block */}
+                        <div className="lg:col-span-5 space-y-5 z-20">
+                            <div className="space-y-2">
+                                <h1 className="text-4xl sm:text-[44px] font-black text-[#0B1B3D] tracking-tight leading-none">
+                                    Sri Lanka Properties
+                                </h1>
+                                <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
+                                    Invest in Paradise. Live the Potential.
+                                </h2>
+                            </div>
+                            <p className="text-slate-500 text-[13px] font-medium leading-relaxed max-w-lg">
+                                Discover premium properties and high-potential real estate investment opportunities across Sri Lanka's most promising locations.
+                            </p>
+
+                            {/* Action Buttons Matrix */}
+                            <div className="flex flex-wrap items-center gap-3">
+                                <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer">
+                                    Explore Properties
+                                </button>
+                                <button className="border border-slate-200 bg-white hover:bg-slate-50 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center gap-2 transition-all cursor-pointer">
+                                    <Compass size={15} />
+                                    Check Rental Properties
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Right Mascot & Floating Panel Layer Assembly */}
+                        <div className="lg:col-span-7 flex items-center justify-end relative h-full min-h-[300px] z-10">
+
+                            {/* Mascot Fixed Alignment Frame */}
+                            <div className="absolute right-[-150px] bottom-[-48px] w-280 h-120 z-10 z-0 mt-20px pointer-events-none">
+                                <img
+                                    src="../../public/SrilankaPage.png"
+                                    alt="Sri Lanka Welcome Character Assistant"
+                                    className="w-full h-full object-contain select-none"
+                                />
+                            </div>
+
+                            {/* Speech Prompt Card Framework Container */}
+                            <div className="bg-white border border-slate-100/80 shadow-xl rounded-2xl p-5 w-full max-w-[250px] space-y-3 relative z-20 relative mr-[-45px]">
+                                <div className="space-y-1.5">
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-[12px] font-black text-[#662211] tracking-tight">
+                                            Ayubowan! I'm Junglefowl
+                                        </span>
+                                        <span className="text-xs select-none">🇱🇰</span>
+                                    </div>
+
+                                    <p className="text-[11px] leading-relaxed text-slate-500 font-medium">
+                                        Your Sri Lanka real estate guide. I'll help you find the best properties and investment opportunities across our beautiful island.
+                                    </p>
+                                </div>
+
+                                {/* Verified Criteria Indicators List */}
+                                <div className="space-y-1.5 text-[11px] font-bold text-slate-600 pt-1">
+                                    <p className="flex items-center gap-2 text-[#0066FF]">
+                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Local Market Expert
+                                    </p>
+                                    <p className="flex items-center gap-2 text-[#0066FF]">
+                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Verified Opportunities
+                                    </p>
+                                    <p className="flex items-center gap-2 text-[#0066FF]">
+                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Here to Assist You
+                                    </p>
+                                </div>
+
+                                {/* Action Dropdown Trigger Button */}
+                                <button className="w-full flex items-center justify-between bg-white border border-slate-200/80 text-[#0066FF] hover:bg-slate-50 font-black text-[10.5px] px-3 py-2 rounded-xl shadow-3xs transition-all mt-2 cursor-pointer">
+                                    <span className="flex items-center gap-1.5">
+                                        <HelpCircle size={13} className="text-[#0066FF]" />
+                                        How I Can Help You
+                                    </span>
+                                    <ChevronDown size={12} className="text-slate-400" />
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* 3. Bottom Row Indicators Row Container */}
+                    <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-100/60 max-w-2xl">
+
+                        <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                                <ShieldCheck size={13} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Verified</span>
+                                <span className="text-[9px] font-bold text-slate-400">Listings</span>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                                <Building2 size={13} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Trusted</span>
+                                <span className="text-[9px] font-bold text-slate-400">Agencies</span>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                                <ShieldCheck size={13} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Secure</span>
+                                <span className="text-[9px] font-bold text-slate-400">Transactions</span>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                                <MapPin size={13} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Local</span>
+                                <span className="text-[9px] font-bold text-slate-400">Expertise</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            {/* SEARCH SYSTEM BAR COMPONENT */}
+            <section className="max-w-7xl mx-auto px-6 -mt-6 relative z-30">
+                <div className="bg-white border border-slate-100 shadow-lg rounded-2xl p-4 space-y-4">
+                    <div className="flex items-center gap-2 border-b border-slate-50 pb-3">
+                        <button
+                            onClick={() => setActiveFilterTab('buy')}
+                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
+                        >
+                            🛍️ Buy
+                        </button>
+                        <button
+                            onClick={() => setActiveFilterTab('rent')}
+                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
+                        >
+                            🔑 Rent
+                        </button>
+                        <button
+                            onClick={() => setActiveFilterTab('invest')}
+                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
+                        >
+                            📈 Invest
+                        </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
+                        <div className="lg:col-span-3 space-y-1.5">
+                            <label className="font-bold text-slate-400 block">Location</label>
+                            <input type="text" placeholder="City, Area or District" className="w-full border border-slate-200 rounded-xl p-3 focus:outline-hidden focus:border-blue-500 font-medium" />
+                        </div>
+                        <div className="lg:col-span-2 space-y-1.5">
+                            <label className="font-bold text-slate-400 block">Property Type</label>
+                            <div className="relative">
+                                <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
+                                    <option>All Types</option>
+                                </select>
+                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                            </div>
+                        </div>
+                        <div className="lg:col-span-2 space-y-1.5">
+                            <label className="font-bold text-slate-400 block">Price Range</label>
+                            <div className="relative">
+                                <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
+                                    <option>Any Price</option>
+                                </select>
+                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                            </div>
+                        </div>
+                        <div className="lg:col-span-2 space-y-1.5">
+                            <label className="font-bold text-slate-400 block">Bedrooms</label>
+                            <div className="relative">
+                                <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
+                                    <option>Any</option>
+                                </select>
+                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                            </div>
+                        </div>
+                        <div className="lg:col-span-1">
+                            <button className="w-full flex items-center justify-center gap-1.5 border border-slate-200 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer">
+                                <SlidersHorizontal className="w-3.5 h-3.5" /> More
+                            </button>
+                        </div>
+                        <div className="lg:col-span-2">
+                            <button className="w-full flex items-center justify-center gap-2 bg-[#0066FF] hover:bg-blue-700 text-white font-bold p-3 rounded-xl shadow-xs transition-all cursor-pointer">
+                                <Search className="w-4 h-4" /> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FEATURED PORTFOLIO GRID */}
+            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+                <div className="flex justify-between items-end">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight">Featured Properties in Sri Lanka</h3>
+                    <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
+                        View All Properties <ArrowRight className="w-3 h-3" />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                    {SRI_LANKA_PROPERTIES.map((prop) => (
+                        <div key={prop.id} className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-2xs hover:shadow-md transition-all group relative">
+                            <button className="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 backdrop-blur-xs rounded-full flex items-center justify-center text-slate-400 hover:text-rose-500 shadow-2xs transition-colors cursor-pointer">
+                                <Heart className="w-3.5 h-3.5" />
+                            </button>
+                            <div className="h-28 bg-slate-100 relative">
+                                <img src={prop.image} alt={prop.title} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" />
+                                <span className="absolute bottom-2 left-2 bg-[#0066FF] text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-md uppercase tracking-wider">{prop.badge}</span>
+                            </div>
+                            <div className="p-3 space-y-1">
+                                <h4 className="font-black text-slate-900 text-xs truncate">{prop.title}</h4>
+                                <p className="text-[10px] font-semibold text-slate-400 flex items-center gap-1">
+                                    <MapPin className="w-2.5 h-2.5 text-slate-300 shrink-0" /> {prop.location}
+                                </p>
+                                <p className="text-xs font-black text-[#0066FF] pt-1">{prop.price}</p>
+                                <div className="flex flex-wrap gap-x-2 gap-y-1 pt-2 text-[9px] text-slate-400 font-bold border-t border-slate-50">
+                                    {prop.specs.map((spec, sIdx) => {
+                                        const isBed = spec.includes('Beds');
+                                        const isBath = spec.includes('Baths');
+                                        return (
+                                            <span key={sIdx} className="flex items-center gap-0.5">
+                                                {isBed && <Bed className="w-2.5 h-2.5 text-slate-300" />}
+                                                {isBath && <Bath className="w-2.5 h-2.5 text-slate-300" />}
+                                                {!isBed && !isBath && <Maximize2 className="w-2.5 h-2.5 text-slate-300" />}
+                                                {spec.replace(/[^\d\s\w+,.]/g, '')}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* DEVELOPMENT INVESTMENT PROJECTS */}
+            <section className="max-w-7xl mx-auto px-6 py-4 space-y-6">
+                <div className="flex justify-between items-end">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight">Invest in Sri Lanka – Real Estate Projects</h3>
+                    <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
+                        View All Projects <ArrowRight className="w-3 h-3" />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+                    {SRI_LANKA_PROJECTS.map((proj) => (
+                        <div key={proj.id} className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-2xs hover:shadow-sm transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="h-32 bg-slate-100 relative">
+                                    <img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />
+                                    {proj.isFeatured && (
+                                        <span className="absolute top-2 left-2 bg-amber-500 text-white text-[8px] font-black px-1.5 py-0.5 rounded-sm uppercase tracking-wider">Featured</span>
+                                    )}
+                                </div>
+                                <div className="p-4 space-y-1">
+                                    <h4 className="font-black text-slate-900 text-sm">{proj.title}</h4>
+                                    <p className="text-[10px] font-bold text-slate-400 uppercase">{proj.location} • {proj.type}</p>
+                                </div>
+                            </div>
+                            <div className="p-4 pt-0 space-y-3">
+                                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-50 text-[10.5px]">
+                                    <div>
+                                        <span className="text-[9px] font-bold text-slate-400 block uppercase">Expected ROI</span>
+                                        <span className="text-emerald-500 font-extrabold flex items-center gap-0.5">
+                                            <TrendingUp className="w-3 h-3" /> {proj.roi}
+                                        </span>
+                                    </div>
+                                    <div className="text-right">
+                                        <span className="text-[9px] font-bold text-slate-400 block uppercase">Min. Investment</span>
+                                        <span className="text-slate-800 font-bold">{proj.minInvestment}</span>
+                                    </div>
+                                </div>
+                                <button className="w-full text-center bg-blue-50 hover:bg-blue-100 text-[#0066FF] font-bold text-[11px] py-2 rounded-xl transition-colors cursor-pointer">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* TOP REGIONAL LOCATIONS SECTION */}
+            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+                <div className="flex justify-between items-end">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight">Top Locations in Sri Lanka</h3>
+                    <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
+                        Explore All Areas <ArrowRight className="w-3 h-3" />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                    {TOP_LOCATIONS.map((loc, i) => (
+                        <div key={i} className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100/60 p-2 flex flex-col gap-2 shadow-2xs hover:bg-slate-100/50 transition-colors cursor-pointer">
+                            <div className="h-20 rounded-xl bg-slate-200 overflow-hidden">
+                                <img src={loc.image} alt={loc.name} className="w-full h-full object-cover" />
+                            </div>
+                            <div className="px-1 text-[11px]">
+                                <h4 className="font-black text-slate-900">{loc.name}</h4>
+                                <p className="text-[9.5px] text-slate-400 font-medium truncate">{loc.tag}</p>
+                                <p className="text-[10px] font-bold text-[#0066FF] mt-1">Avg. {loc.avgPrice}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* REAL ESTATE MARKET INSIGHTS MATRIX */}
+            <section className="max-w-7xl mx-auto px-6 py-4">
+                <div className="bg-slate-50 border border-slate-100/80 rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                    <div className="lg:col-span-5 space-y-5">
+                        <h3 className="text-xl font-black text-slate-900 tracking-tight">Sri Lanka Real Estate Market Overview</h3>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            A growing market with high potential returns for local and international investors seeking geographic portfolio diversification.
+                        </p>
+                        <ul className="space-y-2 text-xs font-bold text-slate-500">
+                            <li className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#0066FF] shrink-0" /> Strong tourism growth and infrastructure development</li>
+                            <li className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#0066FF] shrink-0" /> Government incentives for foreign investors</li>
+                            <li className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#0066FF] shrink-0" /> High rental yields in prime commercial locations</li>
+                            <li className="flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#0066FF] shrink-0" /> Growing demand for residential and luxury spaces</li>
+                        </ul>
+                        <button className="bg-white border border-slate-200 text-[#0066FF] hover:bg-slate-50 font-bold text-xs px-5 py-3 rounded-xl shadow-2xs transition-all cursor-pointer">
+                            View Full Market Report
+                        </button>
+                    </div>
+
+                    <div className="lg:col-span-3 flex justify-center items-center bg-white/60 rounded-2xl p-4 border border-slate-100">
+                        <div className="w-full aspect-[1/1.2] relative max-w-[200px] opacity-80 flex items-center justify-center text-slate-200 font-black text-3xl select-none">
+                            <Globe className="w-24 h-24 stroke-1 text-slate-200" />
+                            <span className="absolute top-[10%] left-[45%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Jaffna</span>
+                            <span className="absolute top-[45%] left-[10%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Colombo</span>
+                            <span className="absolute bottom-[10%] left-[45%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Galle</span>
+                        </div>
+                    </div>
+
+                    <div className="lg:col-span-4 grid grid-cols-2 gap-4">
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl shadow-2xs">
+                            <span className="text-lg font-black text-[#0066FF] block">8.5%</span>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Average ROI</span>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl shadow-2xs">
+                            <span className="text-lg font-black text-[#0066FF] block">6.3%</span>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Tourism Growth</span>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl shadow-2xs">
+                            <span className="text-lg font-black text-[#0066FF] block">$2.8B+</span>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">FDI in Real Estate</span>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl shadow-2xs">
+                            <span className="text-lg font-black text-[#0066FF] block">150K+</span>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Foreign Investors</span>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl shadow-2xs col-span-2 flex items-center justify-between">
+                            <div>
+                                <span className="text-lg font-black text-[#0066FF] block">25+</span>
+                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Mega Projects in Development</span>
+                            </div>
+                            <span className="bg-emerald-50 text-emerald-600 font-black text-[10px] px-2 py-1 rounded-md uppercase">Tier-1</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* WHY INVEST SECTION */}
+            <section className="max-w-7xl mx-auto px-6 py-16 space-y-8 relative">
+                <div>
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight">
+                        Why Invest in Sri Lanka with <span className="text-[#0066FF]">SeaHomeNet?</span>
+                    </h3>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <Compass className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">Local Expertise</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">In-depth localized knowledge of the regulatory real estate market.</p>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <ShieldCheck className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">Verified Properties</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">All active database listing profiles undergo rigorous ownership audits.</p>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <Users className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">End-to-End Support</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">From portfolio analysis selection patterns through settlement escrow logs.</p>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <Scale className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">Legal Assistance</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">Direct channels guiding cross-border compliance parameters properly.</p>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <TrendingUp className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">High ROI Potential</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">Attractive growth vectors mapped accurately onto verified opportunities.</p>
+                        </div>
+                        <div className="bg-white border border-slate-100 p-4 rounded-xl space-y-2">
+                            <Layers className="w-5 h-5 text-[#0066FF]" />
+                            <h4 className="font-black text-xs text-slate-900">Secure & Transparent</h4>
+                            <p className="text-[10px] text-slate-400 font-medium leading-relaxed">Fully audited infrastructure keeping asset management processing clear.</p>
+                        </div>
+                    </div>
+
+                    {/* Character Callout Vector Block */}
+                    <div className="lg:col-span-4 bg-blue-50/50 border border-blue-100/40 rounded-2xl p-4 flex items-center justify-between gap-4">
+                        <div className="w-[110px] h-[110px] shrink-0 overflow-hidden bg-white rounded-xl shadow-2xs">
+                            <img
+                                src="/2.png"
+                                alt="Assistant Dialogue Target Mascot"
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                        <div className="space-y-2 flex-1">
+                            <p className="text-[11px] font-black text-slate-900 leading-tight">Got questions?</p>
+                            <p className="text-[10px] text-slate-500 font-medium leading-normal">
+                                I'm here to help you find the perfect investment in Sri Lanka!
+                            </p>
+                            <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-bold text-[9.5px] px-3 py-1.5 rounded-lg transition-colors shadow-xs w-full text-center flex items-center justify-center gap-1 cursor-pointer">
+                                <MessageSquare className="w-3 h-3" /> Chat with Junglefowl
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* WHAT INVESTORS SAY TESTIMONIAL CARDS */}
+            <section className="max-w-7xl mx-auto px-6 py-4 space-y-6">
+                <div className="flex justify-between items-end">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight">What Investors Say</h3>
+                    <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
+                        View All Reviews <ArrowRight className="w-3 h-3" />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                        { name: 'Michael T.', origin: 'Investor, Australia', quote: 'SeaHomeNet made investing in Sri Lanka so easy. The team was professional and the returns have been excellent!' },
+                        { name: 'Priya S.', origin: 'Investor, Singapore', quote: 'Found a great villa in Galle through SeaHomeNet. The process was smooth, secure, and transparent throughout.' },
+                        { name: 'James L.', origin: 'Investor, UK', quote: 'Highly recommended platform for anyone looking to enter the Sri Lankan real estate market with full confidence.' }
+                    ].map((testi, tIdx) => (
+                        <div key={tIdx} className="bg-white border border-slate-100 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-2xs">
+                            <blockquote>
+                                <p className="text-xs font-medium text-slate-500 italic leading-relaxed">
+                                    "{testi.quote}"
+                                </p>
+                            </blockquote>
+                            <div className="flex items-center justify-between pt-3 border-t border-slate-50">
+                                <div className="flex items-center gap-2.5">
+                                    <div className="w-8 h-8 rounded-full bg-slate-100 overflow-hidden text-center text-[10px] flex items-center justify-center font-bold text-slate-400">
+                                        USR
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs font-black text-slate-900">{testi.name}</h4>
+                                        <p className="text-[9.5px] font-semibold text-slate-400">{testi.origin}</p>
+                                    </div>
+                                </div>
+                                <div className="text-amber-400 text-[10px] font-bold tracking-xs">★★★★★</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* INSTITUTIONAL TRUSTED AGENCIES GRID */}
+            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+                <div className="flex justify-between items-end">
+                    <h3 className="text-sm font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                        <Building2 className="w-4 h-4 text-slate-300" /> Trusted Real Estate Agencies in Sri Lanka
+                    </h3>
+                    <button className="text-xs font-bold text-[#0066FF] hover:underline cursor-pointer">View All Agencies →</button>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
+                    {['LankaPropertyWeb', 'ACQUEST', 'John Keells', 'RE/MAX Sri Lanka', 'CENTURY 21', 'CBRE Sri Lanka'].map((brand, bIdx) => (
+                        <div key={bIdx} className="border border-slate-100 rounded-xl p-3.5 text-center text-xs font-black tracking-tight text-slate-400 bg-slate-50/50 hover:bg-white hover:border-slate-200 hover:text-slate-600 transition-all cursor-pointer">
+                            {brand}
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* INSTITUTIONAL GLOBAL SITE FOOTER */}
+            <footer className="w-full bg-[#030914] text-slate-400 border-t border-slate-900 text-xs pt-12 pb-6 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 pb-10 border-b border-slate-900">
+
+                    <div className="col-span-2 space-y-4">
+                        <span className="text-white font-black text-base tracking-tight">Sea<span className="text-[#0066FF]">A</span>Home Net</span>
+                        <p className="text-[11px] text-slate-500 leading-relaxed max-w-xs">
+                            Connecting investors, buyers, and trusted agencies across the world to the best real estate opportunities globally.
+                        </p>
+                        <div className="flex items-center gap-4 text-slate-500">
+                            <FacebookIcon className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                            <LinkedinIcon className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                            <InstagramIcon className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                            <YoutubeIcon className="w-4 h-4 hover:text-white cursor-pointer transition-colors" />
+                        </div>
+                    </div>
+
+                    <div className="space-y-2">
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider">Buy</h4>
+                        <ul className="space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer">Search Properties</li>
+                            <li className="hover:text-white cursor-pointer">Browse by Country</li>
+                            <li className="hover:text-white cursor-pointer">Browse by City</li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-2">
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider">Invest</h4>
+                        <ul className="space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer">Opportunities</li>
+                            <li className="hover:text-white cursor-pointer">ROI Calculator</li>
+                            <li className="hover:text-white cursor-pointer">Market Insights</li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-2">
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider">Countries</h4>
+                        <ul className="space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer text-[#0066FF]">Sri Lanka</li>
+                            <li className="hover:text-white cursor-pointer">Japan</li>
+                            <li className="hover:text-white cursor-pointer">UAE</li>
+                            <li className="hover:text-white cursor-pointer">USA</li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-2">
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider">Resources</h4>
+                        <ul className="space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer">Blog News</li>
+                            <li className="hover:text-white cursor-pointer">Market Reports</li>
+                            <li className="hover:text-white cursor-pointer">Buying Guide</li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-2">
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider">Contact Us</h4>
+                        <p className="text-[11.5px] text-slate-400 font-bold">support@seahomenet.com</p>
+                        <p className="text-[10.5px] text-slate-600 font-mono">+1 234 567 8900</p>
+                    </div>
+
+                </div>
+
+                <div className="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row justify-between items-center text-[10.5px] text-slate-600 font-medium gap-4">
+                    <p>© 2026 SeaHomeNet. All rights reserved globally.</p>
+                    <div className="flex gap-4">
+                        <span className="hover:underline cursor-pointer">Terms of Use</span>
+                        <span className="hover:underline cursor-pointer">Privacy Policy</span>
+                        <span className="hover:underline cursor-pointer">Sitemap</span>
+                    </div>
+                </div>
+            </footer>
+
         </div>
-      </main>
     );
-  }
-
-  return (
-    <main className="min-h-screen bg-[#f8fbff] text-slate-900 py-20 px-6">
-      <div className="mx-auto max-w-5xl rounded-[2rem] bg-white p-10 shadow-xl border border-slate-200">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
-              Country Page
-            </span>
-            <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900">{country.name}</h1>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600">{country.description}</p>
-          </div>
-          <Link
-            to="/invest"
-            className="inline-flex items-center justify-center rounded-3xl bg-[#0066FF] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 hover:bg-blue-600 transition-all"
-          >
-            Explore Invest Page
-          </Link>
-        </div>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6">
-            <h2 className="text-xl font-bold text-slate-900">Market Overview</h2>
-            <p className="mt-3 text-sm text-slate-600 leading-7">Find the latest property trends, top locations, and expected returns for {country.name} investments.</p>
-          </div>
-          <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6">
-            <h2 className="text-xl font-bold text-slate-900">Featured Assets</h2>
-            <p className="mt-3 text-sm text-slate-600 leading-7">See featured projects curated for your investment goals in the {country.name} market.</p>
-          </div>
-          <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6">
-            <h2 className="text-xl font-bold text-slate-900">Local Partners</h2>
-            <p className="mt-3 text-sm text-slate-600 leading-7">Connect with trusted agencies and advisors who specialize in {country.name} real estate.</p>
-          </div>
-        </div>
-      </div>
-    </main>
-  );
 }
