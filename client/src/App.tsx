@@ -3,6 +3,7 @@ import { Navbar } from './layouts/Navbar';
 import { Footer } from './layouts/Footer';
 import { HomePage } from './pages/HomePage';
 import { InvestPage } from './pages/InvestPage';
+import { CountryPage } from './pages/CountryPage';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/invest" element={<InvestPage />} />
+        <Route path="/country/:countryId" element={<CountryPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
 
