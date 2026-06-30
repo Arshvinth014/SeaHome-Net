@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Navbar() {
   return (
     <nav className="w-full bg-white border-b border-slate-100 sticky top-0 z-50 px-6 py-3.5">
@@ -10,10 +12,10 @@ export function Navbar() {
 
         {/* Desktop Links Matrix */}
         <div className="hidden lg:flex items-center gap-7 text-[13.5px] font-semibold text-slate-700">
-          <a href="#buy" className="text-[#0066FF] border-b-2 border-[#0066FF] pb-1">Buy</a>
-          <a href="#invest" className="hover:text-slate-900 transition-colors">Invest</a>
-          <a href="#countries" className="hover:text-slate-900 transition-colors">Countries</a>
-          <a href="#agencies" className="hover:text-slate-900 transition-colors">Agencies</a>
+          <Link to="/#buy" className="text-[#0066FF] border-b-2 border-[#0066FF] pb-1">Buy</Link>
+          <Link to="/invest" className="hover:text-slate-900 transition-colors">Invest</Link>
+          <Link to="/#countries" className="hover:text-slate-900 transition-colors">Countries</Link>
+          <Link to="/#agencies" className="hover:text-slate-900 transition-colors">Agencies</Link>
           <div className="relative group cursor-pointer flex items-center gap-1 hover:text-slate-900">
             <span>Resources</span>
             <span className="text-[10px] text-slate-400">▼</span>
