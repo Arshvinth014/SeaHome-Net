@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Globe, ChevronDown } from 'lucide-react';
 
 export function Navbar() {
   const [countriesOpen, setCountriesOpen] = useState(false);
@@ -82,7 +83,7 @@ export function Navbar() {
         {/* Localized Interaction Elements Wrapper */}
         <div className="flex items-center gap-3">
           <button className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 border border-slate-200 rounded-lg px-2.5 py-1.5 hover:bg-slate-50">
-            🌐 EN <span className="text-[9px] text-slate-400">▼</span>
+            <Globe className="w-3.5 h-3.5 text-slate-400" /> <span>EN</span> <ChevronDown className="w-3 h-3 text-slate-400" />
           </button>
           
           <button className="text-slate-400 hover:text-rose-500 p-2 border border-slate-100 rounded-lg transition-colors">
