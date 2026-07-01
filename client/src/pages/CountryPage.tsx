@@ -120,7 +120,7 @@ export function CountryPage() {
                         <div className="lg:col-span-7 flex items-center justify-end relative h-full min-h-[300px] z-10">
 
                             {/* Mascot Fixed Alignment Frame */}
-                            <div className="absolute right-[-150px] bottom-[-48px] w-280 h-120 z-10 z-0 mt-20px pointer-events-none">
+                            <div className="absolute right-[-120px] w-280 h-125 z-10 z-0 pointer-events-none">
                                 <img
                                     src="../../public/SrilankaPage.png"
                                     alt="Sri Lanka Welcome Character Assistant"
@@ -129,7 +129,7 @@ export function CountryPage() {
                             </div>
 
                             {/* Speech Prompt Card Framework Container */}
-                            <div className="bg-white border border-slate-100/80 shadow-xl rounded-2xl p-5 w-full max-w-[250px] space-y-3 relative z-20 relative mr-[-45px]">
+                            <div className="bg-white border border-slate-100/80 shadow-xl rounded-2xl p-5 w-full max-w-[250px] space-y-3 relative z-20 relative mr-[-25px]">
                                 <div className="space-y-1.5">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[12px] font-black text-[#662211] tracking-tight">
@@ -170,45 +170,45 @@ export function CountryPage() {
                     </div>
 
                     {/* 3. Bottom Row Indicators Row Container */}
-                    <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-100/60 max-w-2xl">
+                    <div className="flex flex-wrap items-center gap-7 pt-1 border-t border-slate-100/60 max-w-2xl z-20">
 
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
                                 <ShieldCheck size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Verified</span>
-                                <span className="text-[9px] font-bold text-slate-400">Listings</span>
+                                <span className="text-[14px] font-black text-slate-700 tracking-tight leading-none">Verified</span>
+                                <span className="text-[10px] font-bold text-slate-400">Listings</span>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
                                 <Building2 size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Trusted</span>
-                                <span className="text-[9px] font-bold text-slate-400">Agencies</span>
+                                <span className="text-[14px] font-black text-slate-700 tracking-tight leading-none">Trusted</span>
+                                <span className="text-[10px] font-bold text-slate-400">Agencies</span>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
                                 <ShieldCheck size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Secure</span>
-                                <span className="text-[9px] font-bold text-slate-400">Transactions</span>
+                                <span className="text-[14px] font-black text-slate-700 tracking-tight leading-none">Secure</span>
+                                <span className="text-[10px] font-bold text-slate-400">Transactions</span>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center text-[#0066FF]">
                                 <MapPin size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black text-slate-700 tracking-tight leading-none">Local</span>
-                                <span className="text-[9px] font-bold text-slate-400">Expertise</span>
+                                <span className="text-[14px] font-black text-slate-700 tracking-tight leading-none">Local</span>
+                                <span className="text-[10px] font-bold text-slate-400">Expertise</span>
                             </div>
                         </div>
 
@@ -225,19 +225,19 @@ export function CountryPage() {
                             onClick={() => setActiveFilterTab('buy')}
                             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
                         >
-                            🛍️ Buy
+                            Buy
                         </button>
                         <button
                             onClick={() => setActiveFilterTab('rent')}
                             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
                         >
-                            🔑 Rent
+                            Rent
                         </button>
                         <button
                             onClick={() => setActiveFilterTab('invest')}
                             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
                         >
-                            📈 Invest
+                            Invest
                         </button>
                     </div>
 
@@ -425,10 +425,15 @@ export function CountryPage() {
 
                     <div className="lg:col-span-3 flex justify-center items-center bg-white/60 rounded-2xl p-4 border border-slate-100">
                         <div className="w-full aspect-[1/1.2] relative max-w-[200px] opacity-80 flex items-center justify-center text-slate-200 font-black text-3xl select-none">
-                            <Globe className="w-24 h-24 stroke-1 text-slate-200" />
-                            <span className="absolute top-[10%] left-[45%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Jaffna</span>
-                            <span className="absolute top-[45%] left-[10%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Colombo</span>
-                            <span className="absolute bottom-[10%] left-[45%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Galle</span>
+                            {/* <Globe className="w-24 h-24 stroke-1 text-slate-200" /> */}
+                            <img
+                                src="../../public/SLmap.png"
+                                alt="Sri Lanka Geographic Investment Hotspots Map"
+                                className="w-full h-full object-contain mix-blend-multiply"
+                            />
+                            <span className="absolute top-[10%] left-[35%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Jaffna</span>
+                            <span className="absolute top-[65%] left-[10%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Colombo</span>
+                            <span className="absolute bottom-[5%] left-[35%] text-[9px] text-slate-900 font-bold bg-white px-1.5 py-0.5 shadow-2xs rounded-md">Galle</span>
                         </div>
                     </div>
 
@@ -505,9 +510,9 @@ export function CountryPage() {
 
                     {/* Character Callout Vector Block */}
                     <div className="lg:col-span-4 bg-blue-50/50 border border-blue-100/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-                        <div className="w-[110px] h-[110px] shrink-0 overflow-hidden bg-white rounded-xl shadow-2xs">
+                        <div className="w-[220px] h-[220px] shrink-0 overflow-hidden bg-white rounded-xl shadow-2xs">
                             <img
-                                src="/2.png"
+                                src="../../public/jungleFowl.png"
                                 alt="Assistant Dialogue Target Mascot"
                                 className="w-full h-full object-contain"
                             />
