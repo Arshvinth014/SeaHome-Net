@@ -507,8 +507,8 @@ export function InvestPage() {
                     </div>
 
                     {/* Center Mascot & Floating Infrastructure Canvas Panel */}
-                    <div className="flex-1 min-h-[160px] relative w-full flex items-end justify-center lg:justify-start lg:pl-4">
-                        <div className="relative w-70 h-64 max-w-full flex items-end justify-center">
+                    <div className="flex-1 min-h-[100px] relative w-full flex items-end justify-center lg:justify-start lg:pl-4">
+                        <div className="relative w-70 h-70 max-w-full flex items-end justify-center">
                             <img
                                 src="../../public/OrangeCatWithCity.png"
                                 alt="Haru Assistant Close Frame"
@@ -544,7 +544,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 8: TRUST SECURITY COMPLIANCE FOOTER */}
-            <section className="max-w-7xl mx-auto px-6 py-10">
+            <section className="max-w-7xl mx-auto mt-[-50px] px-5 py-5">
                 {/* Container Box: Uses dark royal midnight blue background with deep padding */}
                 <div className="bg-[#001E4E] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden text-white shadow-xs">
 

@@ -91,9 +91,9 @@ export function CountryPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center pt-0">
 
                         {/* Left Narrative Text Block */}
-                        <div className="lg:col-span-5 space-y-5 z-20">
-                            <div className="space-y-2">
-                                <h1 className="text-4xl sm:text-[44px] font-black text-[#0B1B3D] tracking-tight leading-none">
+                        <div className="lg:col-span-5 space-y-6 z-20">
+                            <div className="space-y-4">
+                                <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] tracking-tight leading-none">
                                     Sri Lanka Properties
                                 </h1>
                                 <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
@@ -571,15 +571,15 @@ export function CountryPage() {
             {/* INSTITUTIONAL TRUSTED AGENCIES GRID */}
             <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
                 <div className="flex justify-between items-end">
-                    <h3 className="text-sm font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                        <Building2 className="w-4 h-4 text-slate-300" /> Trusted Real Estate Agencies in Sri Lanka
+                    <h3 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                        <Building2 className="w-4 h-4 text-slate-600" /> Trusted Real Estate Agencies in Sri Lanka
                     </h3>
                     <button className="text-xs font-bold text-[#0066FF] hover:underline cursor-pointer">View All Agencies →</button>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
                     {['LankaPropertyWeb', 'ACQUEST', 'John Keells', 'RE/MAX Sri Lanka', 'CENTURY 21', 'CBRE Sri Lanka'].map((brand, bIdx) => (
-                        <div key={bIdx} className="border border-slate-100 rounded-xl p-3.5 text-center text-xs font-black tracking-tight text-slate-400 bg-slate-50/50 hover:bg-white hover:border-slate-200 hover:text-slate-600 transition-all cursor-pointer">
+                        <div key={bIdx} className="border border-slate-400 rounded-xl p-3.5 text-center text-xs font-black tracking-tight text-slate-400 bg-slate-50/50 hover:bg-white hover:border-slate-200 hover:text-slate-600 transition-all cursor-pointer">
                             {brand}
                         </div>
                     ))}
