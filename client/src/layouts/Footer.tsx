@@ -1,24 +1,26 @@
 export function Footer() {
   return (
     <footer className="w-full bg-[#030914] text-slate-400 text-xs border-t border-slate-900">
-      
+
       {/* 1. Global Newsletter Form Full Width Banner */}
-      <div className="max-w-7xl mx-auto px-6 py-8 border-b border-slate-900 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-        <div className="md:col-span-7">
-          <h4 className="text-sm font-black text-white tracking-tight">Stay Updated with Global Real Estate Opportunities</h4>
-          <p className="text-[11px] text-slate-500 mt-0.5">Subscribe to our newsletter and never miss out on the best international property deals.</p>
+      {/* MARKETING NEWSLETTER SIGNUP BANNER */}
+      <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-4">
+        <div className="bg-[#004ACC] rounded-2xl p-6 lg:p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6 shadow-xl shadow-blue-900/10">
+          <div className="space-y-1 text-center md:text-left">
+            <h3 className="text-lg lg:text-xl font-black tracking-tight">Stay Updated with Global Real Estate Opportunities</h3>
+            <p className="text-xs text-blue-100 font-medium">Subscribe to our newsletter and never miss out on the best deals.</p>
+          </div>
+
+          <div className="flex w-full md:w-auto max-w-md gap-2 shrink-0 text-xs font-medium">
+            <input type="email" placeholder="Enter your email address" className="bg-white text-slate-800 px-4 py-3 rounded-xl focus:outline-hidden flex-1 md:w-64 placeholder:text-slate-300" />
+            <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md cursor-pointer whitespace-nowrap">Subscribe</button>
+          </div>
         </div>
-        <div className="md:col-span-5 flex gap-2">
-          <input type="email" placeholder="Enter your email address" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500 placeholder-slate-600 font-medium" />
-          <button className="bg-[#0066FF] hover:bg-blue-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl shrink-0 shadow-sm cursor-pointer">
-            Subscribe
-          </button>
-        </div>
-      </div>
+      </section>
 
       {/* 2. Structured Link Columns Grid System */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
-        
+
         {/* Identity Block Info Column */}
         <div className="space-y-4">
           <div>
