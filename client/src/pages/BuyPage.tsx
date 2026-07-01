@@ -71,7 +71,6 @@ export function BuyPage() {
             {/* HERO REGION CONTROLLER BLOCK */}
             <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 relative overflow-hidden">
 
-                {/* 100% Exact Skyline Image Matching background layer from image_c7dbff.jpg */}
                 <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
                     <img
                         src="../../public/buyPageHero.png"
@@ -124,7 +123,7 @@ export function BuyPage() {
                         </div>
 
                         {/* Central Search Card Hub */}
-                        <div className="bg-white border border-slate-100 shadow-xl shadow-blue-900/5 rounded-2xl p-5 space-y-4 relative z-10">
+                        <div className="bg-white border border-slate-100 shadow-xl shadow-blue-900/25 rounded-2xl p-5 space-y-4 relative z-10">
 
                             {/* Active Operations Tabs Row */}
                             <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
@@ -510,7 +509,7 @@ export function BuyPage() {
 
             {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
             <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-60px] border-t border-slate-100">
-                <div className="bg-white border border-slate-100/80 shadow-md shadow-blue-900/[0.01] rounded-2xl p-6 relative">
+                <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-6 relative">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32">
 
                         <div className="flex items-start gap-3">
