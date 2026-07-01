@@ -1,8 +1,20 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Navbar() {
   const [countriesOpen, setCountriesOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const getLinkClass = (path: string) => {
+    const baseClass = "transition-colors";
+    return isActive(path)
+      ? "text-[#0066FF] border-b-2 border-[#0066FF] pb-1 font-semibold"
+      : "text-slate-700 hover:text-slate-900";
+  };
 
   return (
     <nav className="w-full bg-white border-b border-slate-100 sticky top-0 z-50 px-6 py-3.5">
@@ -15,8 +27,9 @@ export function Navbar() {
 
         {/* Desktop Links Matrix */}
         <div className="hidden lg:flex items-center gap-7 text-[13.5px] font-semibold text-slate-700">
-          <Link to="/#buy" className="text-[#0066FF] border-b-2 border-[#0066FF] pb-1">Buy</Link>
-          <Link to="/invest" className="hover:text-slate-900 transition-colors">Invest</Link>
+          <Link to="/" className={getLinkClass("/")}>Home</Link>
+          <Link to="/buy" className={getLinkClass("/buy")}>Buy</Link>
+          <Link to="/invest" className={getLinkClass("/invest")}>Invest</Link>
           <div className="relative">
             <button
               type="button"
