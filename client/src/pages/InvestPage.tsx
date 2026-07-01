@@ -83,16 +83,16 @@ export function InvestPage() {
                             <img src="../../public/investmap.png" alt="Global Node Connectivity Map" className="w-full h-full object-contain" />
 
                             {/* Absolute Circular Node Overlay Frameworks over map paths */}
-                            <div className="absolute top-[32%] left-[10%] w-14 h-14 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[25%] left-[20%] w-15 h-15 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute top-[12%] left-[62%] w-12 h-12 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[25%] left-[65%] w-15 h-15 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute top-[48%] left-[42%] w-16 h-16 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[50%] left-[60%] w-17 h-17 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute bottom-[8%] left-[25%] w-14 h-14 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute bottom-[12%] left-[35%] w-18 h-18 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
                         </div>
@@ -434,7 +434,6 @@ export function InvestPage() {
                 </div>
             </section>
 
-            {/* SECTION 6: RESOURCES */}
             {/* SECTION 6: RESOURCES */}
             <section className="max-w-7xl mx-auto px-6 py-6 space-y-6">
                 <div className="flex justify-between items-center">
