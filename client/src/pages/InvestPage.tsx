@@ -29,13 +29,13 @@ export function InvestPage() {
                             <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer">
                                 Explore Investment Opportunities
                             </button>
-                            <button className="border border-slate-200 text-[#0066FF] bg-white hover:bg-slate-50 font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer">
+                            <button className="border border-slate-300 text-[#0066FF] bg-white hover:bg-slate-150 font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer">
                                 How It Works
                             </button>
                         </div>
 
                         {/* Core Feature Badge Elements with Lucide Icons */}
-                        <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pt-6 border-t border-slate-100/80 text-[11.5px] font-bold text-slate-600">
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-4 pt-6 border-t border-slate-300/80 text-[11.5px] font-bold text-slate-600">
                             <div className="flex items-center gap-2">
                                 <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center text-[#0066FF]">
                                     <ShieldCheck size={14} />
@@ -101,14 +101,14 @@ export function InvestPage() {
                         <div className="w-[320px] flex flex-col gap-4 relative z-10">
 
                             {/* Top Card - Let Sora Guide You */}
-                            <div className="bg-white border border-slate-100/80 shadow-md shadow-slate-100/50 rounded-2xl p-4 flex justify-between items-start gap-3">
+                            <div className="bg-white border border-slate-300/80 shadow-md shadow-slate-500/50 rounded-2xl p-4 flex justify-between items-start gap-3">
                                 <div className="space-y-1.5 text-[11px] leading-relaxed text-slate-500 font-medium">
                                     <h4 className="font-bold text-slate-900 text-[13px]">
                                         Let <span className="text-[#0066FF]">Sora</span> guide you.
                                     </h4>
                                     <p>I'll connect you with Haru, your personal investment manager, to handle everything on your behalf.</p>
                                 </div>
-                                <div className="w-36 h-36 shrink-0 bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center">
+                                <div className="w-36 h-36 shrink-0 bg-slate-150 rounded-xl overflow-hidden flex items-center justify-center">
                                     <img src="../../public/BlueBird&House.png" alt="Sora Character" className="w-full h-full object-contain" />
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export function InvestPage() {
                             </div>
 
                             {/* Bottom Card - Haru Assist Block */}
-                            <div className="bg-[#FFFBF7] border border-orange-100/50 shadow-md shadow-orange-50/30 rounded-2xl p-4 flex justify-between items-end gap-2 mt-4">
+                            <div className="bg-[#FFFBF7] border border-orange-300/50 shadow-md shadow-orange-300/50 rounded-2xl p-4 flex justify-between items-end gap-2 mt-4">
                                 <div className="space-y-2 text-[10.5px] font-bold text-slate-600 w-full">
                                     <h4 className="text-[13px] font-extrabold text-slate-900">
                                         <span className="text-orange-500">Haru</span> will handle it for you.
@@ -147,7 +147,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 2: WHY INVEST WITH SEAHOMENET */}
-            <section className="max-w-7xl mx-auto px-6 py-12 space-y-6">
+            <section className="max-w-7xl mx-auto px-6 py-3 space-y-3">
                 <div>
                     <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
                         Why Invest with <span className="text-[#0066FF]">SeaHomeNet?</span>
@@ -160,7 +160,7 @@ export function InvestPage() {
                     <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                         {/* Card 1 */}
-                        <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
+                        <div className="bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
                             <div className="w-9 h-9 rounded-xl bg-blue-50/70 flex items-center justify-center text-[#0066FF]">
                                 <Globe size={18} />
                             </div>
@@ -173,7 +173,7 @@ export function InvestPage() {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
+                        <div className="bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
                             <div className="w-9 h-9 rounded-xl bg-blue-50/70 flex items-center justify-center text-[#0066FF]">
                                 <ShieldCheck size={18} />
                             </div>
@@ -186,7 +186,7 @@ export function InvestPage() {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
+                        <div className="bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
                             <div className="w-9 h-9 rounded-xl bg-blue-50/70 flex items-center justify-center text-[#0066FF]">
                                 <BarChart3 size={18} />
                             </div>
@@ -199,7 +199,7 @@ export function InvestPage() {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
+                        <div className="bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-start space-y-3">
                             <div className="w-9 h-9 rounded-xl bg-blue-50/70 flex items-center justify-center text-[#0066FF]">
                                 <Headphones size={18} />
                             </div>
@@ -214,7 +214,7 @@ export function InvestPage() {
                     </div>
 
                     {/* Center Frame: Market Growth Dynamic Bar Chart */}
-                    <div className="lg:col-span-4 bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-between min-h-[260px]">
+                    <div className="lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-between min-h-[260px]">
                         <div>
                             <h3 className="font-bold text-slate-900 text-[13.5px]">Global Real Estate Market Outlook</h3>
                             <p className="text-[11px] text-slate-400 font-medium mt-0.5">
@@ -222,7 +222,7 @@ export function InvestPage() {
                             </p>
                         </div>
                         {/* Responsive Graph Workspace Container */}
-                        <div className="flex items-end justify-between gap-3 pt-12 pb-1 h-36 border-b border-slate-100 px-2 relative">
+                        <div className="flex items-end justify-between gap-3 pt-12 pb-1 h-36 border-b border-slate-300 px-2 relative">
                             {MARKET_CHART_DATA.map((item, index) => (
                                 <div key={index} className="flex-1 flex flex-col items-center gap-2 group relative h-full justify-end">
 
@@ -249,7 +249,7 @@ export function InvestPage() {
                     </div>
 
                     {/* Right Frame: Region ROI Rankings List Wrapper */}
-                    <div className="lg:col-span-3 bg-white border border-slate-100 p-5 rounded-2xl shadow-xs flex flex-col justify-between min-h-[260px]">
+                    <div className="lg:col-span-3 bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-between min-h-[260px]">
                         <div className="space-y-3.5">
                             <div>
                                 <h3 className="font-bold text-slate-900 text-[13.5px]">Average ROI (2024)</h3>
@@ -257,19 +257,19 @@ export function InvestPage() {
 
                             {/* National Row Elements */}
                             <div className="space-y-2.5 text-[12px] font-semibold text-slate-600">
-                                <div className="flex justify-between items-center py-0.5 border-b border-slate-50/50">
+                                <div className="flex justify-between items-center py-0.5 border-b border-slate-300">
                                     <span className="flex items-center gap-1.5">🇯🇵 <span className="text-slate-700">Japan</span></span>
                                     <span className="font-black text-slate-900 text-[12.5px]">8.7%</span>
                                 </div>
-                                <div className="flex justify-between items-center py-0.5 border-b border-slate-50/50">
+                                <div className="flex justify-between items-center py-0.5 border-b border-slate-300">
                                     <span className="flex items-center gap-1.5">🇱🇰 <span className="text-slate-700">Sri Lanka</span></span>
                                     <span className="font-black text-slate-900 text-[12.5px]">9.2%</span>
                                 </div>
-                                <div className="flex justify-between items-center py-0.5 border-b border-slate-50/50">
+                                <div className="flex justify-between items-center py-0.5 border-b border-slate-300">
                                     <span className="flex items-center gap-1.5">🇦🇪 <span className="text-slate-700">UAE</span></span>
                                     <span className="font-black text-slate-900 text-[12.5px]">7.8%</span>
                                 </div>
-                                <div className="flex justify-between items-center py-0.5 border-b border-slate-50/50">
+                                <div className="flex justify-between items-center py-0.5 border-b border-slate-300">
                                     <span className="flex items-center gap-1.5">🇺🇸 <span className="text-slate-700">USA</span></span>
                                     <span className="font-black text-slate-900 text-[12.5px]">6.9%</span>
                                 </div>
@@ -280,7 +280,7 @@ export function InvestPage() {
                             </div>
                         </div>
 
-                        <button className="w-full text-center border border-slate-100 hover:border-slate-200 hover:bg-slate-50 text-[#0066FF] font-bold text-[11.5px] py-2 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer mt-4 shadow-2xs">
+                        <button className="w-full text-center border border-slate-300 hover:border-slate-300 hover:bg-slate-150 text-[#0066FF] font-bold text-[11.5px] py-2 rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer mt-4 shadow-2xs">
                             <span>View Market Reports</span>
                             <ArrowRight size={12} strokeWidth={2.5} />
                         </button>
@@ -290,7 +290,7 @@ export function InvestPage() {
             </section>
             {/* SECTION 3: HOW IT WORKS */}
             <section className="max-w-8xl mx-auto px-6 py-10">
-                <div className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xs relative overflow-hidden">
+                <div className="bg-white border border-slate-300 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xs relative overflow-hidden">
 
                     {/* Left Side Workflow Framework */}
                     <div className="flex-1 space-y-10 w-full">
@@ -310,12 +310,12 @@ export function InvestPage() {
 
                                         {/* Horizontal dotted connector trace line */}
                                         {idx < HARU_STEPS_DATA.length - 1 && (
-                                            <div className="hidden sm:block absolute top-7 left-14 right-[-24px] h-[1px] border-t border-dashed border-slate-200 pointer-events-none z-0" />
+                                            <div className="hidden sm:block absolute top-7 left-14 right-[-24px] h-[1px] border-t border-dashed border-slate-500 pointer-events-none z-0" />
                                         )}
 
                                         {/* Concentric Step Icon Stacked Circles */}
-                                        <div className="relative w-14 h-14 rounded-full bg-blue-50/40 flex items-center justify-center border border-blue-100/40 shrink-0 z-10">
-                                            <span className="absolute -top-1 -left-1 bg-white border border-slate-100 shadow-2xs text-[#0066FF] text-[9px] font-black w-5 h-5 rounded-full flex items-center justify-center">
+                                        <div className="relative w-14 h-14 rounded-full bg-blue-50/40 flex items-center justify-center border border-blue-400/40 shrink-0 z-10">
+                                            <span className="absolute -top-1 -left-1 bg-white border border-slate-400 shadow-2xs text-[#0066FF] text-[9px] font-black w-5 h-5 rounded-full flex items-center justify-center">
                                                 {step.num}
                                             </span>
                                             {IconComponent && <IconComponent size={21} className="text-[#0066FF]" />}
@@ -368,8 +368,8 @@ export function InvestPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5">
                     {INVESTMENT_OPPORTUNITIES.map((opp) => (
-                        <div key={opp.id} className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all group">
-                            <div className="h-40 bg-slate-100 relative overflow-hidden">
+                        <div key={opp.id} className="bg-white border border-slate-300 rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-all group">
+                            <div className="h-40 bg-slate-300 relative overflow-hidden">
                                 <img src={opp.image} alt={opp.country} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                                 <div className="absolute bottom-3 left-4 text-white space-y-0.5">
@@ -408,8 +408,8 @@ export function InvestPage() {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     {AGENCIES.map((agency) => (
-                        <div key={agency.id} className="bg-white border border-slate-100 rounded-2xl p-4 flex flex-col justify-between text-center space-y-4 shadow-xs hover:shadow-md transition-all">
-                            <div className="h-12 w-full flex items-center justify-center font-bold text-xs uppercase bg-slate-50 border border-slate-100 rounded-xl px-2 text-slate-700">
+                        <div key={agency.id} className="bg-white border border-slate-300 rounded-2xl p-4 flex flex-col justify-between text-center space-y-4 shadow-xs hover:shadow-md transition-all">
+                            <div className="h-12 w-full flex items-center justify-center font-bold text-xs uppercase bg-slate-50 border border-slate-300 rounded-xl px-2 text-slate-700">
                                 {agency.logoText}
                             </div>
                             <div className="space-y-1 text-[12px]">
@@ -426,7 +426,7 @@ export function InvestPage() {
                 </div>
 
                 {/* Value Assurances Row */}
-                <div className="bg-blue-50/40 border border-blue-50 rounded-xl p-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-[11px] font-bold text-[#0066FF] tracking-wide">
+                <div className="bg-blue-50/40 border border-blue-300 rounded-xl p-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-[11px] font-bold text-[#0066FF] tracking-wide">
                     <span>✓ Verified & Licensed Agencies</span>
                     <span>✓ Transparent Communication</span>
                     <span>✓ Local Market Expertise</span>
@@ -437,12 +437,12 @@ export function InvestPage() {
             {/* SECTION 6: RESOURCES */}
             <section className="max-w-7xl mx-auto px-6 py-6 space-y-6">
                 <div className="flex justify-between items-center">
-                    <div>
+                    <div> 
                         <h2 className="text-xl font-black text-[#0B1B3D] tracking-tight">
                             Investor Resources Center
                         </h2>
                     </div>
-                    <button className="text-[11px] font-bold text-slate-500 hover:text-slate-800 border border-slate-200/80 px-4 py-2 rounded-xl transition-all cursor-pointer bg-white shadow-3xs">
+                    <button className="text-[11px] font-bold text-slate-500 hover:text-slate-800 border border-slate-300/80 px-4 py-2 rounded-xl transition-all cursor-pointer bg-white shadow-3xs">
                         Explore All Resources &rarr;
                     </button>
                 </div>
@@ -454,7 +454,7 @@ export function InvestPage() {
                         return (
                             <div
                                 key={i}
-                                className="bg-white border border-slate-100/70 p-5 rounded-2xl flex flex-col justify-between hover:shadow-sm transition-all cursor-pointer group min-h-[160px]"
+                                className="bg-white border border-slate-300/70 p-5 rounded-2xl flex flex-col justify-between hover:shadow-sm transition-all cursor-pointer group min-h-[160px]"
                             >
                                 <div className="space-y-4">
                                     {/* Icon Wrapper Circle */}
@@ -483,7 +483,7 @@ export function InvestPage() {
 
             {/* SECTION 7: CTA RECRUITMENT BANNER */}
             <section className="max-w-7xl mx-auto px-6 py-4">
-                <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-3xs">
+                <div className="bg-white border border-slate-300 rounded-3xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-3xs">
 
                     {/* Left Side Copywriting Elements */}
                     <div className="lg:max-w-[32%] space-y-4 text-center lg:text-left z-10">

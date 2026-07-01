@@ -117,16 +117,16 @@ export function BuyPage() {
                                 <p className="text-[11px] font-medium leading-tight text-slate-500">I'll help you find the perfect property.</p>
 
                                 {/* Pointing triangle facing left toward the mascot */}
-                                <div className="absolute top-[70%] -left-1 w-2.5 h-2.5 bg-white border-l border-b border-slate-100/90 rotate-20"></div>
+                                <div className="absolute top-[70%] -left-1 w-2.5 h-2.5 bg-white border-l border-b border-slate-300/90 rotate-20"></div>
                             </div>
 
                         </div>
 
                         {/* Central Search Card Hub */}
-                        <div className="bg-white border border-slate-100 shadow-xl shadow-blue-900/25 rounded-2xl p-5 space-y-4 relative z-10">
+                        <div className="bg-white border border-slate-300 shadow-xl shadow-blue-900/25 rounded-2xl p-5 space-y-4 relative z-10">
 
                             {/* Active Operations Tabs Row */}
-                            <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+                            <div className="flex items-center gap-2 border-b border-slate-300 pb-3">
                                 <button
                                     onClick={() => setActiveSearchTab?.('buy')}
                                     className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
@@ -159,7 +159,7 @@ export function BuyPage() {
                                     <input
                                         type="text"
                                         placeholder="Country, City, or Location"
-                                        className="w-full border border-slate-200 rounded-xl p-3 focus:outline-hidden focus:border-blue-500 font-medium placeholder:text-slate-300 h-[44px] bg-white"
+                                        className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-500 font-medium placeholder:text-slate-300 h-[44px] bg-white"
                                     />
                                 </div>
 
@@ -167,7 +167,7 @@ export function BuyPage() {
                                 <div className="lg:col-span-2 space-y-1.5">
                                     <label className="font-bold text-slate-400 block px-0.5">Property Type</label>
                                     <div className="relative">
-                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                        <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
                                             <option>All Types</option>
                                             {PROPERTY_TYPES_MOCK.map((type, idx) => (
                                                 <option key={idx} value={type.label.toLowerCase()}>
@@ -183,7 +183,7 @@ export function BuyPage() {
                                 <div className="lg:col-span-2 space-y-1.5">
                                     <label className="font-bold text-slate-400 block px-0.5">Price Range</label>
                                     <div className="relative">
-                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                        <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
                                             <option>Any Price</option>
                                         </select>
                                         <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
@@ -194,7 +194,7 @@ export function BuyPage() {
                                 <div className="lg:col-span-2 space-y-1.5">
                                     <label className="font-bold text-slate-400 block px-0.5">Bedrooms</label>
                                     <div className="relative">
-                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                        <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
                                             <option>Any</option>
                                         </select>
                                         <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
@@ -203,7 +203,7 @@ export function BuyPage() {
 
                                 {/* Action Buttons Section */}
                                 <div className="lg:col-span-3 flex items-center gap-2">
-                                    <button className="flex items-center justify-center gap-1.5 border border-slate-200 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer h-[44px] min-w-[110px]">
+                                    <button className="flex items-center justify-center gap-1.5 border border-slate-300 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer h-[44px] min-w-[110px]">
                                         <SlidersHorizontal className="w-3.5 h-3.5" /> More Filters
                                     </button>
                                     <button className="flex-1 flex items-center justify-center gap-2 bg-[#0066FF] hover:bg-blue-700 text-white font-bold p-3 rounded-xl shadow-xs transition-all cursor-pointer h-[44px] whitespace-nowrap px-4">
@@ -214,19 +214,19 @@ export function BuyPage() {
                             </div>
 
                             {/* Popular Searches footer tags mapped with POPULAR_SEARCHES mock data array */}
-                            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-[11px] border-t border-slate-50">
+                            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-[11px] border-t border-slate-300">
                                 <div className="flex flex-wrap items-center gap-2">
                                     <span className="text-slate-400 font-bold">Popular Searches:</span>
                                     {POPULAR_SEARCHES.map((tag, i) => (
                                         <span
                                             key={i}
-                                            className="bg-slate-100 hover:bg-slate-200/80 text-slate-500 font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-colors"
+                                            className="bg-slate-300 hover:bg-slate-300/80 text-slate-500 font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-colors"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <button className="flex items-center gap-1.5 text-slate-500 hover:text-[#0066FF] font-bold border border-slate-200 rounded-lg px-3 py-1 bg-white cursor-pointer transition-colors">
+                                <button className="flex items-center gap-1.5 text-slate-500 hover:text-[#0066FF] font-bold border border-slate-300 rounded-lg px-3 py-1 bg-white cursor-pointer transition-colors">
                                     <Heart className="w-3 h-3 text-slate-400" /> Save Search
                                 </button>
                             </div>
@@ -241,13 +241,13 @@ export function BuyPage() {
             <main className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                 {/* LEFT COLUMN: FILTERS INTERACTION SIDEBAR MATRIX */}
-                <aside className="lg:col-span-3 bg-white border border-slate-100 rounded-2xl p-5 space-y-6 shadow-2xs self-start">
-                    <div className="flex justify-between items-center pb-2 border-b border-slate-100">
+                <aside className="lg:col-span-3 bg-white border border-slate-300 rounded-2xl p-5 space-y-6 shadow-2xs self-start">
+                    <div className="flex justify-between items-center pb-2 border-b border-slate-300">
                         <h2 className="text-sm font-black text-[#0C1E3E] uppercase tracking-wider">Filters</h2>
                         <button className="text-xs font-bold text-[#0066FF] hover:underline cursor-pointer">Reset All</button>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Location</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
@@ -256,7 +256,7 @@ export function BuyPage() {
                             <div>
                                 <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">Country</label>
                                 <div className="relative">
-                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-8 focus:outline-hidden font-semibold text-slate-600 bg-white">
+                                    <select className="w-full appearance-none border border-slate-300 rounded-lg p-2.5 pr-8 focus:outline-hidden font-semibold text-slate-600 bg-white">
                                         <option>All Countries</option>
                                     </select>
                                     <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-3 pointer-events-none" />
@@ -264,12 +264,12 @@ export function BuyPage() {
                             </div>
                             <div>
                                 <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">City</label>
-                                <input type="text" placeholder="Any City or Location" className="w-full border border-slate-200 rounded-lg p-2.5 text-slate-600 placeholder:text-slate-300 font-medium focus:outline-hidden focus:border-blue-500" />
+                                <input type="text" placeholder="Any City or Location" className="w-full border border-slate-300 rounded-lg p-2.5 text-slate-600 placeholder:text-slate-300 font-medium focus:outline-hidden focus:border-blue-500" />
                             </div>
                         </div>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Property Type</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
@@ -287,13 +287,13 @@ export function BuyPage() {
                         </div>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Price Range</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                         </div>
                         <div className="space-y-4">
-                            <div className="h-1 bg-slate-100 rounded-full relative mx-1 mt-2">
+                            <div className="h-1 bg-slate-300 rounded-full relative mx-1 mt-2">
                                 <div className="absolute left-[15%] right-[20%] h-full bg-[#0066FF]"></div>
                                 <div className="absolute left-[15%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white border-2 border-[#0066FF] rounded-full shadow-xs cursor-pointer"></div>
                                 <div className="absolute right-[20%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white border-2 border-[#0066FF] rounded-full shadow-xs cursor-pointer"></div>
@@ -305,7 +305,7 @@ export function BuyPage() {
                             <div className="text-xs">
                                 <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">Currency</label>
                                 <div className="relative">
-                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
+                                    <select className="w-full appearance-none border border-slate-300 rounded-lg p-2.5 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
                                         <option>USD</option>
                                     </select>
                                     <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-3 pointer-events-none" />
@@ -314,49 +314,49 @@ export function BuyPage() {
                         </div>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Bedrooms</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                         </div>
                         <div className="grid grid-cols-6 gap-1 text-[11px] font-bold text-center">
                             {['Any', '1+', '2+', '3+', '4+', '5+'].map((opt, i) => (
-                                <button key={i} className={`py-1.5 rounded-md border border-slate-100 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-100 text-slate-600'}`}>{opt}</button>
+                                <button key={i} className={`py-1.5 rounded-md border border-slate-300 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-300 text-slate-600'}`}>{opt}</button>
                             ))}
                         </div>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Bathrooms</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                         </div>
                         <div className="grid grid-cols-6 gap-1 text-[11px] font-bold text-center">
                             {['Any', '1+', '2+', '3+', '4+', '5+'].map((opt, i) => (
-                                <button key={i} className={`py-1.5 rounded-md border border-slate-100 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-100 text-slate-600'}`}>{opt}</button>
+                                <button key={i} className={`py-1.5 rounded-md border border-slate-300 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-300 text-slate-600'}`}>{opt}</button>
                             ))}
                         </div>
                     </div>
 
-                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                    <div className="space-y-3 pb-4 border-b border-slate-300">
                         <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
                             <span>Property Size</span>
                             <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                         </div>
                         <div className="space-y-2 text-xs">
                             <div className="grid grid-cols-2 gap-2">
-                                <input type="text" placeholder="Min Size" className="border border-slate-200 rounded-lg p-2.5 focus:outline-hidden font-medium" />
+                                <input type="text" placeholder="Min Size" className="border border-slate-300 rounded-lg p-2.5 focus:outline-hidden font-medium" />
                                 <div className="relative">
-                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
+                                    <select className="w-full appearance-none border border-slate-300 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
                                         <option>sqft</option>
                                     </select>
                                     <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-3 pointer-events-none" />
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-2">
-                                <input type="text" placeholder="Max Size" className="border border-slate-200 rounded-lg p-2.5 focus:outline-hidden font-medium" />
+                                <input type="text" placeholder="Max Size" className="border border-slate-300 rounded-lg p-2.5 focus:outline-hidden font-medium" />
                                 <div className="relative">
-                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
+                                    <select className="w-full appearance-none border border-slate-300 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
                                         <option>sqft</option>
                                     </select>
                                     <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-3 pointer-events-none" />
@@ -388,7 +388,7 @@ export function BuyPage() {
                 {/* RIGHT COLUMN: SEARCH RESULT LISTINGS FEED MATRIX */}
                 <section className="lg:col-span-9 space-y-6">
 
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white border border-slate-100 rounded-xl p-3 shadow-2xs">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white border border-slate-300 rounded-xl p-3 shadow-2xs">
                         <div className="text-sm font-black text-[#0C1E3E]">
                             12,540 <span className="text-slate-400 font-bold ml-0.5">Properties Found</span>
                         </div>
@@ -397,13 +397,13 @@ export function BuyPage() {
                             <div className="flex items-center gap-1.5">
                                 <span className="text-slate-400 font-bold whitespace-nowrap">Sort by:</span>
                                 <div className="relative">
-                                    <select className="appearance-none border border-slate-200 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-bold bg-white text-slate-700">
+                                    <select className="appearance-none border border-slate-300 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-bold bg-white text-slate-700">
                                         <option>Newest First</option>
                                     </select>
                                     <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-2.5 pointer-events-none" />
                                 </div>
                             </div>
-                            <div className="flex items-center gap-1 border-l border-slate-100 pl-3">
+                            <div className="flex items-center gap-1 border-l border-slate-300 pl-3">
                                 <button onClick={() => setViewType('grid')} className={`p-2 rounded-lg cursor-pointer ${viewType === 'grid' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:bg-slate-50'}`}>
                                     <Grid className="w-4 h-4" />
                                 </button>
@@ -417,9 +417,9 @@ export function BuyPage() {
                     {/* Core Properties Data integration mapping directly from decoupled source */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {PROPERTIES_DATA.map((prop) => (
-                            <div key={prop.id} className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-2xs hover:shadow-lg hover:border-slate-200/60 transition-all group flex flex-col justify-between">
+                            <div key={prop.id} className="bg-white border border-slate-300 rounded-2xl overflow-hidden shadow-2xs hover:shadow-lg hover:border-slate-400/60 transition-all group flex flex-col justify-between">
                                 <div>
-                                    <div className="h-44 bg-slate-100 relative overflow-hidden">
+                                    <div className="h-44 bg-slate-300 relative overflow-hidden">
                                         <img src={prop.image} alt={prop.title} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
 
                                         <div className="absolute top-3 left-3 flex flex-col gap-1 items-start z-10">
@@ -465,9 +465,9 @@ export function BuyPage() {
                                 </div>
 
                                 <div className="p-4 pt-0">
-                                    <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[11px]">
+                                    <div className="flex items-center justify-between pt-2 border-t border-slate-300 text-[11px]">
                                         <div className="flex items-center gap-2 truncate">
-                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center font-bold text-[9px] text-[#0066FF] border border-blue-50 shrink-0 uppercase">
+                                            <div className="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center font-bold text-[9px] text-[#0066FF] border border-blue-50 shrink-0 uppercase">
                                                 {prop.agency.name.substring(0, 2)}
                                             </div>
                                             <div className="truncate">
@@ -482,21 +482,21 @@ export function BuyPage() {
                         ))}
                     </div>
 
-                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-slate-100 text-xs">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-slate-300 text-xs">
                         <div className="flex items-center gap-1 font-bold text-slate-500">
-                            <button className="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer text-slate-300"><ChevronLeft className="w-3.5 h-3.5" /></button>
+                            <button className="p-2 border border-slate-300 rounded-lg hover:bg-slate-150 cursor-pointer text-slate-300"><ChevronLeft className="w-3.5 h-3.5" /></button>
                             <button className="w-8 h-8 rounded-lg bg-[#0066FF] text-white font-black cursor-pointer">1</button>
-                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">2</button>
-                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">3</button>
+                            <button className="w-8 h-8 rounded-lg border border-slate-300 hover:bg-slate-150 cursor-pointer">2</button>
+                            <button className="w-8 h-8 rounded-lg border border-slate-300 hover:bg-slate-50 cursor-pointer">3</button>
                             <span className="px-1 text-slate-300 font-medium">...</span>
-                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">417</button>
-                            <button className="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer"><ChevronRight className="w-3.5 h-3.5" /></button>
+                            <button className="w-8 h-8 rounded-lg border border-slate-300 hover:bg-slate-150 cursor-pointer">417</button>
+                            <button className="p-2 border border-slate-300 rounded-lg hover:bg-slate-150 cursor-pointer"><ChevronRight className="w-3.5 h-3.5" /></button>
                         </div>
 
                         <div className="flex items-center gap-2 text-slate-400 font-bold">
                             <span>Show:</span>
                             <div className="relative">
-                                <select className="appearance-none border border-slate-200 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
+                                <select className="appearance-none border border-slate-300 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
                                     <option>12 per page</option>
                                 </select>
                                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-2 pointer-events-none" />
@@ -508,7 +508,7 @@ export function BuyPage() {
             </main>
 
             {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
-            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-60px] border-t border-slate-100">
+            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-60px] border-t border-slate-300">
                 <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-6 relative">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32">
 
