@@ -21,7 +21,7 @@ export function HeroSection() {
       <section className="max-w-7xl mx-auto px-6 pt-2 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-1 items-center">
 
         {/* Column 1: Left Frame Text & Badges (Occupies 4 Columns) */}
-        <div className="lg:col-span-3 space-y-6 z-20 pointer-events-auto">
+        <div className="lg:col-span-3 space-y-7 z-20 pointer-events-auto">
           <h1 className="text-3xl sm:text-4xl lg:text-[36px] font-black text-slate-900 tracking-tight leading-[1.15]">
             The World of <br />
             <span className="text-[#0066FF]">Real Estate</span> <br />
