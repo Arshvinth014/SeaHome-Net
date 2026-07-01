@@ -4,6 +4,7 @@ import { Footer } from './layouts/Footer';
 import { HomePage } from './pages/HomePage';
 import { InvestPage } from './pages/InvestPage';
 import { CountryPage } from './pages/CountryPage';
+import { BuyPage } from './pages/BuyPage';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/buy" element={<BuyPage />} />
         <Route path="/invest" element={<InvestPage />} />
         <Route path="/country/:countryId" element={<CountryPage />} />
         <Route path="*" element={<HomePage />} />
