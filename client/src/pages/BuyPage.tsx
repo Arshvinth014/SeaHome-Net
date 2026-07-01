@@ -1,7 +1,676 @@
+import { useState } from 'react';
+import {
+    ChevronDown,
+    Heart,
+    Search,
+    SlidersHorizontal,
+    Grid,
+    TrendingUp,
+    Home,
+    List,
+    MapPin,
+    Bed,
+    KeyRound,
+    Bath,
+    Maximize2,
+    ChevronLeft,
+    ChevronRight,
+    ShieldCheck,
+    Lock,
+    Globe,
+    UserCheck,
+    Mail,
+    Phone,
+    ArrowUp
+} from 'lucide-react';
+
+// Import decoupled mock structures
+import { PROPERTIES_DATA, POPULAR_SEARCHES, PROPERTY_TYPES_MOCK, MORE_FEATURES_MOCK } from '../config/buyMock';
+
+interface PropertyHeroSectionProps {
+    activeSearchTab: 'buy' | 'rent' | 'invest';
+    setActiveSearchTab: (tab: 'buy' | 'rent' | 'invest') => void;
+}
+
+// Custom inline SVG replacements for brand social icons
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+);
+
+const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+    </svg>
+);
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+);
+
+const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+        <path d="m10 15 5-3-5-3z" />
+    </svg>
+);
+
 export function BuyPage() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Hello World</h1>
-    </div>
-  );
+    const [activeSearchTab, setActiveSearchTab] = useState<'buy' | 'rent' | 'invest'>('buy');
+    const [viewType, setViewType] = useState<'grid' | 'list'>('grid');
+
+    return (
+        <div className="w-full bg-[#FAFCFF] min-h-screen font-sans text-slate-800 antialiased">
+            {/* HERO REGION CONTROLLER BLOCK */}
+            <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 relative overflow-hidden">
+
+                {/* 100% Exact Skyline Image Matching background layer from image_c7dbff.jpg */}
+                <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
+                    <img
+                        src="../../public/buyPageHero.png"
+                        alt="Skyline Backdrop"
+                        className="w-full max-w-[1400px] h-[200px] object-contain object-bottom opacity-40 mix-blend-multiply md:mb-[200px]"
+                    />
+                </div>
+
+                <div className="max-w-[1400px] mx-auto relative z-10">
+
+                    {/* Breadcrumbs Layout */}
+                    <div className="text-xs font-semibold text-slate-400 flex items-center gap-1.5 py-2">
+                        <span>Home</span>
+                        <ChevronRight className="w-3 h-3 text-slate-300" />
+                        <span className="text-slate-600 font-bold">Buy</span>
+                    </div>
+
+                    {/* Hero Title Section */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-2 relative">
+                        <div className="lg:col-span-8 space-y-2">
+                            <h1 className="text-3xl sm:text-4xl font-black text-[#0C1E3E] tracking-tight">Buy Properties</h1>
+                            <p className="text-slate-500 text-sm font-medium">Find your perfect property from verified listings worldwide.</p>
+                        </div>
+                    </div>
+
+                    {/* Main Interface Wrapper with Precise Bird Overlap from image_c7dbff.jpg */}
+                    <div className="relative mt-6">
+
+                        {/* Bird Mascot Container floating directly on top of the search card border */}
+                        <div className="absolute right-4 md:right-12 top-[-80px] flex items-center gap-3 z-20 pointer-events-none">
+
+                            {/* Mascot Bird Image Asset Wrapper */}
+                            <div className="w-48 h-48 md:w-48 md:h-48 relative shrink-0 pointer-events-auto left-7 mt-[-50px]">
+                                <img
+                                    src="../../public/BlueBirdBuyPage.png"
+                                    alt="Seahome Mascot Hero Asset"
+                                    className="w-full h-full object-contain object-bottom"
+                                />
+                            </div>
+
+                            {/* The Chat Bubble: Placed to the right of the bird, arrow pointing left */}
+                            <div className="bg-white text-slate-800 shadow-md border border-slate-100/90 rounded-2xl p-3.5 max-w-[195px] relative pointer-events-auto left-2 mt-[-90px]">
+                                <span className="font-bold text-[#0C1E3E] text-xs block mb-0.5">Hi! I'm Seahome 👋</span>
+                                <p className="text-[11px] font-medium leading-tight text-slate-500">I'll help you find the perfect property.</p>
+
+                                {/* Pointing triangle facing left toward the mascot */}
+                                <div className="absolute top-[70%] -left-1 w-2.5 h-2.5 bg-white border-l border-b border-slate-100/90 rotate-20"></div>
+                            </div>
+
+                        </div>
+
+                        {/* Central Search Card Hub */}
+                        <div className="bg-white border border-slate-100 shadow-xl shadow-blue-900/5 rounded-2xl p-5 space-y-4 relative z-10">
+
+                            {/* Active Operations Tabs Row */}
+                            <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+                                <button
+                                    onClick={() => setActiveSearchTab?.('buy')}
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                        }`}
+                                >
+                                    <Home className="w-3.5 h-3.5" /> Buy
+                                </button>
+                                <button
+                                    onClick={() => setActiveSearchTab?.('rent')}
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                        }`}
+                                >
+                                    <KeyRound className="w-3.5 h-3.5" /> Rent
+                                </button>
+                                <button
+                                    onClick={() => setActiveSearchTab?.('invest')}
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                        }`}
+                                >
+                                    <TrendingUp className="w-3.5 h-3.5" /> Invest
+                                </button>
+                            </div>
+
+                            {/* Multi-tier Dropdown Filter System Input Fields Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
+
+                                {/* Where input section */}
+                                <div className="lg:col-span-3 space-y-1.5">
+                                    <label className="font-bold text-slate-400 block px-0.5">Where</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Country, City, or Location"
+                                        className="w-full border border-slate-200 rounded-xl p-3 focus:outline-hidden focus:border-blue-500 font-medium placeholder:text-slate-300 h-[44px] bg-white"
+                                    />
+                                </div>
+
+                                {/* Property Type selection mapped with PROPERTY_TYPES_MOCK */}
+                                <div className="lg:col-span-2 space-y-1.5">
+                                    <label className="font-bold text-slate-400 block px-0.5">Property Type</label>
+                                    <div className="relative">
+                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                            <option>All Types</option>
+                                            {PROPERTY_TYPES_MOCK.map((type, idx) => (
+                                                <option key={idx} value={type.label.toLowerCase()}>
+                                                    {type.label} ({type.count})
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                                    </div>
+                                </div>
+
+                                {/* Price Range box section */}
+                                <div className="lg:col-span-2 space-y-1.5">
+                                    <label className="font-bold text-slate-400 block px-0.5">Price Range</label>
+                                    <div className="relative">
+                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                            <option>Any Price</option>
+                                        </select>
+                                        <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                                    </div>
+                                </div>
+
+                                {/* Bedrooms selector */}
+                                <div className="lg:col-span-2 space-y-1.5">
+                                    <label className="font-bold text-slate-400 block px-0.5">Bedrooms</label>
+                                    <div className="relative">
+                                        <select className="w-full appearance-none border border-slate-200 rounded-xl p-3 pr-8 focus:outline-hidden font-bold text-slate-600 bg-white h-[44px]">
+                                            <option>Any</option>
+                                        </select>
+                                        <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                                    </div>
+                                </div>
+
+                                {/* Action Buttons Section */}
+                                <div className="lg:col-span-3 flex items-center gap-2">
+                                    <button className="flex items-center justify-center gap-1.5 border border-slate-200 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer h-[44px] min-w-[110px]">
+                                        <SlidersHorizontal className="w-3.5 h-3.5" /> More Filters
+                                    </button>
+                                    <button className="flex-1 flex items-center justify-center gap-2 bg-[#0066FF] hover:bg-blue-700 text-white font-bold p-3 rounded-xl shadow-xs transition-all cursor-pointer h-[44px] whitespace-nowrap px-4">
+                                        <Search className="w-4 h-4 flex-shrink-0" />
+                                        Search properties
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Popular Searches footer tags mapped with POPULAR_SEARCHES mock data array */}
+                            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-[11px] border-t border-slate-50">
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <span className="text-slate-400 font-bold">Popular Searches:</span>
+                                    {POPULAR_SEARCHES.map((tag, i) => (
+                                        <span
+                                            key={i}
+                                            className="bg-slate-100 hover:bg-slate-200/80 text-slate-500 font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-colors"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <button className="flex items-center gap-1.5 text-slate-500 hover:text-[#0066FF] font-bold border border-slate-200 rounded-lg px-3 py-1 bg-white cursor-pointer transition-colors">
+                                    <Heart className="w-3 h-3 text-slate-400" /> Save Search
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* MAIN TWO-COLUMN CONTENT REGION */}
+            <main className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                {/* LEFT COLUMN: FILTERS INTERACTION SIDEBAR MATRIX */}
+                <aside className="lg:col-span-3 bg-white border border-slate-100 rounded-2xl p-5 space-y-6 shadow-2xs self-start">
+                    <div className="flex justify-between items-center pb-2 border-b border-slate-100">
+                        <h2 className="text-sm font-black text-[#0C1E3E] uppercase tracking-wider">Filters</h2>
+                        <button className="text-xs font-bold text-[#0066FF] hover:underline cursor-pointer">Reset All</button>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Location</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="space-y-2 text-xs">
+                            <div>
+                                <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">Country</label>
+                                <div className="relative">
+                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-8 focus:outline-hidden font-semibold text-slate-600 bg-white">
+                                        <option>All Countries</option>
+                                    </select>
+                                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-3 pointer-events-none" />
+                                </div>
+                            </div>
+                            <div>
+                                <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">City</label>
+                                <input type="text" placeholder="Any City or Location" className="w-full border border-slate-200 rounded-lg p-2.5 text-slate-600 placeholder:text-slate-300 font-medium focus:outline-hidden focus:border-blue-500" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Property Type</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="space-y-2 text-xs font-bold text-slate-500">
+                            {PROPERTY_TYPES_MOCK.map((item, idx) => (
+                                <label key={idx} className="flex items-center justify-between cursor-pointer group">
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" className="rounded-sm border-slate-300 text-[#0066FF] focus:ring-[#0066FF] w-3.5 h-3.5" />
+                                        <span className="group-hover:text-slate-800 transition-colors">{item.label}</span>
+                                    </div>
+                                    <span className="text-[10.5px] text-slate-400 font-mono font-medium">{item.count}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Price Range</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="space-y-4">
+                            <div className="h-1 bg-slate-100 rounded-full relative mx-1 mt-2">
+                                <div className="absolute left-[15%] right-[20%] h-full bg-[#0066FF]"></div>
+                                <div className="absolute left-[15%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white border-2 border-[#0066FF] rounded-full shadow-xs cursor-pointer"></div>
+                                <div className="absolute right-[20%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white border-2 border-[#0066FF] rounded-full shadow-xs cursor-pointer"></div>
+                            </div>
+                            <div className="flex justify-between items-center text-[10.5px] font-bold text-slate-400">
+                                <span>$0</span>
+                                <span>$5,000,000+</span>
+                            </div>
+                            <div className="text-xs">
+                                <label className="text-[10px] font-bold text-slate-400 block mb-1 uppercase">Currency</label>
+                                <div className="relative">
+                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
+                                        <option>USD</option>
+                                    </select>
+                                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-3 pointer-events-none" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Bedrooms</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="grid grid-cols-6 gap-1 text-[11px] font-bold text-center">
+                            {['Any', '1+', '2+', '3+', '4+', '5+'].map((opt, i) => (
+                                <button key={i} className={`py-1.5 rounded-md border border-slate-100 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-100 text-slate-600'}`}>{opt}</button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Bathrooms</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="grid grid-cols-6 gap-1 text-[11px] font-bold text-center">
+                            {['Any', '1+', '2+', '3+', '4+', '5+'].map((opt, i) => (
+                                <button key={i} className={`py-1.5 rounded-md border border-slate-100 cursor-pointer transition-colors ${i === 0 ? 'bg-[#0066FF] text-white border-[#0066FF]' : 'bg-slate-50 hover:bg-slate-100 text-slate-600'}`}>{opt}</button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-3 pb-4 border-b border-slate-100">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>Property Size</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="space-y-2 text-xs">
+                            <div className="grid grid-cols-2 gap-2">
+                                <input type="text" placeholder="Min Size" className="border border-slate-200 rounded-lg p-2.5 focus:outline-hidden font-medium" />
+                                <div className="relative">
+                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
+                                        <option>sqft</option>
+                                    </select>
+                                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-3 pointer-events-none" />
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2">
+                                <input type="text" placeholder="Max Size" className="border border-slate-200 rounded-lg p-2.5 focus:outline-hidden font-medium" />
+                                <div className="relative">
+                                    <select className="w-full appearance-none border border-slate-200 rounded-lg p-2.5 pr-6 focus:outline-hidden font-bold bg-white text-slate-500">
+                                        <option>sqft</option>
+                                    </select>
+                                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-3 pointer-events-none" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="space-y-3">
+                        <div className="flex justify-between items-center text-xs font-black text-slate-700 uppercase tracking-wide">
+                            <span>More Features</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                        </div>
+                        <div className="space-y-2 text-xs font-bold text-slate-500">
+                            {MORE_FEATURES_MOCK.map((feat, i) => (
+                                <label key={i} className="flex items-center justify-between cursor-pointer group">
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" className="rounded-sm border-slate-300 text-[#0066FF] focus:ring-[#0066FF] w-3.5 h-3.5" />
+                                        <span className="group-hover:text-slate-800 transition-colors">{feat.label}</span>
+                                    </div>
+                                    <span className="text-[10.5px] text-slate-400 font-mono font-medium">{feat.count}</span>
+                                </label>
+                            ))}
+                        </div>
+                        <button className="w-full text-center text-xs font-bold text-[#0066FF] hover:underline pt-2 cursor-pointer">Show More</button>
+                    </div>
+                </aside>
+
+                {/* RIGHT COLUMN: SEARCH RESULT LISTINGS FEED MATRIX */}
+                <section className="lg:col-span-9 space-y-6">
+
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white border border-slate-100 rounded-xl p-3 shadow-2xs">
+                        <div className="text-sm font-black text-[#0C1E3E]">
+                            12,540 <span className="text-slate-400 font-bold ml-0.5">Properties Found</span>
+                        </div>
+
+                        <div className="flex items-center gap-3 w-full sm:w-auto text-xs justify-between sm:justify-end">
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-slate-400 font-bold whitespace-nowrap">Sort by:</span>
+                                <div className="relative">
+                                    <select className="appearance-none border border-slate-200 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-bold bg-white text-slate-700">
+                                        <option>Newest First</option>
+                                    </select>
+                                    <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-2.5 pointer-events-none" />
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-1 border-l border-slate-100 pl-3">
+                                <button onClick={() => setViewType('grid')} className={`p-2 rounded-lg cursor-pointer ${viewType === 'grid' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:bg-slate-50'}`}>
+                                    <Grid className="w-4 h-4" />
+                                </button>
+                                <button onClick={() => setViewType('list')} className={`p-2 rounded-lg cursor-pointer ${viewType === 'list' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:bg-slate-50'}`}>
+                                    <List className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Core Properties Data integration mapping directly from decoupled source */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {PROPERTIES_DATA.map((prop) => (
+                            <div key={prop.id} className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-2xs hover:shadow-lg hover:border-slate-200/60 transition-all group flex flex-col justify-between">
+                                <div>
+                                    <div className="h-44 bg-slate-100 relative overflow-hidden">
+                                        <img src={prop.image} alt={prop.title} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+
+                                        <div className="absolute top-3 left-3 flex flex-col gap-1 items-start z-10">
+                                            {prop.badge && (
+                                                <span className={`text-[9px] font-black tracking-wider px-2 py-0.5 rounded text-white uppercase shadow-xs ${prop.badge === 'FEATURED' ? 'bg-blue-600' : prop.badge === 'NEW' ? 'bg-emerald-500' : 'bg-rose-500'
+                                                    }`}>
+                                                    {prop.badge}
+                                                </span>
+                                            )}
+                                            <span className="bg-sky-400/90 backdrop-blur-xs text-white text-[9px] font-black px-2 py-0.5 rounded tracking-wide uppercase">{prop.type}</span>
+                                        </div>
+
+                                        {prop.discount && (
+                                            <span className="absolute top-3 right-12 bg-rose-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-sm shadow-xs z-10">{prop.discount}</span>
+                                        )}
+
+                                        <button className="absolute top-3 right-3 z-10 w-7 h-7 bg-white/90 backdrop-blur-xs text-slate-400 hover:text-rose-500 rounded-full flex items-center justify-center shadow-xs transition-colors cursor-pointer">
+                                            <Heart className="w-3.5 h-3.5" />
+                                        </button>
+                                    </div>
+
+                                    <div className="p-4 space-y-1.5">
+                                        <h3 className="font-black text-slate-800 text-sm group-hover:text-[#0066FF] transition-colors truncate">{prop.title}</h3>
+                                        <p className="text-[11px] font-bold text-slate-400 flex items-center gap-1">
+                                            <MapPin className="w-3 h-3 text-slate-300 shrink-0" /> {prop.location}
+                                        </p>
+
+                                        <div className="pt-1 flex items-baseline gap-1.5">
+                                            <span className="text-sm font-black text-slate-900">{prop.price}</span>
+                                            {prop.discount && <span className="text-[10px] text-slate-400 font-medium line-through font-mono">$850,000 USD</span>}
+                                        </div>
+
+                                        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 text-[10.5px] font-bold text-slate-500 border-t border-slate-50">
+                                            {prop.specs.beds && (
+                                                <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.beds} Beds</span>
+                                            )}
+                                            {prop.specs.baths && (
+                                                <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.baths} Baths</span>
+                                            )}
+                                            <span className="flex items-center gap-1"><Maximize2 className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.size}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 pt-0">
+                                    <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[11px]">
+                                        <div className="flex items-center gap-2 truncate">
+                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center font-bold text-[9px] text-[#0066FF] border border-blue-50 shrink-0 uppercase">
+                                                {prop.agency.name.substring(0, 2)}
+                                            </div>
+                                            <div className="truncate">
+                                                <span className="font-bold text-slate-700 block truncate leading-tight">{prop.agency.name}</span>
+                                                <span className="text-[9px] font-semibold text-emerald-500 uppercase tracking-wide">Verified Agency</span>
+                                            </div>
+                                        </div>
+                                        <span className="text-[10.5px] font-black text-amber-500 font-mono shrink-0">★ {prop.agency.rating}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-slate-100 text-xs">
+                        <div className="flex items-center gap-1 font-bold text-slate-500">
+                            <button className="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer text-slate-300"><ChevronLeft className="w-3.5 h-3.5" /></button>
+                            <button className="w-8 h-8 rounded-lg bg-[#0066FF] text-white font-black cursor-pointer">1</button>
+                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">2</button>
+                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">3</button>
+                            <span className="px-1 text-slate-300 font-medium">...</span>
+                            <button className="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">417</button>
+                            <button className="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer"><ChevronRight className="w-3.5 h-3.5" /></button>
+                        </div>
+
+                        <div className="flex items-center gap-2 text-slate-400 font-bold">
+                            <span>Show:</span>
+                            <div className="relative">
+                                <select className="appearance-none border border-slate-200 rounded-lg py-1.5 pl-3 pr-8 focus:outline-hidden font-black text-slate-700 bg-white">
+                                    <option>12 per page</option>
+                                </select>
+                                <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2 top-2 pointer-events-none" />
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+
+            {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
+            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-60px] border-t border-slate-100">
+                <div className="bg-white border border-slate-100/80 shadow-md shadow-blue-900/[0.01] rounded-2xl p-6 relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32">
+
+                        <div className="flex items-start gap-3">
+                            <div className="p-2 rounded-xl bg-blue-50 text-[#0066FF] shrink-0"><ShieldCheck className="w-5 h-5" /></div>
+                            <div className="space-y-0.5">
+                                <h4 className="font-black text-slate-800 text-xs uppercase tracking-wide">Verified Listings</h4>
+                                <p className="text-[11px] leading-relaxed text-slate-400 font-medium">All properties are verified for your safety.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                            <div className="p-2 rounded-xl bg-blue-50 text-[#0066FF] shrink-0"><Lock className="w-5 h-5" /></div>
+                            <div className="space-y-0.5">
+                                <h4 className="font-black text-slate-800 text-xs uppercase tracking-wide">Secure Transactions</h4>
+                                <p className="text-[11px] leading-relaxed text-slate-400 font-medium">We ensure safe and secure transactions.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                            <div className="p-2 rounded-xl bg-blue-50 text-[#0066FF] shrink-0"><Globe className="w-5 h-5" /></div>
+                            <div className="space-y-0.5">
+                                <h4 className="font-black text-slate-800 text-xs uppercase tracking-wide">Global Coverage</h4>
+                                <p className="text-[11px] leading-relaxed text-slate-400 font-medium">Properties in 85+ countries worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                            <div className="p-2 rounded-xl bg-blue-50 text-[#0066FF] shrink-0"><UserCheck className="w-5 h-5" /></div>
+                            <div className="space-y-0.5">
+                                <h4 className="font-black text-slate-800 text-xs uppercase tracking-wide">Expert Support</h4>
+                                <p className="text-[11px] leading-relaxed text-slate-400 font-medium">Get help from real estate experts 24/7.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* MASCOT PLACEMENT 2 BOUNDING CONTAINER */}
+                    <div className="hidden lg:flex absolute mb-[80px] right-5 bottom-0 w-60 h-60 items-center justify-center z-20">
+                        <img src="../../public/BlueBirdBuyPage.png" alt="Seahome Mascot Trust Footer Asset" className="w-full h-full object-contain" />
+                    </div>
+                </div>
+            </section>
+
+            {/* MARKETING NEWSLETTER SIGNUP BANNER */}
+            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-4">
+                <div className="bg-[#004ACC] rounded-2xl p-6 lg:p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6 shadow-xl shadow-blue-900/10">
+                    <div className="space-y-1 text-center md:text-left">
+                        <h3 className="text-lg lg:text-xl font-black tracking-tight">Stay Updated with Global Real Estate Opportunities</h3>
+                        <p className="text-xs text-blue-100 font-medium">Subscribe to our newsletter and never miss out on the best deals.</p>
+                    </div>
+
+                    <div className="flex w-full md:w-auto max-w-md gap-2 shrink-0 text-xs font-medium">
+                        <input type="email" placeholder="Enter your email address" className="bg-white text-slate-800 px-4 py-3 rounded-xl focus:outline-hidden flex-1 md:w-64 placeholder:text-slate-300" />
+                        <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md cursor-pointer whitespace-nowrap">Subscribe</button>
+                    </div>
+                </div>
+            </section>
+
+            {/* BRAND FOOTER UTILITY FRAME */}
+            <footer className="w-full bg-[#030914] text-slate-400 border-t border-slate-900 text-xs pt-16 pb-6 px-4 lg:px-12 mt-12">
+                <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-900">
+
+                    <div className="col-span-2 lg:col-span-4 space-y-4">
+                        <div className="flex flex-col">
+                            <div className="flex items-center text-lg font-black tracking-tight text-white">
+                                Sea<span className="text-[#0066FF] font-extrabold mx-px">Home</span>Net
+                            </div>
+                            <span className="text-[7.5px] text-slate-600 uppercase font-bold tracking-wider">We Connect The World of Real Estate</span>
+                        </div>
+                        <p className="text-[11px] text-slate-500 leading-relaxed max-w-xs font-medium">
+                            A global real estate platform connecting investors, buyers, and trusted agencies across the world.
+                        </p>
+                        <div className="flex items-center gap-3 pt-2 text-slate-600">
+                            <span className="p-1.5 bg-slate-900/50 hover:bg-slate-900 hover:text-white rounded-lg cursor-pointer transition-colors"><FacebookIcon /></span>
+                            <span className="p-1.5 bg-slate-900/50 hover:bg-slate-900 hover:text-white rounded-lg cursor-pointer transition-colors"><LinkedinIcon /></span>
+                            <span className="p-1.5 bg-slate-900/50 hover:bg-slate-900 hover:text-white rounded-lg cursor-pointer transition-colors"><InstagramIcon /></span>
+                            <span className="p-1.5 bg-slate-900/50 hover:bg-slate-900 hover:text-white rounded-lg cursor-pointer transition-colors"><YoutubeIcon /></span>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-1.5 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">Buy</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer transition-colors">Search Properties</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Browse by Country</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Browse by City</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">New Properties</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Price Guide</li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-1.5 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">Invest</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer transition-colors">Investment Opportunities</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">ROI Calculator</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Market Insights</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Investment Guide</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Legal & Taxes</li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-1.5 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">Resources</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer transition-colors">Blog</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Market Reports</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Buying Guide</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">FAQs</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Glossary</li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-1.5 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">For Agencies</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer transition-colors">List Your Agency</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Agency Dashboard</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Partnership Program</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Agent Resources</li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-1.5 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">Support</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="hover:text-white cursor-pointer transition-colors">Help Center</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Terms of Use</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Privacy Policy</li>
+                            <li className="hover:text-white cursor-pointer transition-colors">Cookie Policy</li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-2 lg:col-span-2 space-y-3">
+                        <h4 className="text-white font-bold text-[10.5px] uppercase tracking-wider">Contact Us</h4>
+                        <ul className="space-y-2 text-[11px] text-slate-500 font-medium">
+                            <li className="flex items-center gap-2 text-slate-400 font-bold"><Mail className="w-3.5 h-3.5 text-slate-600" /> support@seahomenet.com</li>
+                            <li className="flex items-center gap-2 font-mono text-slate-400"><Phone className="w-3.5 h-3.5 text-slate-600" /> +1 234 567 8900</li>
+                            <li className="text-[10px] leading-relaxed text-slate-600 font-medium pt-1">
+                                📍 123 Ocean Drive, Suite 1000<br />Miami, FL 33139, USA
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div className="max-w-[1400px] mx-auto pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-600 font-medium gap-4">
+                    <p>© 2026 SeaHomeNet. All rights reserved.</p>
+                    <div className="flex items-center gap-6">
+                        <span className="hover:underline hover:text-slate-400 cursor-pointer transition-colors">Terms of Use</span>
+                        <span className="hover:underline hover:text-slate-400 cursor-pointer transition-colors">Privacy Policy</span>
+                        <span className="hover:underline hover:text-slate-400 cursor-pointer transition-colors">Sitemap</span>
+
+                        <button className="w-7 h-7 rounded-full bg-slate-900 border border-slate-800 text-slate-400 flex items-center justify-center hover:text-white transition-colors cursor-pointer shadow-xs">
+                            <ArrowUp className="w-3.5 h-3.5" />
+                        </button>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    );
 }
