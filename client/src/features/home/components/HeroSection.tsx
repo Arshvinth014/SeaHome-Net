@@ -72,11 +72,11 @@ export function HeroSection() {
             />
 
             {/* Live Property Marker: Tokyo */}
-            <div className="absolute top-[18%] right-[5%] bg-white p-1.5 rounded-xl shadow-xl border border-slate-100/80 flex items-center gap-2 z-10">
-              <div className="w-7 h-7 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0">
+            <div className="absolute top-[15%] right-[6%] bg-white p-1.5 rounded-xl shadow-xl border border-slate-100/80 flex items-center gap-2 z-10">
+              <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=100" className="w-full h-full object-cover" alt="Tokyo" />
               </div>
-              <div className="text-[8px] leading-tight pr-1">
+              <div className="text-[9px] leading-tight pr-1">
                 <p className="font-bold text-slate-900">Luxury Apartment</p>
                 <p className="text-slate-400">Tokyo, Japan</p>
                 <p className="text-slate-900 font-extrabold mt-0.5">$800,000 USD</p>
@@ -85,11 +85,11 @@ export function HeroSection() {
             <div className="absolute top-[30%] right-[8%] w-2 h-2 bg-red-500 rounded-full border-2 border-white shadow-sm z-10"></div>
 
             {/* Live Property Marker: Galle */}
-            <div className="absolute top-[42%] left-[58%] bg-white p-1.5 rounded-xl shadow-xl border border-slate-100/80 flex items-center gap-2 z-10">
-              <div className="w-7 h-7 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0">
+            <div className="absolute top-[40%] left-[53%] bg-white p-1.5 rounded-xl shadow-xl border border-slate-100/80 flex items-center gap-2 z-10">
+              <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=100" className="w-full h-full object-cover" alt="Galle" />
               </div>
-              <div className="text-[8px] leading-tight pr-1">
+              <div className="text-[9px] leading-tight pr-1">
                 <p className="font-bold text-slate-900">Beachfront Villa</p>
                 <p className="text-slate-400">Galle, Sri Lanka</p>
                 <p className="text-slate-900 font-extrabold mt-0.5">$1,150,000 USD</p>
@@ -102,7 +102,7 @@ export function HeroSection() {
 
         {/* Column 3: Interactive Assistant Panel (Occupies 3 Columns - Shifted Right) */}
         <div className="lg:col-span-2 w-full flex justify-end lg:justify-center z-10">
-          <div className="bg-white border border-slate-100 w-full max-w-[240px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-4 space-y-3">
+          <div className="bg-white border border-slate-400 w-full max-w-[240px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-4 space-y-3">
             <div className="leading-tight relative">
               <span className="absolute top-0 right-0 text-sm">👋</span>
               <p className="text-xs font-black text-slate-900 flex items-center gap-1">
@@ -141,7 +141,7 @@ export function HeroSection() {
 
       {/* 2. Structured Parameter Search Bar Section Matrix */}
       <div className="max-w-7xl mx-auto px-6 mt-12 relative z-30">
-        <div className="bg-white rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-100 p-5 space-y-5">
+        <div className="bg-white rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-300 p-5 space-y-5">
 
           {/* Tab Controls Selector Toggle */}
           <div className="flex gap-6 border-b border-slate-100 pb-2 text-xs font-bold text-slate-400">
@@ -159,7 +159,7 @@ export function HeroSection() {
           {/* Grid Selection Filters Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 items-end">
             <div className="lg:col-span-3">
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">What are you looking for?</label>
+              <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">What are you looking for?</label>
               <div className="relative">
                 <input
                   type="text"
