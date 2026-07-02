@@ -65,7 +65,7 @@ export function HeroSection() {
             
             {/* World Map Background Asset */}
             <img
-              src="url('../../public//HomePage.png')"
+              src="HomePage.png"
               alt="Global Network Grid"
               className="w-full h-full object-contain"
             />
