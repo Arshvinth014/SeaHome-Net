@@ -10,8 +10,7 @@ import {
   UserCheck, 
   MapPin, 
   Shield, 
-  TrendingUp, 
-  Smartphone 
+  TrendingUp
 } from 'lucide-react';
 
 export function InsightsAndTrust() {

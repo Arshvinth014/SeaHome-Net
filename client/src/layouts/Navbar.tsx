@@ -11,7 +11,6 @@ export function Navbar() {
   };
 
   const getLinkClass = (path: string) => {
-    const baseClass = "transition-colors";
     return isActive(path)
       ? "text-[#0066FF] border-b-2 border-[#0066FF] pb-1 font-semibold"
       : "text-slate-700 hover:text-slate-900";
