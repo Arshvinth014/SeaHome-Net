@@ -25,6 +25,7 @@ import {
     ChevronDown
 } from 'lucide-react';
 import { SRI_LANKA_PROPERTIES, SRI_LANKA_PROJECTS, TOP_LOCATIONS } from '../config/sriLankaData';
+import { useNavigate } from 'react-router-dom';
 
 // Custom lightweight SVG implementations for the removed Lucide brand icons
 const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -58,6 +59,7 @@ const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function CountryPage() {
     const [activeFilterTab, setActiveFilterTab] = useState<'buy' | 'rent' | 'invest'>('buy');
+    const navigate = useNavigate();
 
     return (
         <div className="w-full bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
@@ -109,7 +111,7 @@ export function CountryPage() {
                                 <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer">
                                     Explore Properties
                                 </button>
-                                <button className="border border-slate-300 bg-white hover:bg-slate-150 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center gap-2 transition-all cursor-pointer">
+                                <button onClick={() => navigate('/sl-homepage')} className="border border-slate-300 bg-white hover:bg-slate-150 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center gap-2 transition-all cursor-pointer">
                                     <Compass size={15} />
                                     Check Rental Properties
                                 </button>

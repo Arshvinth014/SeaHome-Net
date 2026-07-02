@@ -444,7 +444,7 @@ export function BuyPage() {
                                     <div className="p-4 space-y-1.5">
                                         <h3 className="font-black text-slate-800 text-sm group-hover:text-[#0066FF] transition-colors truncate">{prop.title}</h3>
                                         <p className="text-[11px] font-bold text-slate-400 flex items-center gap-1">
-                                            <MapPin className="w-3 h-3 text-slate-300 shrink-0" /> {prop.location}
+                                            <MapPin className="w-3 h-3 text-slate-400 shrink-0" /> {prop.location}
                                         </p>
 
                                         <div className="pt-1 flex items-baseline gap-1.5">
@@ -454,12 +454,12 @@ export function BuyPage() {
 
                                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 text-[10.5px] font-bold text-slate-500 border-t border-slate-50">
                                             {prop.specs.beds && (
-                                                <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.beds} Beds</span>
+                                                <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5 text-slate-400" /> {prop.specs.beds} Beds</span>
                                             )}
                                             {prop.specs.baths && (
-                                                <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.baths} Baths</span>
+                                                <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5 text-slate-400" /> {prop.specs.baths} Baths</span>
                                             )}
-                                            <span className="flex items-center gap-1"><Maximize2 className="w-3.5 h-3.5 text-slate-300" /> {prop.specs.size}</span>
+                                            <span className="flex items-center gap-1"><Maximize2 className="w-3.5 h-3.5 text-slate-400" /> {prop.specs.size}</span>
                                         </div>
                                     </div>
                                 </div>
