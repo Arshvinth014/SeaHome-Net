@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { InvestPage } from './pages/InvestPage';
 import { CountryPage } from './pages/CountryPage';
 import { BuyPage } from './pages/BuyPage';
+import { SLHomepage } from './pages/SLHomepage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/invest" element={<InvestPage />} />
         <Route path="/country/:countryId" element={<CountryPage />} />
         <Route path="*" element={<HomePage />} />
+        <Route path="/sl-homepage" element={<SLHomepage />} />
       </Routes>
 
       <Footer />
