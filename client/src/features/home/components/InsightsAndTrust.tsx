@@ -18,10 +18,8 @@ export function InsightsAndTrust() {
   return (
     <div className="w-full bg-white py-12 space-y-16">
       
-      {/* =========================================================================
-          1. MARKET INSIGHTS & ANALYTICAL TRENDS PANELS LAYOUT
-         ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-6 space-y-6">
+      {/*  1. MARKET INSIGHTS & ANALYTICAL TRENDS PANELS LAYOUT*/}
+      <section className="max-w-7xl mx-auto mt-[-40px] px-6 space-y-6">
         <div>
           <h2 className="text-[22px] font-bold text-[#0F172A] tracking-tight">Market Insights & Trends</h2>
         </div>
@@ -148,21 +146,21 @@ export function InsightsAndTrust() {
           </div>
 
           {/* Card 5: Bird Agent Assistant Platform Prompt */}
-          <div className="flex items-center justify-between gap-3 bg-white border border-slate-50 rounded-2xl p-2">
+          <div className="flex items-center justify-between gap-3 bg-white border shadow-md shadow-slate-500/50 border-slate-400 rounded-2xl p-2">
             <div className="w-1/2 flex justify-center">
               <img 
-                src="/Bird.PNG" 
+                src="/Sora.png" 
                 alt="SeaHome Assistant Bird Mascot" 
-                className="max-h-[120px] object-contain" 
+                className="max-h-[280px] object-contain" 
               />
             </div>
             <div className="w-1/2 flex flex-col justify-between py-1 pr-1 space-y-2">
               <div className="space-y-0.5">
-                <h5 className="text-[11px] font-bold text-slate-800 leading-tight">Not sure where to invest?</h5>
-                <p className="text-[10px] text-slate-500 leading-tight">I can help you find the best opportunities!</p>
+                <h5 className="text-[12px] font-bold text-slate-800 leading-tight">Not sure where to invest?</h5>
+                <p className="text-[12px] text-slate-600 leading-tight mt-4 mb-4">I can help you find the best opportunities!</p>
               </div>
-              <button className="bg-[#0066FF] hover:bg-blue-600 text-white text-[9.5px] font-semibold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs">
-                <MessageSquare size={11} className="fill-white/10" /> Chat with Seahome
+              <button className="bg-[#0066FF] hover:bg-blue-600 text-white text-[12px] font-semibold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs">
+                <MessageSquare size={16} className="fill-white/10" /> Chat with Seahome
               </button>
             </div>
           </div>
@@ -170,9 +168,7 @@ export function InsightsAndTrust() {
         </div>
       </section>
 
-      {/* =========================================================================
-          2. BRAND VALUE ARCHITECTURE & TESTIMONIAL COMPONENT
-         ========================================================================= */}
+      {/* 2. BRAND VALUE ARCHITECTURE & TESTIMONIAL COMPONENT */}
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
         
         {/* Why Choose Assets Matrix Box Left Side */}
@@ -189,7 +185,7 @@ export function InsightsAndTrust() {
           {/* Horizontal Lineup of Core Features matching image icon styles */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-2">
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
-              <div className="w-10 h-10 rounded-full bg-blue-50/60 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+              <div className="w-10 h-10 rounded-full ml-5 bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
                 <Globe size={18} />
               </div>
               <h4 className="font-bold text-slate-900 text-[12px] tracking-tight">Global Reach</h4>
@@ -199,7 +195,7 @@ export function InsightsAndTrust() {
             </div>
 
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
-              <div className="w-10 h-10 rounded-full bg-blue-50/60 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+              <div className="w-10 h-10 rounded-full ml-5 bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
                 <CheckSquare size={18} />
               </div>
               <h4 className="font-bold text-slate-900 text-[12px] tracking-tight">Verified Listings</h4>
@@ -209,7 +205,7 @@ export function InsightsAndTrust() {
             </div>
 
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
-              <div className="w-10 h-10 rounded-full bg-blue-50/60 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+              <div className="w-10 h-10 rounded-full ml-5 bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
                 <Search size={18} />
               </div>
               <h4 className="font-bold text-slate-900 text-[12px] tracking-tight">Smart Search</h4>
@@ -219,7 +215,7 @@ export function InsightsAndTrust() {
             </div>
 
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
-              <div className="w-10 h-10 rounded-full bg-blue-50/60 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+              <div className="w-10 h-10 rounded-full ml-5 bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
                 <ShieldCheck size={18} />
               </div>
               <h4 className="font-bold text-slate-900 text-[12px] tracking-tight">Secure Platform</h4>
@@ -229,7 +225,7 @@ export function InsightsAndTrust() {
             </div>
 
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
-              <div className="w-10 h-10 rounded-full bg-blue-50/60 border border-blue-100 flex items-center justify-center text-[#0066FF]">
+              <div className="w-10 h-10 rounded-full ml-5 bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
                 <Headphones size={18} />
               </div>
               <h4 className="font-bold text-slate-900 text-[12px] tracking-tight">Expert Support</h4>
@@ -282,9 +278,7 @@ export function InsightsAndTrust() {
 
       </section>
 
-      {/* =========================================================================
-          3. HOW IT WORKS & DOWNLOAD MOBILE APP (ADDED BENEATH WHY CHOOSE SECTION)
-         ========================================================================= */}
+      {/* 3. HOW IT WORKS & DOWNLOAD MOBILE APP */}
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
         
         {/* Left Grid Panel: How It Works Process Tracker Line */}
@@ -389,9 +383,7 @@ export function InsightsAndTrust() {
         </div>
       </section>
 
-      {/* =========================================================================
-          4. TRUSTED PARTNERS REGISTRY HORIZONTAL STRIP
-         ========================================================================= */}
+      {/* 4. TRUSTED PARTNERS REGISTRY HORIZONTAL STRIP */}
       <section className="max-w-7xl mx-auto px-6 space-y-4 pt-2">
         <h3 className="text-sm font-bold text-slate-800 tracking-tight">Trusted by Top Real Estate Agencies Worldwide</h3>
         
@@ -410,7 +402,7 @@ export function InsightsAndTrust() {
 
           {/* Right slider forward action link */}
           <button className="w-7 h-7 rounded-full border border-slate-300 bg-white shadow-xs flex items-center justify-center text-slate-400 hover:text-slate-800 transition-colors shrink-0">
-            <ChevronRight size={14} />
+            <ChevronRight size={16} />
           </button>
         </div>
       </section>

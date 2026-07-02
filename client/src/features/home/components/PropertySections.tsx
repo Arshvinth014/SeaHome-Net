@@ -55,7 +55,7 @@ export function PropertySections() {
 
         <div className="relative group/slider">
           {/* Slider Arrow Left */}
-          <button className="absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-300 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
+          <button className="absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-400 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
             <ChevronLeft size={16} />
           </button>
 
@@ -76,7 +76,7 @@ export function PropertySections() {
                         {property.type}
                       </span>
                     )}
-                    <button className="absolute top-2.5 right-2.5 w-6 h-6 bg-white rounded-full flex items-center justify-center text-rose-500 shadow-xs border border-slate-50">
+                    <button className="absolute top-2.5 right-2.5 w-6 h-6 bg-white rounded-full flex items-center justify-center text-rose-500 shadow-xs border border-slate-200">
                       <Heart size={12} className="text-rose-500 fill-rose-500" />
                     </button>
                   </div>
@@ -84,22 +84,22 @@ export function PropertySections() {
                   <div className="p-3.5 space-y-1">
                     <h3 className="font-bold text-slate-900 text-[13px] tracking-tight leading-snug">{property.title}</h3>
                     <p className="text-[11px] text-slate-400 flex items-center gap-0.5 font-normal">
-                      <MapPin size={10} className="text-slate-300" /> {property.location}
+                      <MapPin size={10} className="text-slate-600" /> {property.location}
                     </p>
                     <p className="text-[13px] font-extrabold text-slate-900 pt-1">{property.price}</p>
                   </div>
                 </div>
 
                 {/* Specs section with explicit custom micro-icons layout */}
-                <div className="p-3.5 pt-0 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-slate-400 border-t border-slate-300 mt-2">
+                <div className="p-3.5 pt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-slate-400 border-t border-slate-300 mt-2">
                   {property.beds && (
-                    <span className="flex items-center gap-0.5 font-medium"><BedDouble size={11} className="text-slate-300" /> {property.beds.split(' ')[0]} Beds</span>
+                    <span className="flex items-center gap-0.5 font-medium"><BedDouble size={11} className="text-slate-600" /> {property.beds.split(' ')[0]} Beds</span>
                   )}
                   {property.baths && (
-                    <span className="flex items-center gap-0.5 font-medium"><Bath size={11} className="text-slate-300" /> {property.baths.split(' ')[0]} Baths</span>
+                    <span className="flex items-center gap-0.5 font-medium"><Bath size={11} className="text-slate-600" /> {property.baths.split(' ')[0]} Baths</span>
                   )}
                   {property.sqft && (
-                    <span className="flex items-center gap-0.5 font-medium"><Maximize size={11} className="text-slate-300" /> {property.sqft}</span>
+                    <span className="flex items-center gap-0.5 font-medium"><Maximize size={11} className="text-slate-600" /> {property.sqft}</span>
                   )}
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function PropertySections() {
           </div>
 
           {/* Slider Arrow Right */}
-          <button className="absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-300 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
+          <button className="absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-600 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
             <ChevronRight size={16} />
           </button>
         </div>
@@ -150,7 +150,7 @@ export function PropertySections() {
         <div className="bg-white border border-slate-300 rounded-2xl p-5 grid grid-cols-2 md:grid-cols-5 gap-4 shadow-xs mt-6 items-center">
           {METRICS.map((m, i) => (
             <div key={i} className="flex items-center gap-3 px-2">
-              <div className="w-10 h-10 rounded-full bg-blue-50/70 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-full bg-blue-300/70 flex items-center justify-center shrink-0">
                 {m.icon}
               </div>
               <div className="space-y-0.5">
@@ -211,14 +211,15 @@ export function PropertySections() {
           <div className="lg:col-span-3 bg-[#0a1128] rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-sm min-h-[280px]">
             <div className="space-y-3 pt-2">
               <h3 className="text-xl font-bold tracking-tight">List Your Property</h3>
-              <p className="text-[13px] text-slate-300 font-light leading-relaxed max-w-[200px]">
+              <p className="text-[14px] font-bold text-slate-400 font-light leading-relaxed max-w-[200px]">
                 Reach global investors and sell or rent faster.
               </p>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="List Your Property" className="w-full h-20 object-cover rounded-xl mt-2" />
             </div>
             
             <div className="w-full">
               <button className="w-full bg-[#0066FF] hover:bg-blue-600 text-white font-semibold text-[13px] py-3 px-4 rounded-xl shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer">
-                <span>📋</span> List Your Property
+                <span><Building2 className="w-4 h-4 text-white-500/80" strokeWidth={2.5} /></span> List Your Property
               </button>
             </div>
           </div>
