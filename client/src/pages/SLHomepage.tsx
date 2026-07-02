@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
-  Search, MapPin, Building2, DollarSign, SearchCode, ShieldCheck, 
-  ThumbsUp, HelpCircle, ChevronLeft, ChevronRight, Heart, Eye, 
+  Search, MapPin, Building2, ShieldCheck, 
+  ThumbsUp, ChevronLeft, ChevronRight, Heart, Eye, 
   Home, Utensils, Building, LifeBuoy, Star, Mail, ArrowRight, 
   ChevronDown, Check, HelpCircle as SupportIcon,
   Maximize2,

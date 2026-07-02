@@ -18,10 +18,7 @@ import {
     ShieldCheck,
     Lock,
     Globe,
-    UserCheck,
-    Mail,
-    Phone,
-    ArrowUp
+    UserCheck
 } from 'lucide-react';
 
 // Import decoupled mock structures

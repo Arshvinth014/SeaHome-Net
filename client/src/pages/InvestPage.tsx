@@ -1,6 +1,5 @@
-import React from 'react';
 import { Play } from 'lucide-react';
-import { Search, BarChart3, ClipboardCheck, Handshake, FileText, ShieldCheck, Building2, Lock, Globe, Headphones, ArrowRight } from 'lucide-react';
+import { BarChart3, ShieldCheck, Building2, Lock, Globe, Headphones, ArrowRight } from 'lucide-react';
 import { INVESTMENT_OPPORTUNITIES, AGENCIES, TRUST_FEATURES_DATA, MARKET_CHART_DATA, HARU_STEPS_DATA, INVESTOR_RESOURCES_DATA, CTA_STATS_DATA } from '../config/investData';
 
 export function InvestPage() {

@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import {
     ShieldCheck,
-    Handshake,
-    Lock,
     MapPin,
     Search,
     SlidersHorizontal,
@@ -21,7 +19,6 @@ import {
     Compass,
     Layers,
     MessageSquare,
-    Globe,
     ChevronDown
 } from 'lucide-react';
 import { SRI_LANKA_PROPERTIES, SRI_LANKA_PROJECTS, TOP_LOCATIONS } from '../config/sriLankaData';
