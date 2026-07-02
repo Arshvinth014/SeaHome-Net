@@ -22,7 +22,7 @@ export function Navbar() {
         
         {/* Brand Identity */}
         <div className="flex items-center gap-2">
-          <img src="logo.png" alt="SeaHome Net" className="h-12 w-50 " />
+          <img src="/logo.png" alt="SeaHome Net" className="h-12 w-50 " />
         </div>
 
         {/* Desktop Links Matrix */}
