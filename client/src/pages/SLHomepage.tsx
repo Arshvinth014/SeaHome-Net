@@ -398,8 +398,8 @@ export function SLHomepage() {
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Banner Grid Area */}
-        <div className="lg:col-span-7 bg-blue-900 rounded-2xl overflow-hidden relative min-h-[240px] flex flex-col justify-end p-6 text-white bg-cover bg-center" style={{ backgroundImage: `linear-gradient(to top, url('../../public/buyPageHero.png')` }}>
-          <h2 className="text-lg font-extrabold mb-4">Why Choose <span className="text-sky-400">SeaHomeNet.co.lk?</span></h2>
+        <div className="lg:col-span-7 bg-blue-900 rounded-2xl overflow-hidden relative min-h-[240px] flex flex-col justify-end p-6 text-white bg-cover bg-center" style={{ backgroundImage: `url('/TrainSL.jpg')` }}>
+          <h2 className="text-2xl font-extrabold mb-12">Why Choose <span className="text-sky-400">SeaHomeNet.co.lk?</span></h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             {[
               { label: "Sri Lanka's Trusted Platform", icon: <Building2 className="w-4 h-4 mx-auto mb-1 text-sky-400" /> },
@@ -409,7 +409,7 @@ export function SLHomepage() {
             ].map((box, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/10">
                 {box.icon}
-                <p className="text-[10px] font-medium leading-tight">{box.label}</p>
+                <p className="text-[11px] font-semibold leading-tight">{box.label}</p>
               </div>
             ))}
           </div>
@@ -465,8 +465,8 @@ export function SLHomepage() {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {popularLocations.map((loc) => (
-            <div key={loc.id} className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition relative group">
-              <div className="h-32 overflow-hidden bg-slate-200">
+            <div key={loc.id} className="bg-white border border-slate-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer transition relative group">
+              <div className="h-32 overflow-hidden bg-slate-300">
                 <img src={loc.image} alt={loc.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div className="p-3 bg-white absolute bottom-0 inset-x-0 bg-gradient-to-t from-white via-white/95 to-white/80">
@@ -482,11 +482,8 @@ export function SLHomepage() {
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
         
         {/* Support CTA Callout Box */}
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 flex items-center gap-4 relative">
-          {/* Re-use bird style layout padding zone for additional safety metrics */}
-          <div className="w-16 h-16 min-w-[64px] bg-white border border-blue-200 rounded-xl flex items-center justify-center text-xs font-bold text-blue-600 text-center">
-            🐓 Info
-          </div>
+        <div className="bg-blue-100 border border-blue-100 rounded-2xl p-6 flex items-center gap-4 relative h-[170px]">
+          <img src="../../public/JungleFowlSL.png" alt="Support Agent Illustration" className="w-50 h-50 object-contain z-10 mb-[30px]" />
           <div>
             <h3 className="text-sm font-bold text-blue-950">Need Help Finding the Right Property?</h3>
             <p className="text-xs text-slate-500 mt-1">Our team is here to help you find the perfect place or answer any questions you have.</p>

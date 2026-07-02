@@ -77,10 +77,10 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const popularLocations: PopularLocation[] = [
-  { id: '1', name: 'Colombo', count: '5,288 Properties', image: 'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=400&auto=format&fit=crop&q=60' },
-  { id: '2', name: 'Kandy', count: '1,562 Properties', image: 'https://images.unsplash.com/photo-1625633658514-41315b8109d7?w=400&auto=format&fit=crop&q=60' },
-  { id: '3', name: 'Galle', count: '1,248 Properties', image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=400&auto=format&fit=crop&q=60' },
-  { id: '4', name: 'Negombo', count: '1,023 Properties', image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&auto=format&fit=crop&q=60' },
+  { id: '1', name: 'Colombo', count: '5,288 Properties', image: 'https://plus.unsplash.com/premium_photo-1697730489433-4a5fe8a77f96?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { id: '2', name: 'Kandy', count: '1,562 Properties', image: 'https://images.unsplash.com/photo-1708694648935-eeafaa7fd1ef?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { id: '3', name: 'Galle', count: '1,248 Properties', image: 'https://images.unsplash.com/photo-1509982724584-2ce0d4366d8b?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { id: '4', name: 'Negombo', count: '1,023 Properties', image: 'https://images.unsplash.com/photo-1460627390041-532a28402358?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
   { id: '5', name: 'Nugegoda', count: '1,354 Properties', image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&auto=format&fit=crop&q=60' },
   { id: '6', name: 'Malabe', count: '1,102 Properties', image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=400&auto=format&fit=crop&q=60' },
 ];
