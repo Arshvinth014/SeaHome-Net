@@ -105,7 +105,7 @@ export function HeroSection() {
             <div className="leading-tight relative">
               <span className="absolute top-0 right-0 text-sm">👋</span>
               <p className="text-[13px] font-black text-slate-900 flex items-center gap-1">
-                Hi! I'm Seahome
+                Hi! I'm <span className="text-[#0066FF]">Sora</span>
               </p>
               <p className="text-[12px] text-slate-500 font-semibold mt-1 leading-normal">
                 Your real estate guide. How can I help you today?
