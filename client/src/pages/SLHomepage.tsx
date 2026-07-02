@@ -34,7 +34,7 @@ export function SLHomepage() {
       {/* 1. Base Sea Coast Backdrop Layer */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="../../public/SLHubHero.png" 
+          src="SLHubHero.png" 
           alt="Sri Lanka Coastline Backdrop" 
           className="w-full h-full object-cover object-center pointer-events-none select-none"
         />
@@ -189,7 +189,7 @@ export function SLHomepage() {
           {/* 2. Isolated Mascot Layer overlapping between the containers */}
           <div className="absolute left-[-230px] lg:left-[-250px] bottom-[159px] w-60 h-60 lg:w-78 lg:h-78 z-20 pointer-events-none">
             <img 
-              src="../../public/JungleFowlBird.png" 
+              src="JungleFowlBird.png" 
               alt="Sri Lankan Junglefowl Character Asset" 
               className="w-full h-full object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.04)]" 
             />
@@ -340,7 +340,7 @@ export function SLHomepage() {
         </div>
       </section>
 
-      {/* SERVICES & PROMOTION BLOCK AREA WITH 2.png */}
+      {/* SERVICES & PROMOTION BLOCK AREA */}
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
         {/* Left Services Block */}
@@ -364,7 +364,7 @@ export function SLHomepage() {
           </div>
         </div>
 
-        {/* Right Promotional Box Layout & 2.png Integration */}
+        {/* Right Promotional Box Layout */}
         <div className="lg:col-span-4 bg-gradient-to-br from-blue-50 to-sky-200 border border-blue-50 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
           <div>
             <h2 className="text-xl font-extrabold text-blue-600 leading-tight mt-[30px]">List Your Property <br />for Free!</h2>
@@ -383,10 +383,9 @@ export function SLHomepage() {
             </button>
           </div>
 
-          {/* 2.png Placeholder (Bird Character right aligned) */}
           <div className="absolute right-[-25px] bottom-20 w-68 h-68 pointer-events-none">
             <img 
-              src=".././public/JungleFowlBird.png" 
+              src="JungleFowlBird.png" 
               alt="Promotion Character Placeholder" 
               className="w-full h-full object-contain"
             />
@@ -483,7 +482,7 @@ export function SLHomepage() {
         
         {/* Support CTA Callout Box */}
         <div className="bg-blue-100 border border-blue-100 rounded-2xl p-6 flex items-center gap-4 relative h-[170px]">
-          <img src="../../public/JungleFowlSL.png" alt="Support Agent Illustration" className="w-50 h-50 object-contain z-10 mb-[30px]" />
+          <img src="jungleFowlSL.png" alt="Support Agent Illustration" className="w-50 h-50 object-contain z-10 mb-[30px]" />
           <div>
             <h3 className="text-sm font-bold text-blue-950">Need Help Finding the Right Property?</h3>
             <p className="text-xs text-slate-500 mt-1">Our team is here to help you find the perfect place or answer any questions you have.</p>

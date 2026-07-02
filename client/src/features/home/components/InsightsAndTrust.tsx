@@ -148,7 +148,7 @@ export function InsightsAndTrust() {
           <div className="flex items-center justify-between gap-3 bg-white border shadow-md shadow-slate-500/50 border-slate-400 rounded-2xl p-2">
             <div className="w-1/2 flex justify-center">
               <img 
-                src="/Sora.png" 
+                src="Sora.png" 
                 alt="SeaHome Assistant Bird Mascot" 
                 className="max-h-[280px] object-contain" 
               />

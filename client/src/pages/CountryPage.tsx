@@ -121,7 +121,7 @@ export function CountryPage() {
                             {/* Mascot Fixed Alignment Frame */}
                             <div className="absolute right-[-120px] w-280 h-125 z-10 z-0 pointer-events-none">
                                 <img
-                                    src="../../public/SrilankaPage.png"
+                                    src="/SrilankaPage.png"
                                     alt="Sri Lanka Welcome Character Assistant"
                                     className="w-full h-full object-contain select-none"
                                 />
@@ -426,7 +426,7 @@ export function CountryPage() {
                         <div className="w-full aspect-[1/1.2] relative max-w-[200px] opacity-80 flex items-center justify-center text-slate-50 font-black text-3xl select-none">
                             {/* <Globe className="w-24 h-24 stroke-1 text-slate-200" /> */}
                             <img
-                                src="../../public/SLmap.png"
+                                src="/SLMap.PNG"
                                 alt="Sri Lanka Geographic Investment Hotspots Map"
                                 className="w-full h-full object-contain mix-blend-multiply"
                             />
@@ -508,10 +508,10 @@ export function CountryPage() {
                     </div>
 
                     {/* Character Callout Vector Block */}
-                    <div className="lg:col-span-4 bg-blue-50/50 border border-blue-100/40 rounded-2xl p-4 flex items-center justify-between gap-4">
-                        <div className="w-[220px] h-[220px] shrink-0 overflow-hidden bg-white rounded-xl shadow-2xs">
+                    <div className="lg:col-span-4 bg-blue-50/50 border border-blue-300/40 rounded-2xl p-4 flex items-center justify-between gap-4">
+                        <div className="w-[220px] h-[220px] shrink-0 border border-blue-300/40 overflow-hidden bg-white rounded-xl shadow-2xs">
                             <img
-                                src="../../public/jungleFowl.png"
+                                src="/jungleFowl.png"
                                 alt="Assistant Dialogue Target Mascot"
                                 className="w-full h-full object-contain"
                             />

@@ -35,7 +35,7 @@ export function BuyPage() {
 
                 <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
                     <img
-                        src="../../public/buyPageHero.png"
+                        src="buyPageHero.png"
                         alt="Skyline Backdrop"
                         className="w-full max-w-[1400px] h-[200px] object-contain object-bottom opacity-40 mix-blend-multiply md:mb-[200px]"
                     />
@@ -67,7 +67,7 @@ export function BuyPage() {
                             {/* Mascot Bird Image Asset Wrapper */}
                             <div className="w-48 h-48 md:w-48 md:h-48 relative shrink-0 pointer-events-auto left-7 mt-[-50px]">
                                 <img
-                                    src="../../public/BlueBirdBuyPage.png"
+                                    src="BlueBirdBuyPage.png"
                                     alt="Seahome Mascot Hero Asset"
                                     className="w-full h-full object-contain object-bottom"
                                 />
@@ -510,7 +510,7 @@ export function BuyPage() {
 
                     {/* MASCOT PLACEMENT 2 BOUNDING CONTAINER */}
                     <div className="hidden lg:flex absolute mb-[80px] right-5 bottom-0 w-60 h-60 items-center justify-center z-20">
-                        <img src="../../public/BlueBirdBuyPage.png" alt="Seahome Mascot Trust Footer Asset" className="w-full h-full object-contain" />
+                        <img src="BlueBirdBuyPage.png" alt="Seahome Mascot Trust Footer Asset" className="w-full h-full object-contain" />
                     </div>
                 </div>
             </section>

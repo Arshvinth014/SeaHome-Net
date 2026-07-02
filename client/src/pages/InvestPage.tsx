@@ -79,7 +79,7 @@ export function InvestPage() {
 
                         {/* World Dot Grid Background Vector Image */}
                         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[80%] aspect-[1.4/1] pointer-events-none mix-blend-multiply opacity-90">
-                            <img src="../../public/investmap.png" alt="Global Node Connectivity Map" className="w-full h-full object-contain" />
+                            <img src="Investmap.png" alt="Global Node Connectivity Map" className="w-full h-full object-contain" />
 
                             {/* Absolute Circular Node Overlay Frameworks over map paths */}
                             <div className="absolute top-[25%] left-[20%] w-15 h-15 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
@@ -108,7 +108,7 @@ export function InvestPage() {
                                     <p>I'll connect you with Haru, your personal investment manager, to handle everything on your behalf.</p>
                                 </div>
                                 <div className="w-36 h-36 shrink-0 bg-slate-150 rounded-xl overflow-hidden flex items-center justify-center">
-                                    <img src="../../public/BlueBird&House.png" alt="Sora Character" className="w-full h-full object-contain" />
+                                    <img src="BlueBird&House.PNG" alt="Sora Character" className="w-full h-full object-contain" />
                                 </div>
                             </div>
 
@@ -134,7 +134,7 @@ export function InvestPage() {
                                     </div>
                                 </div>
                                 <div className="w-36 h-36 shrink-0 overflow-hidden flex items-center justify-center">
-                                    <img src="../../public/OrangeCat_investpage.png" alt="Haru Character" className="w-full h-full object-contain" />
+                                    <img src="OrangeCat_investpage.PNG" alt="Haru Character" className="w-full h-full object-contain" />
                                 </div>
                             </div>
 
@@ -346,7 +346,7 @@ export function InvestPage() {
                     <div className="shrink-0 flex items-center justify-center lg:justify-end mt-4 lg:mt-0 z-10">
                         <div className="w-50 h-50 md:w-50 md:h-50 overflow-hidden rounded-2xl flex items-center justify-center">
                             <img
-                                src="../../public/OrangeCat_Compass.png"
+                                src="OrangeCat_Compass.PNG"
                                 alt="Haru Workflow Companion Avatar"
                                 className="w-full h-full object-contain"
                             />
@@ -509,7 +509,7 @@ export function InvestPage() {
                     <div className="flex-1 min-h-[100px] relative w-full flex items-end justify-center lg:justify-start lg:pl-4">
                         <div className="relative w-70 h-70 max-w-full flex items-end justify-center">
                             <img
-                                src="../../public/OrangeCatWithCity.png"
+                                src="OrangeCatWithCity.PNG"
                                 alt="Haru Assistant Close Frame"
                                 className="w-full h-full object-contain z-10 select-none transform translate-y-1"
                             />
@@ -543,7 +543,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 8: TRUST SECURITY COMPLIANCE FOOTER */}
-            <section className="max-w-7xl mx-auto mt-[-50px] px-5 py-5">
+            <section className="max-w-7xl mx-auto mt-[10px] px-5 py-5">
                 {/* Container Box: Uses dark royal midnight blue background with deep padding */}
                 <div className="bg-[#001E4E] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden text-white shadow-xs">
 
@@ -588,7 +588,7 @@ export function InvestPage() {
                     <div className="shrink-0 flex items-center justify-center md:justify-end mt-4 md:mt-0 relative z-10">
                         <div className="w-40 h-36 overflow-hidden flex items-end justify-center transform translate-y-2 translate-x-2">
                             <img
-                                src="../../public/BlueBirdSmall.png"
+                                src="BlueBirdSmall.png"
                                 alt="Sora Bottom Alignment Edge Anchor"
                                 className="w-full h-full object-contain select-none"
                             />
