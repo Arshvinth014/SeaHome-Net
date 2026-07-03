@@ -42,27 +42,27 @@ const METRICS = [
 
 export function PropertySections() {
   return (
-    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16">
+    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16 overflow-hidden">
       
       {/* SECTION 1: Featured Properties */}
-      <section className="max-w-7xl mx-auto px-6 pt-2" id="buy">
-        <div className="flex justify-between items-center mb-5">
-          <h2 className="text-[22px] font-bold text-slate-900 tracking-tight">Featured Properties</h2>
-          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-3 py-1.5 rounded-lg flex items-center gap-1 transition-colors">
-            View All Properties <span className="text-[10px]">→</span>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2" id="buy">
+        <div className="flex justify-between items-center mb-5 gap-2">
+          <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight whitespace-nowrap">Featured Properties</h2>
+          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors shrink-0">
+            <span className="hidden sm:inline">View All Properties</span><span className="sm:hidden">View All</span> <span className="text-[10px]">→</span>
           </button>
         </div>
 
         <div className="relative group/slider">
           {/* Slider Arrow Left */}
-          <button className="absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-400 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
+          <button className="hidden lg:flex absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-400 shadow-sm items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
             <ChevronLeft size={16} />
           </button>
 
           {/* 6 Grid Lineup matching layout view */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="flex lg:grid overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none pb-4 lg:pb-0 lg:grid-cols-6 gap-4 scrollbar-none -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
             {FEATURED_PROPERTIES.map((property) => (
-              <div key={property.id} className="bg-white border border-slate-300 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div key={property.id} className="min-w-[240px] sm:min-w-[280px] lg:min-w-0 snap-start bg-white border border-slate-300 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div className="h-32 w-full bg-slate-500 relative overflow-hidden">
                     <img src={property.image} alt={property.title} className="w-full h-full object-cover" />
@@ -82,24 +82,24 @@ export function PropertySections() {
                   </div>
 
                   <div className="p-3.5 space-y-1">
-                    <h3 className="font-bold text-slate-900 text-[13px] tracking-tight leading-snug">{property.title}</h3>
-                    <p className="text-[11px] text-slate-400 flex items-center gap-0.5 font-normal">
-                      <MapPin size={10} className="text-slate-600" /> {property.location}
+                    <h3 className="font-bold text-slate-900 text-[13px] tracking-tight leading-snug line-clamp-1">{property.title}</h3>
+                    <p className="text-[11px] text-slate-400 flex items-center gap-0.5 font-normal line-clamp-1">
+                      <MapPin size={10} className="text-slate-600 shrink-0" /> {property.location}
                     </p>
                     <p className="text-[13px] font-extrabold text-slate-900 pt-1">{property.price}</p>
                   </div>
                 </div>
 
                 {/* Specs section with explicit custom micro-icons layout */}
-                <div className="p-3.5 pt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-slate-400 border-t border-slate-300 mt-2">
+                <div className="p-3.5 pt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] text-slate-400 border-t border-slate-300 mt-2">
                   {property.beds && (
-                    <span className="flex items-center gap-0.5 font-medium"><BedDouble size={11} className="text-slate-600" /> {property.beds.split(' ')[0]} Beds</span>
+                    <span className="flex items-center gap-0.5 font-medium"><BedDouble size={11} className="text-slate-600 shrink-0" /> {property.beds.split(' ')[0]} Beds</span>
                   )}
                   {property.baths && (
-                    <span className="flex items-center gap-0.5 font-medium"><Bath size={11} className="text-slate-600" /> {property.baths.split(' ')[0]} Baths</span>
+                    <span className="flex items-center gap-0.5 font-medium"><Bath size={11} className="text-slate-600 shrink-0" /> {property.baths.split(' ')[0]} Baths</span>
                   )}
                   {property.sqft && (
-                    <span className="flex items-center gap-0.5 font-medium"><Maximize size={11} className="text-slate-600" /> {property.sqft}</span>
+                    <span className="flex items-center gap-0.5 font-medium"><Maximize size={11} className="text-slate-600 shrink-0" /> {property.sqft}</span>
                   )}
                 </div>
               </div>
@@ -107,24 +107,24 @@ export function PropertySections() {
           </div>
 
           {/* Slider Arrow Right */}
-          <button className="absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-600 shadow-sm flex items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
+          <button className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-slate-600 shadow-sm items-center justify-center text-slate-600 z-10 opacity-80 hover:opacity-100 transition-opacity">
             <ChevronRight size={16} />
           </button>
         </div>
       </section>
 
       {/* SECTION 2: Explore Properties By Country Layout */}
-      <section className="max-w-7xl mx-auto px-6 space-y-5" id="countries">
-        <div className="flex justify-between items-center">
-          <h2 className="text-[22px] font-bold text-slate-900 tracking-tight">Explore Properties by Country</h2>
-          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-3 py-1.5 rounded-lg flex items-center gap-1 transition-colors">
-            View All Countries <span className="text-[10px]">→</span>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 space-y-5" id="countries">
+        <div className="flex justify-between items-center gap-2">
+          <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight whitespace-nowrap">Explore Properties by Country</h2>
+          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors shrink-0">
+            <span className="hidden sm:inline">View All Countries</span><span className="sm:hidden">View All</span> <span className="text-[10px]">→</span>
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {COUNTRIES.map((country) => (
-            <div key={country.id} className="h-48 rounded-2xl overflow-hidden relative group shadow-xs cursor-pointer border border-slate-300">
+            <div key={country.id} className="h-40 sm:h-48 rounded-2xl overflow-hidden relative group shadow-xs cursor-pointer border border-slate-300">
               <img src={country.image} alt={country.name} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent"></div>
               
@@ -147,9 +147,9 @@ export function PropertySections() {
         </div>
 
         {/* Global Statistics Counter Row Block */}
-        <div className="bg-white border border-slate-300 rounded-2xl p-5 grid grid-cols-2 md:grid-cols-5 gap-4 shadow-xs mt-6 items-center">
+        <div className="bg-white border border-slate-300 rounded-2xl p-5 flex flex-wrap md:grid md:grid-cols-5 gap-y-6 gap-x-4 shadow-xs mt-6 items-center justify-between sm:justify-start">
           {METRICS.map((m, i) => (
-            <div key={i} className="flex items-center gap-3 px-2">
+            <div key={i} className="flex items-center gap-3 px-1 min-w-[140px] sm:min-w-[160px] md:min-w-0">
               <div className="w-10 h-10 rounded-full bg-blue-300/70 flex items-center justify-center shrink-0">
                 {m.icon}
               </div>
@@ -163,13 +163,13 @@ export function PropertySections() {
       </section>
 
       {/* SECTION 3: Top Investment Opportunities (Pre-existing Content) */}
-      <section className="max-w-7xl mx-auto px-6 pt-4" id="invest">
-        <div className="flex justify-between items-end mb-5">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-4" id="invest">
+        <div className="flex justify-between items-end mb-5 gap-2">
           <div>
-            <h2 className="text-[22px] font-bold text-slate-900 tracking-tight">Top Investment Opportunities</h2>
+            <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight">Top Investment Opportunities</h2>
           </div>
-          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-3 py-1.5 rounded-lg flex items-center gap-1 transition-colors">
-            View All Opportunities <span className="text-[10px]">→</span>
+          <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors shrink-0">
+            <span className="hidden sm:inline">View All Opportunities</span><span className="sm:hidden">View All</span> <span className="text-[10px]">→</span>
           </button>
         </div>
 
@@ -189,7 +189,7 @@ export function PropertySections() {
                     />
                   </div>
                   <div className="pt-4 space-y-1">
-                    <h4 className="font-bold text-slate-900 text-[13px] tracking-tight leading-snug">{opp.title}</h4>
+                    <h4 className="font-bold text-slate-900 text-[13px] tracking-tight leading-snug line-clamp-1">{opp.title}</h4>
                     <p className="text-[11px] text-slate-400 font-medium">{opp.location}</p>
                   </div>
                 </div>
@@ -208,16 +208,16 @@ export function PropertySections() {
             ))}
           </div>
 
-          <div className="lg:col-span-3 bg-[#0a1128] rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-sm min-h-[280px]">
+          <div className="lg:col-span-3 bg-[#0a1128] rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-sm min-h-[260px] lg:min-h-[280px]">
             <div className="space-y-3 pt-2">
               <h3 className="text-xl font-bold tracking-tight">List Your Property</h3>
-              <p className="text-[14px] font-bold text-slate-400 font-light leading-relaxed max-w-[200px]">
+              <p className="text-[14px] font-bold text-slate-400 font-light leading-relaxed max-w-full sm:max-w-[200px] lg:max-w-full">
                 Reach global investors and sell or rent faster.
               </p>
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="List Your Property" className="w-full h-20 object-cover rounded-xl mt-2" />
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="List Your Property" className="w-full h-24 lg:h-20 object-cover rounded-xl mt-2" />
             </div>
             
-            <div className="w-full">
+            <div className="w-full mt-6 lg:mt-0">
               <button className="w-full bg-[#0066FF] hover:bg-blue-600 text-white font-semibold text-[13px] py-3 px-4 rounded-xl shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer">
                 <span><Building2 className="w-4 h-4 text-white-500/80" strokeWidth={2.5} /></span> List Your Property
               </button>

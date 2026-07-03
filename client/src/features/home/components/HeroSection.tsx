@@ -14,23 +14,23 @@ import {
 
 export function HeroSection() {
   return (
-    <div className="relative w-full bg-gradient-to-b from-blue-50/30 via-white to-white pb-20 font-sans">
+    <div className="relative w-full bg-gradient-to-b from-blue-50/30 via-white to-white pb-10 lg:pb-20 font-sans overflow-x-hidden">
 
       {/* 1. Main Hero Content Layout */}
-      <section className="max-w-7xl mx-auto px-6 pt-2 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-1 items-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-1 items-center">
 
         {/* Column 1: Left Frame Text & Badges (Occupies 4 Columns) */}
-        <div className="lg:col-span-3 space-y-7 z-20 pointer-events-auto">
+        <div className="col-span-1 lg:col-span-3 space-y-5 lg:space-y-7 z-20 pointer-events-auto text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl lg:text-[36px] font-black text-slate-900 tracking-tight leading-[1.15]">
-            The World of <br />
+            The World of <br className="hidden lg:inline" />
             <span className="text-[#0066FF]">Real Estate</span> <br />
             at Your Fingertips
           </h1>
-          <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed max-w-sm">
+          <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed max-w-sm mx-auto lg:mx-0">
             Buy, Invest, and Connect with Verified Real Estate Agencies Worldwide.
           </p>
 
-          <div className="flex items-center gap-3 pt-2">
+          <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
             <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-bold text-xs px-4 py-3.5 rounded-xl shadow-lg shadow-blue-500/20 transition-all cursor-pointer whitespace-nowrap">
               Explore Properties
             </button>
@@ -43,7 +43,7 @@ export function HeroSection() {
           </div>
 
           {/* Value Badging Sub-Row */}
-          <div className="grid grid-cols-2 gap-y-4 gap-x-4 pt-6 border-t border-slate-300 text-[11px] font-bold text-slate-400">
+          <div className="grid grid-cols-2 gap-y-4 gap-x-4 pt-6 border-t border-slate-300 text-[11px] font-bold text-slate-400 max-w-sm mx-auto lg:mx-0 text-left">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-blue-500/80" strokeWidth={2.5} /> Verified Listings
             </div>
@@ -60,8 +60,8 @@ export function HeroSection() {
         </div>
 
         {/* Column 2: Graphical Map */}
-        <div className="lg:col-span-7 mt-1.5 relative w-full flex justify-center items-center">
-          <div className="relative w-full aspect-[1.4/1] scale-110 transform origin-center">
+        <div className="col-span-1 lg:col-span-7 mt-4 lg:mt-1.5 relative w-full flex justify-center items-center overflow-visible">
+          <div className="relative w-full aspect-[1.4/1] scale-100 sm:scale-105 lg:scale-110 transform origin-center max-w-2xl lg:max-w-none">
             
             {/* World Map Background Asset */}
             <img
@@ -71,37 +71,37 @@ export function HeroSection() {
             />
 
             {/* Live Property Marker: Tokyo */}
-            <div className="absolute top-[15%] right-[6%] bg-white p-1.5 rounded-xl shadow-xl hover:border-blue-500 hover:shadow-[0_20px_25px_rgba(37,99,235,0.3)] transition-all border border-slate-300/80 flex items-center gap-2 z-10">
-              <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-300 flex-shrink-0">
+            <div className="absolute top-[10%] right-[2%] sm:right-[6%] bg-white p-1 sm:p-1.5 rounded-xl shadow-xl hover:border-blue-500 hover:shadow-[0_20px_25px_rgba(37,99,235,0.3)] transition-all border border-slate-300/80 flex items-center gap-1.5 sm:gap-2 z-10">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg overflow-hidden bg-slate-300 flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=100" className="w-full h-full object-cover" alt="Tokyo" />
               </div>
-              <div className="text-[9px] leading-tight pr-1">
-                <p className="font-bold text-slate-900">Luxury Apartment</p>
+              <div className="text-[7.5px] sm:text-[9px] leading-tight pr-1">
+                <p className="font-bold text-slate-900 whitespace-nowrap">Luxury Apartment</p>
                 <p className="text-slate-400">Tokyo, Japan</p>
                 <p className="text-slate-900 font-extrabold mt-0.5">$800,000 USD</p>
               </div>
             </div>
-            <div className="absolute top-[30%] right-[8%] w-2 h-2 bg-red-500 rounded-full border-2 border-white shadow-sm z-10"></div>
+            <div className="absolute top-[26%] right-[6%] sm:right-[8%] w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full border-2 border-white shadow-sm z-10"></div>
 
             {/* Live Property Marker: Galle */}
-            <div className="absolute top-[40%] left-[53%] bg-white p-1.5 rounded-xl shadow-xl hover:border-blue-500 hover:shadow-[0_20px_25px_rgba(37,99,235,0.3)] transition-all border border-slate-300/80 flex items-center gap-2 z-10">
-              <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-300 flex-shrink-0">
+            <div className="absolute top-[42%] left-[48%] sm:left-[53%] bg-white p-1 sm:p-1.5 rounded-xl shadow-xl hover:border-blue-500 hover:shadow-[0_20px_25px_rgba(37,99,235,0.3)] transition-all border border-slate-300/80 flex items-center gap-1.5 sm:gap-2 z-10">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg overflow-hidden bg-slate-300 flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=100" className="w-full h-full object-cover" alt="Galle" />
               </div>
-              <div className="text-[9px] leading-tight pr-1">
-                <p className="font-bold text-slate-900">Beachfront Villa</p>
+              <div className="text-[7.5px] sm:text-[9px] leading-tight pr-1">
+                <p className="font-bold text-slate-900 whitespace-nowrap">Beachfront Villa</p>
                 <p className="text-slate-400">Galle, Sri Lanka</p>
                 <p className="text-slate-900 font-extrabold mt-0.5">$1,150,000 USD</p>
               </div>
             </div>
-            <div className="absolute top-[54%] left-[69.5%] w-2 h-2 bg-red-500 rounded-full border-2 border-white shadow-sm z-10"></div>
+            <div className="absolute top-[56%] left-[65%] sm:left-[69.5%] w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full border-2 border-white shadow-sm z-10"></div>
 
           </div>
         </div>
 
         {/* Column 3: Interactive Assistant Panel (Occupies 3 Columns - Shifted Right) */}
-        <div className="lg:col-span-2 w-full flex justify-end lg:justify-center z-10">
-          <div className="bg-white border border-slate-300 w-full max-w-[240px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-4 space-y-3">
+        <div className="col-span-1 lg:col-span-2 w-full flex justify-center lg:justify-end z-10">
+          <div className="bg-white border border-slate-300 w-full max-w-xs lg:max-w-[240px] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-4 space-y-3">
             <div className="leading-tight relative">
               <span className="absolute top-0 right-0 text-sm">👋</span>
               <p className="text-[13px] font-black text-slate-900 flex items-center gap-1">
@@ -139,7 +139,7 @@ export function HeroSection() {
       </section>
 
       {/* 2. Structured Parameter Search Bar Section Matrix */}
-      <div className="max-w-7xl mx-auto px-6 mt-12 relative z-30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 relative z-30">
         <div className="bg-white rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-300 p-5 space-y-5">
 
           {/* Tab Controls Selector Toggle */}
@@ -217,7 +217,7 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="lg:col-span-1">
+            <div className="md:col-span-2 lg:col-span-1">
               <button className="w-full bg-[#0066FF] hover:bg-blue-700 text-white font-bold text-xs h-[42px] rounded-xl flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20 transition-all cursor-pointer">
                 <Search className="w-3.5 h-3.5" strokeWidth={2.5} />
                 <span>Search</span>
