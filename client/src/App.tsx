@@ -6,7 +6,7 @@ import { InvestPage } from './pages/InvestPage';
 import { CountryPage } from './pages/CountryPage';
 import { BuyPage } from './pages/BuyPage';
 import { SLHomepage } from './pages/SLHomepage';
-import {JapanRentalPage} from './pages/JapanRentalPage';
+import {JapanRentalPage} from './pages/JapanHomepage';
 
 export default function App() {
   return (
