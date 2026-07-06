@@ -8,13 +8,13 @@ export function InvestPage() {
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
             {/* SECTION 1: HERO CONTAINER */}
-            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-20 px-6 overflow-hidden">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 overflow-hidden">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
                     {/* Left Column: Text & Left CTA blocks */}
                     <div className="lg:col-span-4 space-y-6 z-10">
                         <div className="space-y-4">
-                            <h1 className="text-4xl sm:text-[44px] font-black text-slate-900 tracking-tight leading-[1.15]">
+                            <h1 className="text-3xl sm:text-[44px] font-black text-slate-900 tracking-tight leading-[1.15]">
                                 Invest Global.<br />
                                 <span className="text-[#0066FF]">Grow Confidently.</span>
                             </h1>
@@ -24,11 +24,11 @@ export function InvestPage() {
                         </div>
 
                         {/* Action Callout Button Strip */}
-                        <div className="flex items-center gap-3 pt-1">
-                            <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+                            <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer text-center">
                                 Explore Investment Opportunities
                             </button>
-                            <button className="border border-slate-300 text-[#0066FF] bg-white hover:bg-slate-150 font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer">
+                            <button className="border border-slate-300 text-[#0066FF] bg-white hover:bg-slate-150 font-bold text-[13px] px-5 py-3 rounded-xl transition-colors shadow-xs cursor-pointer text-center">
                                 How It Works
                             </button>
                         </div>
@@ -75,45 +75,45 @@ export function InvestPage() {
                     </div>
 
                     {/* Right Column: World Connectivity Map & Character Assist Cards */}
-                    <div className="lg:col-span-8 relative flex items-center justify-end min-h-[500px]">
+                    <div className="lg:col-span-8 relative flex flex-col md:flex-row lg:flex-col items-center justify-center lg:items-end lg:justify-end min-h-0 lg:min-h-[500px] gap-6 w-full mt-6 lg:mt-0">
 
                         {/* World Dot Grid Background Vector Image */}
-                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[80%] aspect-[1.4/1] pointer-events-none mix-blend-multiply opacity-90">
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full lg:w-[80%] aspect-[1.4/1] pointer-events-none mix-blend-multiply opacity-40 lg:opacity-90 hidden sm:block">
                             <img src="Investmap.png" alt="Global Node Connectivity Map" className="w-full h-full object-contain" />
 
                             {/* Absolute Circular Node Overlay Frameworks over map paths */}
-                            <div className="absolute top-[25%] left-[20%] w-15 h-15 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[25%] left-[20%] w-10 h-10 md:w-15 md:h-15 rounded-full border-2 md:border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute top-[25%] left-[65%] w-15 h-15 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[25%] left-[65%] w-10 h-10 md:w-15 md:h-15 rounded-full border-2 md:border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute top-[50%] left-[60%] w-17 h-17 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute top-[50%] left-[60%] w-12 h-12 md:w-17 md:h-17 rounded-full border-2 md:border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
-                            <div className="absolute bottom-[12%] left-[35%] w-18 h-18 rounded-full border-[3px] border-white shadow-md overflow-hidden bg-white">
+                            <div className="absolute bottom-[12%] left-[35%] w-12 h-12 md:w-18 md:h-18 rounded-full border-2 md:border-[3px] border-white shadow-md overflow-hidden bg-white">
                                 <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=120" className="w-full h-full object-cover" alt="" />
                             </div>
                         </div>
 
                         {/* Combined Side Character Panels stack aligned to the absolute right side */}
-                        <div className="w-[320px] flex flex-col gap-4 relative z-10">
+                        <div className="w-full sm:max-w-[340px] lg:w-[320px] flex flex-col gap-4 relative z-10">
 
                             {/* Top Card - Let Sora Guide You */}
-                            <div className="bg-white border border-slate-300/80 shadow-md shadow-slate-500/50 rounded-2xl p-4 flex justify-between items-start gap-3">
+                            <div className="bg-white border border-slate-300/80 shadow-md shadow-slate-500/10 lg:shadow-slate-500/50 rounded-2xl p-4 flex justify-between items-start gap-3">
                                 <div className="space-y-1.5 text-[11px] leading-relaxed text-slate-500 font-medium">
                                     <h4 className="font-bold text-slate-900 text-[13px]">
                                         Let <span className="text-[#0066FF]">Sora</span> guide you.
                                     </h4>
                                     <p>I'll connect you with Haru, your personal investment manager, to handle everything on your behalf.</p>
                                 </div>
-                                <div className="w-36 h-36 shrink-0 bg-slate-150 rounded-xl overflow-hidden flex items-center justify-center">
+                                <div className="w-24 h-24 sm:w-36 sm:h-36 shrink-0 bg-slate-150 rounded-xl overflow-hidden flex items-center justify-center">
                                     <img src="BlueBird&House.PNG" alt="Sora Character" className="w-full h-full object-contain" />
                                 </div>
                             </div>
 
                             {/* Middle Curved Context Connector Arrow Path Vector */}
-                            <div className="absolute left-[35%] top-[102px] w-6 h-8 pointer-events-none opacity-40">
+                            <div className="absolute left-[35%] top-[100px] sm:top-[180px] w-6 h-8 pointer-events-none opacity-40 hidden sm:block">
                                 <svg viewBox="0 0 24 32" fill="none" stroke="#0066FF" strokeWidth="1.5" strokeDasharray="3 3" className="w-full h-full">
                                     <path d="M2,2 C12,2 22,12 22,30" strokeLinecap="round" />
                                     <path d="M18,26 L22,30 L26,26" strokeLinecap="round" strokeLinejoin="round" />
@@ -121,7 +121,7 @@ export function InvestPage() {
                             </div>
 
                             {/* Bottom Card - Haru Assist Block */}
-                            <div className="bg-[#FFFBF7] border border-orange-300/50 shadow-md shadow-orange-300/50 rounded-2xl p-4 flex justify-between items-end gap-2 mt-4">
+                            <div className="bg-[#FFFBF7] border border-orange-300/50 shadow-md shadow-orange-300/20 lg:shadow-orange-300/50 rounded-2xl p-4 flex justify-between items-end gap-2 sm:mt-4">
                                 <div className="space-y-2 text-[10.5px] font-bold text-slate-600 w-full">
                                     <h4 className="text-[13px] font-extrabold text-slate-900">
                                         <span className="text-orange-500">Haru</span> will handle it for you.
@@ -133,7 +133,7 @@ export function InvestPage() {
                                         <p className="flex items-center gap-1.5"><span className="text-slate-400 font-bold text-[9px]">✓</span> Support & grow together</p>
                                     </div>
                                 </div>
-                                <div className="w-36 h-36 shrink-0 overflow-hidden flex items-center justify-center">
+                                <div className="w-24 h-24 sm:w-36 sm:h-36 shrink-0 overflow-hidden flex items-center justify-center">
                                     <img src="OrangeCat_investpage.PNG" alt="Haru Character" className="w-full h-full object-contain" />
                                 </div>
                             </div>
@@ -436,7 +436,7 @@ export function InvestPage() {
             {/* SECTION 6: RESOURCES */}
             <section className="max-w-7xl mx-auto px-6 py-6 space-y-6">
                 <div className="flex justify-between items-center">
-                    <div> 
+                    <div>
                         <h2 className="text-xl font-black text-[#0B1B3D] tracking-tight">
                             Investor Resources Center
                         </h2>
