@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Globe, ChevronDown, Menu, X } from 'lucide-react'; // Added Menu and X icons
+import { Globe, ChevronDown, Menu, X } from 'lucide-react'; 
 
 export function Navbar() {
   const [countriesOpen, setCountriesOpen] = useState(false);
@@ -54,7 +54,7 @@ export function Navbar() {
               className={`absolute left-0 top-full mt-2 min-w-[160px] rounded-2xl border border-slate-200 bg-white py-2 shadow-lg ${countriesOpen ? 'block' : 'hidden'}`}
             >
               <Link to="/country/sri-lanka" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Sri Lanka</Link>
-              <Link to="/country/japan" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Japan</Link>
+              <Link to="/japan-rental" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Japan</Link>
 
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Navbar() {
             {countriesOpen && (
               <div className="pl-4 flex flex-col gap-3 border-l border-slate-100 ml-1">
                 <Link to="/country/sri-lanka" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">Sri Lanka</Link>
-                <Link to="/country/japan" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">Japan</Link>
+                <Link to="/japan-rental" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">Japan</Link>
               </div>
             )}
           </div>

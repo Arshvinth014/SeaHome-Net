@@ -75,7 +75,7 @@ export function BuyPage() {
 
                             {/* The Chat Bubble: Placed to the right of the bird, arrow pointing left */}
                             <div className="bg-white text-slate-800 shadow-md border border-slate-100/90 rounded-2xl p-3.5 max-w-[195px] relative pointer-events-auto left-2 mt-[-90px]">
-                                <span className="font-bold text-[#0C1E3E] text-xs block mb-0.5">Hi! I'm Seahome 👋</span>
+                                <span className="font-bold text-[#0C1E3E] text-xs block mb-0.5">Hi! I'm <span className="text-[#0066FF]">Sora </span> 👋</span>
                                 <p className="text-[11px] font-medium leading-tight text-slate-500">I'll help you find the perfect property.</p>
 
                                 {/* Pointing triangle facing left toward the mascot */}
