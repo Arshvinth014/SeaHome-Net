@@ -55,7 +55,7 @@ export function Navbar() {
             >
               <Link to="/country/sri-lanka" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Sri Lanka</Link>
               <Link to="/country/japan" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Japan</Link>
-              <Link to="/country/usa" onClick={() => setCountriesOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">USA</Link>
+
             </div>
           </div>
 
@@ -125,7 +125,6 @@ export function Navbar() {
               <div className="pl-4 flex flex-col gap-3 border-l border-slate-100 ml-1">
                 <Link to="/country/sri-lanka" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">Sri Lanka</Link>
                 <Link to="/country/japan" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">Japan</Link>
-                <Link to="/country/usa" onClick={closeMobileMenu} className="text-slate-600 hover:text-[#0066FF]">USA</Link>
               </div>
             )}
           </div>
