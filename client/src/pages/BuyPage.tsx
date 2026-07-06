@@ -31,6 +31,7 @@ export function BuyPage() {
     return (
         <div className="w-full bg-[#FAFCFF] min-h-screen font-sans text-slate-800 antialiased">
             {/* HERO REGION CONTROLLER BLOCK */}
+            {/* HERO REGION CONTROLLER BLOCK */}
             <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 relative overflow-hidden">
 
                 <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
@@ -59,13 +60,13 @@ export function BuyPage() {
                     </div>
 
                     {/* Main Interface Wrapper with Precise Bird Overlap from image_c7dbff.jpg */}
-                    <div className="relative mt-6">
+                    <div className="relative mt-20 sm:mt-6">
 
                         {/* Bird Mascot Container floating directly on top of the search card border */}
-                        <div className="absolute right-4 md:right-12 top-[-80px] flex items-center gap-3 z-20 pointer-events-none">
+                        <div className="absolute right-2 md:right-12 top-[-115px] sm:top-[-80px] flex items-center gap-1 sm:gap-3 z-20 pointer-events-none scale-85 sm:scale-100 origin-right">
 
                             {/* Mascot Bird Image Asset Wrapper */}
-                            <div className="w-48 h-48 md:w-48 md:h-48 relative shrink-0 pointer-events-auto left-7 mt-[-50px]">
+                            <div className="w-36 h-36 md:w-48 md:h-48 relative shrink-0 pointer-events-auto left-4 sm:left-7 mt-[-20px] sm:mt-[-50px]">
                                 <img
                                     src="BlueBirdBuyPage.png"
                                     alt="Seahome Mascot Hero Asset"
@@ -74,7 +75,7 @@ export function BuyPage() {
                             </div>
 
                             {/* The Chat Bubble: Placed to the right of the bird, arrow pointing left */}
-                            <div className="bg-white text-slate-800 shadow-md border border-slate-100/90 rounded-2xl p-3.5 max-w-[195px] relative pointer-events-auto left-2 mt-[-90px]">
+                            <div className="bg-white text-slate-800 shadow-md border border-slate-100/90 rounded-2xl p-3.5 max-w-[170px] sm:max-w-[195px] relative pointer-events-auto left-1 sm:left-2 mt-[-50px] sm:mt-[-90px]">
                                 <span className="font-bold text-[#0C1E3E] text-xs block mb-0.5">Hi! I'm <span className="text-[#0066FF]">Sora </span> 👋</span>
                                 <p className="text-[11px] font-medium leading-tight text-slate-500">I'll help you find the perfect property.</p>
 
@@ -85,27 +86,27 @@ export function BuyPage() {
                         </div>
 
                         {/* Central Search Card Hub */}
-                        <div className="bg-white border border-slate-300 shadow-xl shadow-blue-900/25 rounded-2xl p-5 space-y-4 relative z-10">
+                        <div className="bg-white border border-slate-300 shadow-xl shadow-blue-900/25 rounded-2xl p-4 sm:p-5 space-y-4 relative z-10">
 
                             {/* Active Operations Tabs Row */}
-                            <div className="flex items-center gap-2 border-b border-slate-300 pb-3">
+                            <div className="flex items-center gap-2 border-b border-slate-300 pb-3 overflow-x-auto no-scrollbar">
                                 <button
                                     onClick={() => setActiveSearchTab?.('buy')}
-                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer shrink-0 ${activeSearchTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
                                         }`}
                                 >
                                     <Home className="w-3.5 h-3.5" /> Buy
                                 </button>
                                 <button
                                     onClick={() => setActiveSearchTab?.('rent')}
-                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer shrink-0 ${activeSearchTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
                                         }`}
                                 >
                                     <KeyRound className="w-3.5 h-3.5" /> Rent
                                 </button>
                                 <button
                                     onClick={() => setActiveSearchTab?.('invest')}
-                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeSearchTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
+                                    className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer shrink-0 ${activeSearchTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-600'
                                         }`}
                                 >
                                     <TrendingUp className="w-3.5 h-3.5" /> Invest
@@ -116,7 +117,7 @@ export function BuyPage() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
 
                                 {/* Where input section */}
-                                <div className="lg:col-span-3 space-y-1.5">
+                                <div className="sm:col-span-2 lg:col-span-3 space-y-1.5">
                                     <label className="font-bold text-slate-400 block px-0.5">Where</label>
                                     <input
                                         type="text"
@@ -164,8 +165,8 @@ export function BuyPage() {
                                 </div>
 
                                 {/* Action Buttons Section */}
-                                <div className="lg:col-span-3 flex items-center gap-2">
-                                    <button className="flex items-center justify-center gap-1.5 border border-slate-300 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer h-[44px] min-w-[110px]">
+                                <div className="sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2 sm:pt-0">
+                                    <button className="flex items-center justify-center gap-1.5 border border-slate-300 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer h-[44px] sm:min-w-[110px]">
                                         <SlidersHorizontal className="w-3.5 h-3.5" /> More Filters
                                     </button>
                                     <button className="flex-1 flex items-center justify-center gap-2 bg-[#0066FF] hover:bg-blue-700 text-white font-bold p-3 rounded-xl shadow-xs transition-all cursor-pointer h-[44px] whitespace-nowrap px-4">
@@ -176,7 +177,7 @@ export function BuyPage() {
                             </div>
 
                             {/* Popular Searches footer tags mapped with POPULAR_SEARCHES mock data array */}
-                            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 text-[11px] border-t border-slate-300">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-3 text-[11px] border-t border-slate-300">
                                 <div className="flex flex-wrap items-center gap-2">
                                     <span className="text-slate-400 font-bold">Popular Searches:</span>
                                     {POPULAR_SEARCHES.map((tag, i) => (
@@ -188,7 +189,7 @@ export function BuyPage() {
                                         </span>
                                     ))}
                                 </div>
-                                <button className="flex items-center gap-1.5 text-slate-500 hover:text-[#0066FF] font-bold border border-slate-300 rounded-lg px-3 py-1 bg-white cursor-pointer transition-colors">
+                                <button className="w-full sm:w-auto flex items-center justify-center gap-1.5 text-slate-500 hover:text-[#0066FF] font-bold border border-slate-300 rounded-lg px-3 py-2 sm:py-1 bg-white cursor-pointer transition-colors">
                                     <Heart className="w-3 h-3 text-slate-400" /> Save Search
                                 </button>
                             </div>
@@ -470,9 +471,9 @@ export function BuyPage() {
             </main>
 
             {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
-            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-60px] border-t border-slate-300">
-                <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-6 relative">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32">
+            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-20px] sm:mt-[-60px] border-t border-slate-300">
+                <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-5 sm:p-6 relative overflow-hidden lg:overflow-visible">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32 pb-24 lg:pb-0">
 
                         <div className="flex items-start gap-3">
                             <div className="p-2 rounded-xl bg-blue-50 text-[#0066FF] shrink-0"><ShieldCheck className="w-5 h-5" /></div>
@@ -509,8 +510,8 @@ export function BuyPage() {
                     </div>
 
                     {/* MASCOT PLACEMENT 2 BOUNDING CONTAINER */}
-                    <div className="hidden lg:flex absolute mb-[80px] right-5 bottom-0 w-60 h-60 items-center justify-center z-20">
-                        <img src="BlueBirdBuyPage.png" alt="Seahome Mascot Trust Footer Asset" className="w-full h-full object-contain" />
+                    <div className="flex absolute right-4 sm:right-6 lg:right-5 bottom-[-20px] sm:bottom-[-10px] lg:bottom-0 mb-0 lg:mb-[80px] w-32 h-32 sm:w-40 sm:h-40 lg:w-60 lg:h-60 items-center justify-center z-20 pointer-events-none">
+                        <img src="BlueBirdBuyPage.png" alt="Seahome Mascot Trust Footer Asset" className="w-full h-full object-contain object-bottom" />
                     </div>
                 </div>
             </section>
