@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/invest" element={<InvestPage />} />
         <Route path="/country/:countryId" element={<CountryPage />} />
         <Route path="*" element={<HomePage />} />
-        <Route path="/sl-rental" element={<SLHomepage />} />
+        <Route path="/sl-homepage" element={<SLHomepage />} />
         <Route path="/japan-rental" element={<JapanRentalPage />} />
       </Routes>
 

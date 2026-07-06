@@ -4,7 +4,7 @@ export function Footer() {
 
       {/* 1. Global Newsletter Form Full Width Banner */}
       {/* MARKETING NEWSLETTER SIGNUP BANNER */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-4">
+      {/* <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-4">
         <div className="bg-[#004ACC] rounded-2xl p-6 lg:p-8 text-white flex flex-col lg:flex-row justify-between items-center gap-6 shadow-xl shadow-blue-900/10">
           <div className="space-y-1 text-center lg:text-left w-full lg:w-auto">
             <h3 className="text-base sm:text-lg lg:text-xl font-black tracking-tight leading-snug">Stay Updated with Global Real Estate Opportunities</h3>
@@ -16,7 +16,7 @@ export function Footer() {
             <button className="bg-[#0066FF] hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md cursor-pointer whitespace-nowrap w-full sm:w-auto text-center">Subscribe</button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 2. Structured Link Columns Grid System */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
