@@ -59,8 +59,8 @@ export function JapanRentalPage() {
                     {/* Content & Assistant Grid Context Frame */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-5">
 
-                        {/* Left Narrative Text Block */}
-                        <div className="order-2 lg:order-1 lg:col-span-5 space-y-6 lg:space-y-9 z-20">
+                        {/* Left Narrative Text Block (First on mobile via order-1, first on desktop via lg:order-1) */}
+                        <div className="order-1 lg:order-1 lg:col-span-5 space-y-6 lg:space-y-9 z-20">
                             {/* Breadcrumb Navigation Path */}
                             <div className="text-[11px] font-bold text-slate-400 flex flex-wrap items-center gap-1.5 lg:mb-30 lg:mt-[-70px]">
                                 <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
@@ -94,8 +94,8 @@ export function JapanRentalPage() {
                             </div>
                         </div>
 
-                        {/* Right Mascot & Floating Panel Layer Assembly */}
-                        <div className="order-1 lg:order-2 lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[320px] lg:min-h-[400px] z-10">
+                        {/* Right Mascot & Floating Panel Layer Assembly (Second on mobile via order-2, second on desktop via lg:order-2) */}
+                        <div className="order-2 lg:order-2 lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[320px] lg:min-h-[400px] z-10">
 
                             {/* Mascot Fixed Alignment Frame (Hidden on Mobile, Exactly the Same on Desktop) */}
                             <div className="hidden lg:block absolute right-[-60px] w-360 h-400 z-10 pointer-events-none">
