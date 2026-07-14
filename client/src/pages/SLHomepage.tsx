@@ -361,66 +361,64 @@ export function SLHomepage() {
             ))}
           </div>
         </div>
-
         {/* Right Promotional Box Layout */}
-        {/* Right Promotional Box Layout */}
-<div className="lg:col-span-4 relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-sky-100 to-sky-200 p-5 sm:p-6 flex flex-col justify-between min-h-[420px] lg:min-h-[470px]">
+        <div className="lg:col-span-4 relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-sky-100 to-sky-200 p-5 sm:p-6 flex flex-col justify-between min-h-[420px] lg:min-h-[470px]">
 
-    {/* Content */}
-    <div className="relative z-10 text-center lg:text-left">
+          {/* Content */}
+          <div className="relative z-10 text-center lg:text-left">
 
-        <h2 className="mt-2 lg:mt-6 text-2xl lg:text-3xl font-extrabold leading-tight text-blue-700">
-            List Your Property
-            <br />
-            for Free!
-        </h2>
+            <h2 className="mt-2 lg:mt-6 text-2xl lg:text-3xl font-extrabold leading-tight text-blue-700">
+              List Your Property
+              <br />
+              for Free!
+            </h2>
 
-        <p className="mt-3 text-sm leading-6 text-slate-600 font-medium max-w-sm mx-auto lg:mx-0">
-            Reach thousands of genuine renters across Sri Lanka and connect with verified tenants quickly.
-        </p>
+            <p className="mt-3 text-sm leading-6 text-slate-600 font-medium max-w-sm mx-auto lg:mx-0">
+              Reach thousands of genuine renters across Sri Lanka and connect with verified tenants quickly.
+            </p>
 
-        <ul className="mt-8 space-y-4 text-sm font-semibold">
+            <ul className="mt-8 space-y-4 text-sm font-semibold">
 
-            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+              <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
                 <span className="text-lg">✓</span>
                 <span>100% Free Listing</span>
-            </li>
+              </li>
 
-            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+              <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
                 <span className="text-lg">✓</span>
                 <span>Verified Tenants</span>
-            </li>
+              </li>
 
-            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+              <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
                 <span className="text-lg">✓</span>
                 <span>Quick Responses</span>
-            </li>
+              </li>
 
-        </ul>
+            </ul>
 
-    </div>
+          </div>
 
-    {/* CTA */}
-    <div className="relative z-10 mt-8 flex justify-center lg:justify-start z-0">
+          {/* CTA */}
+          <div className="relative z-10 mt-8 flex justify-center lg:justify-start z-0">
 
-        <button className="w-full sm:w-64 lg:w-56 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer">
-            List My Property
-        </button>
+            <button className="w-full sm:w-64 lg:w-56 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer">
+              List My Property
+            </button>
 
-    </div>
+          </div>
 
-    {/* Character Image */}
-    <div className="pointer-events-none mt-8 flex justify-center lg:absolute lg:right-[-25px] lg:bottom-10 z-30">
+          {/* Character Image */}
+          <div className="pointer-events-none mt-8 flex justify-center lg:absolute lg:right-[-25px] lg:bottom-10 z-30">
 
-        <img
-            src="JungleFowlBird.png"
-            alt="Promotion Character Placeholder"
-            className="w-48 sm:w-56 lg:w-52 h-auto object-contain select-none"
-        />
+            <img
+              src="JungleFowlBird.png"
+              alt="Promotion Character Placeholder"
+              className="w-48 sm:w-56 lg:w-52 h-auto object-contain select-none"
+            />
 
-    </div>
+          </div>
 
-</div>
+        </div>
 
       </section>
 
