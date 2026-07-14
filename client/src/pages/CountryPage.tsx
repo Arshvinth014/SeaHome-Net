@@ -31,11 +31,11 @@ export function CountryPage() {
         <div className="w-full bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
             {/* HERO REGION CONTEXT CONTAINER */}
-            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center space-y-6 z-20 pointer-events-auto">
-                <div className="max-w-7xl mx-auto w-full px-4 py-12 z-10 relative flex flex-col justify-between h-full gap-8">
+            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center py-6 sm:py-12 z-20 pointer-events-auto">
+                <div className="max-w-7xl mx-auto w-full px-4 z-10 relative flex flex-col justify-between h-full gap-8">
 
                     {/* 1. Breadcrumb Navigation Path */}
-                    <div className="text-[11px] font-bold text-slate-400 flex items-center gap-1.5">
+                    <div className="text-[11px] font-bold text-slate-400 flex items-center gap-1.5 flex-wrap">
                         <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
                         <ChevronRight className="w-3 h-3 text-slate-300" />
                         <span className="hover:text-blue-600 cursor-pointer transition-colors">Countries</span>
@@ -44,15 +44,15 @@ export function CountryPage() {
                     </div>
 
                     {/* 2. Content & Assistant Grid Context Frame */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center pt-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-0">
 
                         {/* Left Narrative Text Block */}
-                        <div className="lg:col-span-5 space-y-6 z-20">
-                            <div className="space-y-4">
-                                <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] tracking-tight leading-none">
+                        <div className="lg:col-span-5 space-y-6 z-20 text-center lg:text-left flex flex-col items-center lg:items-start">
+                            <div className="space-y-4 w-full">
+                                <h1 className="text-3xl sm:text-4xl md:text-[44px] font-semibold text-[#0B1B3D] tracking-tight leading-tight lg:leading-none">
                                     Sri Lanka Properties
                                 </h1>
-                                <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
+                                <h2 className="text-base sm:text-lg font-black text-[#0B1B3D] tracking-tight">
                                     Invest in Paradise. Live the Potential.
                                 </h2>
                             </div>
@@ -61,11 +61,11 @@ export function CountryPage() {
                             </p>
 
                             {/* Action Buttons Matrix */}
-                            <div className="flex flex-wrap items-center gap-3">
-                                <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 w-full sm:w-auto">
+                                <button className="w-full sm:w-auto bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer">
                                     Explore Properties
                                 </button>
-                                <button onClick={() => navigate('/sl-homepage')} className="border border-slate-300 bg-white hover:bg-slate-150 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center gap-2 transition-all cursor-pointer">
+                                <button onClick={() => navigate('/sl-homepage')} className="w-full sm:w-auto border border-slate-300 bg-white hover:bg-slate-50 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center justify-center gap-2 transition-all cursor-pointer">
                                     <Compass size={15} />
                                     Check Rental Properties
                                 </button>
@@ -73,10 +73,10 @@ export function CountryPage() {
                         </div>
 
                         {/* Right Mascot & Floating Panel Layer Assembly */}
-                        <div className="lg:col-span-7 flex items-center justify-end relative h-full min-h-[300px] z-10">
+                        <div className="lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[220px] lg:min-h-[300px] z-10 w-full">
 
-                            {/* Mascot Fixed Alignment Frame */}
-                            <div className="absolute right-[-120px] w-280 h-125 z-10 z-0 pointer-events-none">
+                            {/* Mascot Fixed Alignment Frame (Visible ONLY on Desktop screen sizes) */}
+                            <div className="hidden lg:block absolute right-[-120px] w-280 h-125 z-10 pointer-events-none">
                                 <img
                                     src="/SrilankaPage.png"
                                     alt="Sri Lanka Welcome Character Assistant"
@@ -85,7 +85,7 @@ export function CountryPage() {
                             </div>
 
                             {/* Speech Prompt Card Framework Container */}
-                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[250px] space-y-3 relative z-20 relative mr-[-25px]">
+                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[280px] sm:max-w-[250px] space-y-3 relative z-20 lg:mr-[-25px] mx-auto lg:mx-0">
                                 <div className="space-y-1.5">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[12px] font-black text-[#662211] tracking-tight">
@@ -126,10 +126,10 @@ export function CountryPage() {
                     </div>
 
                     {/* 3. Bottom Row Indicators Row Container */}
-                    <div className="flex flex-wrap items-center gap-7 pt-1 border-t border-slate-300/60 max-w-2xl z-20">
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5 sm:gap-7 pt-4 border-t border-slate-300/60 max-w-2xl z-20 w-full">
 
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF]">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF] shrink-0">
                                 <ShieldCheck size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
@@ -138,8 +138,8 @@ export function CountryPage() {
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF]">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF] shrink-0">
                                 <Building2 size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
@@ -148,8 +148,8 @@ export function CountryPage() {
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF]">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF] shrink-0">
                                 <ShieldCheck size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
@@ -158,8 +158,8 @@ export function CountryPage() {
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF]">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-300 flex items-center justify-center text-[#0066FF] shrink-0">
                                 <MapPin size={13} strokeWidth={2.5} />
                             </div>
                             <div className="flex flex-col">
@@ -174,138 +174,135 @@ export function CountryPage() {
             </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
-<section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-    <div className="rounded-2xl border border-slate-300 bg-white p-4 sm:p-5 shadow-lg">
+            <section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+                <div className="rounded-2xl border border-slate-300 bg-white p-4 sm:p-5 shadow-lg">
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 border-b border-slate-300 pb-4">
+                    {/* Filter Tabs */}
+                    <div className="flex flex-wrap items-center gap-2 border-b border-slate-300 pb-4">
 
-            <button
-                onClick={() => setActiveFilterTab('buy')}
-                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                    activeFilterTab === 'buy'
-                        ? 'bg-[#0066FF] text-white'
-                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
-                }`}
-            >
-                Buy
-            </button>
+                        <button
+                            onClick={() => setActiveFilterTab('buy')}
+                            className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${activeFilterTab === 'buy'
+                                ? 'bg-[#0066FF] text-white'
+                                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                                }`}
+                        >
+                            Buy
+                        </button>
 
-            <button
-                onClick={() => setActiveFilterTab('rent')}
-                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                    activeFilterTab === 'rent'
-                        ? 'bg-[#0066FF] text-white'
-                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
-                }`}
-            >
-                Rent
-            </button>
+                        <button
+                            onClick={() => setActiveFilterTab('rent')}
+                            className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${activeFilterTab === 'rent'
+                                ? 'bg-[#0066FF] text-white'
+                                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                                }`}
+                        >
+                            Rent
+                        </button>
 
-            <button
-                onClick={() => setActiveFilterTab('invest')}
-                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                    activeFilterTab === 'invest'
-                        ? 'bg-[#0066FF] text-white'
-                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
-                }`}
-            >
-                Invest
-            </button>
+                        <button
+                            onClick={() => setActiveFilterTab('invest')}
+                            className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${activeFilterTab === 'invest'
+                                ? 'bg-[#0066FF] text-white'
+                                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                                }`}
+                        >
+                            Invest
+                        </button>
 
-        </div>
+                    </div>
 
-        {/* Search Form */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mt-5">
+                    {/* Search Form */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mt-5">
 
-            {/* Location */}
-            <div className="lg:col-span-3">
-                <label className="block mb-2 text-xs font-bold text-slate-500">
-                    Location
-                </label>
+                        {/* Location */}
+                        <div className="lg:col-span-3">
+                            <label className="block mb-2 text-xs font-bold text-slate-500">
+                                Location
+                            </label>
 
-                <input
-                    type="text"
-                    placeholder="City, Area or District"
-                    className="w-full h-12 rounded-xl border border-slate-300 px-4 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
+                            <input
+                                type="text"
+                                placeholder="City, Area or District"
+                                className="w-full h-12 rounded-xl border border-slate-300 px-4 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
 
-            {/* Property Type */}
-            <div className="lg:col-span-2">
-                <label className="block mb-2 text-xs font-bold text-slate-500">
-                    Property Type
-                </label>
+                        {/* Property Type */}
+                        <div className="lg:col-span-2">
+                            <label className="block mb-2 text-xs font-bold text-slate-500">
+                                Property Type
+                            </label>
 
-                <div className="relative">
+                            <div className="relative">
 
-                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option>All Types</option>
-                    </select>
+                                <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>All Types</option>
+                                </select>
 
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                            </div>
+                        </div>
+
+                        {/* Price */}
+                        <div className="lg:col-span-2">
+                            <label className="block mb-2 text-xs font-bold text-slate-500">
+                                Price Range
+                            </label>
+
+                            <div className="relative">
+
+                                <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Any Price</option>
+                                </select>
+
+                                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                            </div>
+                        </div>
+
+                        {/* Bedrooms */}
+                        <div className="lg:col-span-2">
+                            <label className="block mb-2 text-xs font-bold text-slate-500">
+                                Bedrooms
+                            </label>
+
+                            <div className="relative">
+
+                                <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Any</option>
+                                </select>
+
+                                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                            </div>
+                        </div>
+
+                        {/* More Button */}
+                        <div className="lg:col-span-1 flex items-end">
+
+                            <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:bg-slate-50 cursor-pointer">
+                                <SlidersHorizontal className="h-4 w-4" />
+                                More
+                            </button>
+
+                        </div>
+
+                        {/* Search Button */}
+                        <div className="lg:col-span-2 flex items-end">
+
+                            <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#0066FF] text-sm font-bold text-white shadow-sm transition-all hover:bg-blue-700 cursor-pointer">
+                                <Search className="h-4 w-4" />
+                                Search
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </div>
-            </div>
-
-            {/* Price */}
-            <div className="lg:col-span-2">
-                <label className="block mb-2 text-xs font-bold text-slate-500">
-                    Price Range
-                </label>
-
-                <div className="relative">
-
-                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option>Any Price</option>
-                    </select>
-
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-
-                </div>
-            </div>
-
-            {/* Bedrooms */}
-            <div className="lg:col-span-2">
-                <label className="block mb-2 text-xs font-bold text-slate-500">
-                    Bedrooms
-                </label>
-
-                <div className="relative">
-
-                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option>Any</option>
-                    </select>
-
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-
-                </div>
-            </div>
-
-            {/* More Button */}
-            <div className="lg:col-span-1 flex items-end">
-
-                <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:bg-slate-50 cursor-pointer">
-                    <SlidersHorizontal className="h-4 w-4" />
-                    More
-                </button>
-
-            </div>
-
-            {/* Search Button */}
-            <div className="lg:col-span-2 flex items-end">
-
-                <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#0066FF] text-sm font-bold text-white shadow-sm transition-all hover:bg-blue-700 cursor-pointer">
-                    <Search className="h-4 w-4" />
-                    Search
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
+            </section>
 
             {/* FEATURED PORTFOLIO GRID */}
             <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
