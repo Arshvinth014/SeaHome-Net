@@ -81,8 +81,8 @@ export function SLHomepage() {
                 <button
                   onClick={() => setActiveTab('rent')}
                   className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'rent'
-                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
-                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                    : 'bg-white/75 hover:bg-white text-slate-600'
                     }`}
                 >
                   <Building2 className="w-3.5 h-3.5" /> Rent
@@ -90,8 +90,8 @@ export function SLHomepage() {
                 <button
                   onClick={() => setActiveTab('restaurants')}
                   className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'restaurants'
-                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
-                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                    : 'bg-white/75 hover:bg-white text-slate-600'
                     }`}
                 >
                   <Utensils className="w-3.5 h-3.5" /> Restaurants
@@ -99,8 +99,8 @@ export function SLHomepage() {
                 <button
                   onClick={() => setActiveTab('hotels')}
                   className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'hotels'
-                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
-                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                    : 'bg-white/75 hover:bg-white text-slate-600'
                     }`}
                 >
                   <Building2 className="w-3.5 h-3.5" /> Hotels for Functions
@@ -363,32 +363,65 @@ export function SLHomepage() {
         </div>
 
         {/* Right Promotional Box Layout */}
-        <div className="lg:col-span-4 bg-gradient-to-br from-blue-50 to-sky-200 border border-blue-50 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
-          <div>
-            <h2 className="text-xl font-extrabold text-blue-600 leading-tight mt-[30px]">List Your Property <br />for Free!</h2>
-            <p className="text-[13px] text-slate-500 mt-2 max-w-xs font-semibold">Reach thousands of genuine <br /> renters across Sri Lanka.</p>
+        {/* Right Promotional Box Layout */}
+<div className="lg:col-span-4 relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-sky-100 to-sky-200 p-5 sm:p-6 flex flex-col justify-between min-h-[420px] lg:min-h-[470px]">
 
-            <ul className="mt-9 space-y-4 text-[13px] text-slate-700 font-semibold">
-              <li className="flex items-center gap-2 text-emerald-600">✓ 100% Free Listing</li>
-              <li className="flex items-center gap-2 text-emerald-600">✓ Verified Tenants</li>
-              <li className="flex items-center gap-2 text-emerald-600">✓ Quick Responses</li>
-            </ul>
-          </div>
+    {/* Content */}
+    <div className="relative z-10 text-center lg:text-left">
 
-          <div className="mt-1 z-10">
-            <button className="w-[200px] bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2.5 rounded-xl shadow-md transition">
-              List My Property
-            </button>
-          </div>
+        <h2 className="mt-2 lg:mt-6 text-2xl lg:text-3xl font-extrabold leading-tight text-blue-700">
+            List Your Property
+            <br />
+            for Free!
+        </h2>
 
-          <div className="absolute right-[-25px] bottom-20 w-68 h-68 pointer-events-none">
-            <img
-              src="JungleFowlBird.png"
-              alt="Promotion Character Placeholder"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
+        <p className="mt-3 text-sm leading-6 text-slate-600 font-medium max-w-sm mx-auto lg:mx-0">
+            Reach thousands of genuine renters across Sri Lanka and connect with verified tenants quickly.
+        </p>
+
+        <ul className="mt-8 space-y-4 text-sm font-semibold">
+
+            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+                <span className="text-lg">✓</span>
+                <span>100% Free Listing</span>
+            </li>
+
+            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+                <span className="text-lg">✓</span>
+                <span>Verified Tenants</span>
+            </li>
+
+            <li className="flex items-center justify-center lg:justify-start gap-2 text-emerald-600">
+                <span className="text-lg">✓</span>
+                <span>Quick Responses</span>
+            </li>
+
+        </ul>
+
+    </div>
+
+    {/* CTA */}
+    <div className="relative z-10 mt-8 flex justify-center lg:justify-start z-0">
+
+        <button className="w-full sm:w-64 lg:w-56 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer">
+            List My Property
+        </button>
+
+    </div>
+
+    {/* Character Image */}
+    <div className="pointer-events-none mt-8 flex justify-center lg:absolute lg:right-[-25px] lg:bottom-10 z-30">
+
+        <img
+            src="JungleFowlBird.png"
+            alt="Promotion Character Placeholder"
+            className="w-48 sm:w-56 lg:w-52 h-auto object-contain select-none"
+        />
+
+    </div>
+
+</div>
+
       </section>
 
       {/* WHY CHOOSE & TESTIMONIALS SECTION */}
@@ -479,19 +512,46 @@ export function SLHomepage() {
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {/* Support CTA Callout Box */}
-        <div className="bg-blue-100 border border-blue-100 rounded-2xl p-6 flex items-center gap-4 relative h-[170px]">
-          <img src="jungleFowlSL.png" alt="Support Agent Illustration" className="w-50 h-50 object-contain z-10 mb-[30px]" />
-          <div>
-            <h3 className="text-sm font-bold text-blue-950">Need Help Finding the Right Property?</h3>
-            <p className="text-xs text-slate-500 mt-1">Our team is here to help you find the perfect place or answer any questions you have.</p>
-            <button className="mt-3 bg-white border border-blue-200 hover:bg-slate-50 text-blue-700 text-xs font-bold py-1.5 px-4 rounded-xl shadow-sm transition">
-              Contact Support
-            </button>
+        <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-blue-100 shadow-sm">
+
+          <div className="flex flex-col sm:flex-row items-center gap-6 p-5 sm:p-6">
+
+            {/* Character */}
+            <div className="flex-shrink-0">
+
+              <img
+                src="jungleFowlSL.png"
+                alt="Support Agent Illustration"
+                className="w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 object-contain sm:-mb-6"
+              />
+
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 text-center sm:text-left">
+
+              <h3 className="text-lg sm:text-xl font-extrabold text-blue-950">
+                Need Help Finding the Right Property?
+              </h3>
+
+              <p className="mt-2 text-sm leading-6 text-slate-600 max-w-lg">
+                Our experienced team is ready to help you discover the perfect
+                property, answer your questions, and guide you through every
+                step of your real estate journey.
+              </p>
+
+              <button className="mt-5 w-full sm:w-auto rounded-xl border border-blue-200 bg-white px-6 py-3 text-sm font-bold text-blue-700 shadow-sm transition-all duration-200 hover:bg-blue-50 hover:shadow-md active:scale-95 cursor-pointer">
+                Contact Support
+              </button>
+
+            </div>
+
           </div>
+
         </div>
 
         {/* Newsletter Bar */}
-        <div className="bg-blue-950 rounded-2xl p-6 flex flex-col justify-between text-white">
+        <div className="bg-blue-950 rounded-2xl p-6 flex flex-col justify-between text-white lg:h-[200px] relative overflow-hidden">
           <div>
             <h3 className="text-sm font-bold">Stay Updated!</h3>
             <p className="text-xs text-slate-400 mt-1">Subscribe to get the latest rental listings, offers and updates.</p>
