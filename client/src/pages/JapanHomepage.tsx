@@ -97,8 +97,8 @@ export function JapanRentalPage() {
                         {/* Right Mascot & Floating Panel Layer Assembly */}
                         <div className="order-1 lg:order-2 lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[320px] lg:min-h-[400px] z-10">
 
-                            {/* Mascot Fixed Alignment Frame (Desktop Only) */}
-                            <div className="absolute right-[-60px] w-360 h-400 z-10 pointer-events-none">
+                            {/* Mascot Fixed Alignment Frame (Hidden on Mobile, Exactly the Same on Desktop) */}
+                            <div className="hidden lg:block absolute right-[-60px] w-360 h-400 z-10 pointer-events-none">
                                 <img
                                     src="/JapanHeroPage.png"
                                     alt="Japan Welcome Character Assistant"
