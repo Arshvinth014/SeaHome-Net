@@ -32,18 +32,6 @@ export function CountryPage() {
 
             {/* HERO REGION CONTEXT CONTAINER */}
             <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center space-y-6 z-20 pointer-events-auto">
-
-                {/* Absolute Full-Bleed Background Image Panel */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1588598126284-a14df9cfbd1f?w=1800&auto=format&fit=crop&q=80"
-                        alt="Sri Lanka Sigiriya Rock Landscape Background"
-                        className="w-full h-full object-cover object-right"
-                    />
-                    {/* Soft Left-to-Right White Fade Layer to overlay readable text contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-50% to-transparent" />
-                </div>
-
                 <div className="max-w-7xl mx-auto w-full px-4 py-12 z-10 relative flex flex-col justify-between h-full gap-8">
 
                     {/* 1. Breadcrumb Navigation Path */}
@@ -186,74 +174,138 @@ export function CountryPage() {
             </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
-            <section className="max-w-7xl mx-auto px-6 -mt-6 relative z-30">
-                <div className="bg-white border border-slate-300 shadow-lg rounded-2xl p-4 space-y-4">
-                    <div className="flex items-center gap-2 border-b border-slate-300 pb-3">
-                        <button
-                            onClick={() => setActiveFilterTab('buy')}
-                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'buy' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
-                        >
-                            Buy
-                        </button>
-                        <button
-                            onClick={() => setActiveFilterTab('rent')}
-                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'rent' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
-                        >
-                            Rent
-                        </button>
-                        <button
-                            onClick={() => setActiveFilterTab('invest')}
-                            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${activeFilterTab === 'invest' ? 'bg-[#0066FF] text-white' : 'text-slate-400 hover:text-slate-700'}`}
-                        >
-                            Invest
-                        </button>
-                    </div>
+<section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+    <div className="rounded-2xl border border-slate-300 bg-white p-4 sm:p-5 shadow-lg">
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
-                        <div className="lg:col-span-3 space-y-1.5">
-                            <label className="font-bold text-slate-400 block">Location</label>
-                            <input type="text" placeholder="City, Area or District" className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-500 font-medium" />
-                        </div>
-                        <div className="lg:col-span-2 space-y-1.5">
-                            <label className="font-bold text-slate-400 block">Property Type</label>
-                            <div className="relative">
-                                <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
-                                    <option>All Types</option>
-                                </select>
-                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
-                            </div>
-                        </div>
-                        <div className="lg:col-span-2 space-y-1.5">
-                            <label className="font-bold text-slate-400 block">Price Range</label>
-                            <div className="relative">
-                                <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
-                                    <option>Any Price</option>
-                                </select>
-                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
-                            </div>
-                        </div>
-                        <div className="lg:col-span-2 space-y-1.5">
-                            <label className="font-bold text-slate-400 block">Bedrooms</label>
-                            <div className="relative">
-                                <select className="w-full appearance-none border border-slate-300 rounded-xl p-3 pr-8 focus:outline-hidden text-slate-600 font-medium bg-white">
-                                    <option>Any</option>
-                                </select>
-                                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
-                            </div>
-                        </div>
-                        <div className="lg:col-span-1">
-                            <button className="w-full flex items-center justify-center gap-1.5 border border-slate-300 text-slate-600 font-bold p-3 rounded-xl hover:bg-slate-50 transition-colors whitespace-nowrap cursor-pointer">
-                                <SlidersHorizontal className="w-3.5 h-3.5" /> More
-                            </button>
-                        </div>
-                        <div className="lg:col-span-2">
-                            <button className="w-full flex items-center justify-center gap-2 bg-[#0066FF] hover:bg-blue-700 text-white font-bold p-3 rounded-xl shadow-xs transition-all cursor-pointer">
-                                <Search className="w-4 h-4" /> Search
-                            </button>
-                        </div>
-                    </div>
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-300 pb-4">
+
+            <button
+                onClick={() => setActiveFilterTab('buy')}
+                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                    activeFilterTab === 'buy'
+                        ? 'bg-[#0066FF] text-white'
+                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                }`}
+            >
+                Buy
+            </button>
+
+            <button
+                onClick={() => setActiveFilterTab('rent')}
+                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                    activeFilterTab === 'rent'
+                        ? 'bg-[#0066FF] text-white'
+                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                }`}
+            >
+                Rent
+            </button>
+
+            <button
+                onClick={() => setActiveFilterTab('invest')}
+                className={`px-5 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                    activeFilterTab === 'invest'
+                        ? 'bg-[#0066FF] text-white'
+                        : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                }`}
+            >
+                Invest
+            </button>
+
+        </div>
+
+        {/* Search Form */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mt-5">
+
+            {/* Location */}
+            <div className="lg:col-span-3">
+                <label className="block mb-2 text-xs font-bold text-slate-500">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="City, Area or District"
+                    className="w-full h-12 rounded-xl border border-slate-300 px-4 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+            </div>
+
+            {/* Property Type */}
+            <div className="lg:col-span-2">
+                <label className="block mb-2 text-xs font-bold text-slate-500">
+                    Property Type
+                </label>
+
+                <div className="relative">
+
+                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>All Types</option>
+                    </select>
+
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
                 </div>
-            </section>
+            </div>
+
+            {/* Price */}
+            <div className="lg:col-span-2">
+                <label className="block mb-2 text-xs font-bold text-slate-500">
+                    Price Range
+                </label>
+
+                <div className="relative">
+
+                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Any Price</option>
+                    </select>
+
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                </div>
+            </div>
+
+            {/* Bedrooms */}
+            <div className="lg:col-span-2">
+                <label className="block mb-2 text-xs font-bold text-slate-500">
+                    Bedrooms
+                </label>
+
+                <div className="relative">
+
+                    <select className="w-full h-12 appearance-none rounded-xl border border-slate-300 bg-white px-4 pr-10 text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Any</option>
+                    </select>
+
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+
+                </div>
+            </div>
+
+            {/* More Button */}
+            <div className="lg:col-span-1 flex items-end">
+
+                <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:bg-slate-50 cursor-pointer">
+                    <SlidersHorizontal className="h-4 w-4" />
+                    More
+                </button>
+
+            </div>
+
+            {/* Search Button */}
+            <div className="lg:col-span-2 flex items-end">
+
+                <button className="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#0066FF] text-sm font-bold text-white shadow-sm transition-all hover:bg-blue-700 cursor-pointer">
+                    <Search className="h-4 w-4" />
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
             {/* FEATURED PORTFOLIO GRID */}
             <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">

@@ -31,7 +31,6 @@ export function BuyPage() {
     return (
         <div className="w-full bg-[#FAFCFF] min-h-screen font-sans text-slate-800 antialiased">
             {/* HERO REGION CONTROLLER BLOCK */}
-            {/* HERO REGION CONTROLLER BLOCK */}
             <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 relative overflow-hidden">
 
                 <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
