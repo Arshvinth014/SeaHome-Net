@@ -52,161 +52,151 @@ export function JapanRentalPage() {
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased font-sans">
 
             {/* HERO REGION CONTEXT CONTAINER */}
-            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center space-y-6 z-20 pointer-events-auto">
+            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center z-20 pointer-events-auto">
 
-                {/* Absolute Full-Bleed Background Image Panel */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1588598126284-a14df9cfbd1f?w=1800&auto=format&fit=crop&q=80"
-                        alt="Sri Lanka Sigiriya Rock Landscape Background"
-                        className="w-full h-full object-cover object-right"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-50% to-transparent" />
+            <div className="max-w-7xl mx-auto w-full px-4 py-8 lg:py-12 z-10 relative flex flex-col justify-between h-full gap-8">
+
+                {/* 1. Breadcrumb Navigation Path */}
+                <div className="text-[11px] font-bold text-slate-400 flex flex-wrap items-center gap-1.5">
+                    <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
+                    <ChevronRight className="w-3 h-3 text-slate-300" />
+                    <span className="hover:text-blue-600 cursor-pointer transition-colors">Countries</span>
+                    <ChevronRight className="w-3 h-3 text-slate-300" />
+                    <span className="text-[#0B1B3D]">Sri Lanka</span>
                 </div>
 
-                <div className="max-w-7xl mx-auto w-full px-4 py-12 z-10 relative flex flex-col justify-between h-full gap-8">
+                {/* 2. Content & Assistant Grid Context Frame */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-5">
 
-                    {/* 1. Breadcrumb Navigation Path */}
-                    <div className="text-[11px] font-bold text-slate-400 flex items-center gap-1.5">
-                        <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
-                        <ChevronRight className="w-3 h-3 text-slate-300" />
-                        <span className="hover:text-blue-600 cursor-pointer transition-colors">Countries</span>
-                        <ChevronRight className="w-3 h-3 text-slate-300" />
-                        <span className="text-[#0B1B3D]">Sri Lanka</span>
+                    {/* Left Narrative Text Block */}
+                    <div className="order-2 lg:order-1 lg:col-span-5 space-y-6 lg:space-y-9 z-20">
+                        <div className="space-y-4">
+                            <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] lg:mt-[-40px] tracking-tight leading-tight lg:leading-none">
+                                Japan Properties
+                            </h1>
+                            <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
+                                Invest in Innovation.<br />Live in Harmony.
+                            </h2>
+                        </div>
+                        <p className="text-slate-500 text-[13px] font-medium leading-relaxed max-w-lg">
+                            Discover premium properties and high-potential real estate investment opportunities across Japan's most dynamic locations.
+                        </p>
+
+                        {/* Action Buttons Matrix */}
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                            <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer text-center">
+                                Explore Properties
+                            </button>
+                            <button className="border border-slate-300 bg-white hover:bg-slate-50 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                                <Compass size={15} />
+                                Check Rental Properties
+                            </button>
+                        </div>
                     </div>
 
-                    {/* 2. Content & Assistant Grid Context Frame */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center pt-5">
+                    {/* Right Mascot & Floating Panel Layer Assembly */}
+                    <div className="order-1 lg:order-2 lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[320px] lg:min-h-[400px] z-10">
 
-                        {/* Left Narrative Text Block */}
-                        <div className="lg:col-span-5 space-y-9 z-20">
-                            <div className="space-y-4">
-                                <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] mt-[-80px] tracking-tight leading-none">
-                                    Japan Properties
-                                </h1>
-                                <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
-                                    Invest in Innovation.<br />Live in Harmony.
-                                </h2>
-                            </div>
-                            <p className="text-slate-500 text-[13px] font-medium leading-relaxed max-w-lg">
-                                Discover premium properties and high-potential real estate investment opportunities across Japan's most dynamic locations.
-                            </p>
-
-                            {/* Action Buttons Matrix */}
-                            <div className="flex flex-wrap items-center gap-3">
-                                <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer">
-                                    Explore Properties
-                                </button>
-                                <button className="border border-slate-300 bg-white hover:bg-slate-150 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center gap-2 transition-all cursor-pointer">
-                                    <Compass size={15} />
-                                    Check Rental Properties
-                                </button>
-                            </div>
+                        {/* Mascot Fixed Alignment Frame (Desktop Only) */}
+                        <div className="hidden lg:block absolute right-[-60px] w-[365px] h-[400px] z-0 pointer-events-none">
+                            <img
+                                src="/JapanHeroPage.png"
+                                alt="Japan Welcome Character Assistant"
+                                className="w-full h-full object-contain select-none"
+                            />
                         </div>
 
-                        {/* Right Mascot & Floating Panel Layer Assembly */}
-                        <div className="lg:col-span-7 flex items-center justify-end relative h-full min-h-[300px] z-10">
+                        {/* Speech Prompt Card Framework Container */}
+                        <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[280px] sm:max-w-[250px] h-[320px] sm:h-[300px] flex flex-col justify-between relative z-20 lg:mr-[50px]">
+                            <div className="space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[12px] font-black text-[#662211] tracking-tight">
+                                        Kon'nichiwa! I'm Pheasan.
+                                    </span>
+                                    <span className="text-xs select-none"> 🇯🇵</span>
+                                </div>
 
-                            {/* Mascot Fixed Alignment Frame */}
-                            <div className="absolute right-[-60px] w-365 h-400 z-10 z-0 pointer-events-none">
-                                <img
-                                    src="/JapanHeroPage.png"
-                                    alt="Sri Lanka Welcome Character Assistant"
-                                    className="w-full h-full object-contain select-none"
-                                />
-                            </div>
-
-                            {/* Speech Prompt Card Framework Container */}
-                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[250px] h-[300px] space-y-3 relative z-20 relative mr-[50px]">
                                 <div className="space-y-1.5">
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-[12px] font-black text-[#662211] tracking-tight">
-                                            Kon'nichiwa! I'm Pheasan.
-                                        </span>
-                                        <span className="text-xs select-none"> 🇯🇵</span>
-                                    </div>
-
-                                    <div className="space-y-1.5">
-                                        <h4 className="font-bold text-slate-700 text-xs">Your Japan Property Guide.</h4>
-                                        <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
-                                            I'll help you find the best properties and investment opportunities in Japan.
-                                        </p>
-                                    </div>
+                                    <h4 className="font-bold text-slate-700 text-xs">Your Japan Property Guide.</h4>
+                                    <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
+                                        I'll help you find the best properties and investment opportunities in Japan.
+                                    </p>
                                 </div>
 
                                 {/* Verified Criteria Indicators List */}
-                                <div className="space-y-4 text-[11px] font-bold text-slate-600 pt-3">
+                                <div className="space-y-2.5 text-[11px] font-bold text-slate-600 pt-2">
                                     <p className="flex items-center gap-2 text-[#0066FF]">
-                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Local Market Expert
+                                        <Check size={12} strokeWidth={3} /> Local Market Expert
                                     </p>
                                     <p className="flex items-center gap-2 text-[#0066FF]">
-                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Verified Opportunities
+                                        <Check size={12} strokeWidth={3} /> Verified Opportunities
                                     </p>
                                     <p className="flex items-center gap-2 text-[#0066FF]">
-                                        <Check size={12} strokeWidth={3} className="text-[#0066FF]" /> Here to Assist You
+                                        <Check size={12} strokeWidth={3} /> Here to Assist You
                                     </p>
                                 </div>
-
-                                {/* Action Dropdown Trigger Button */}
-                                <button className="w-full flex items-center justify-between bg-white border border-slate-400/80 text-[#0066FF] hover:bg-slate-50 font-black text-[10.5px] px-3 py-2 rounded-xl shadow-3xs transition-all mt-7 cursor-pointer">
-                                    <span className="flex items-center gap-1.5">
-                                        <HelpCircle size={13} className="text-[#0066FF]" />
-                                        How I Can Help You
-                                    </span>
-                                    <ChevronDown size={12} className="text-slate-400" />
-                                </button>
                             </div>
 
+                            {/* Action Dropdown Trigger Button */}
+                            <button className="w-full flex items-center justify-between bg-white border border-slate-400/80 text-[#0066FF] hover:bg-slate-50 font-black text-[10.5px] px-3 py-2 rounded-xl shadow-3xs transition-all cursor-pointer">
+                                <span className="flex items-center gap-1.5">
+                                    <HelpCircle size={13} />
+                                    How I Can Help You
+                                </span>
+                                <ChevronDown size={12} className="text-slate-400" />
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* 3. Bottom Row Indicators Row Container */}
+                <div className="flex flex-wrap items-center gap-6 sm:gap-7 pt-6 lg:pt-4 border-t border-slate-300/60 max-w-2xl z-20">
+
+                    <div className="flex items-center gap-2 min-w-[120px]">
+                        <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF] shrink-0">
+                            <ShieldCheck size={13} strokeWidth={2.5} />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Verified</span>
+                            <span className="text-[10px] font-bold text-slate-800">Listings</span>
                         </div>
                     </div>
 
-                    {/* 3. Bottom Row Indicators Row Container */}
-                    <div className="flex flex-wrap items-center gap-7 pt-1 border-t border-slate-300/60 max-w-2xl z-20">
-
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF]">
-                                <ShieldCheck size={13} strokeWidth={2.5} />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Verified</span>
-                                <span className="text-[10px] font-bold text-slate-800">Listings</span>
-                            </div>
+                    <div className="flex items-center gap-2 min-w-[120px]">
+                        <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF] shrink-0">
+                            <Building2 size={13} strokeWidth={2.5} />
                         </div>
-
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF]">
-                                <Building2 size={13} strokeWidth={2.5} />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Trusted</span>
-                                <span className="text-[10px] font-bold text-slate-800">Agencies</span>
-                            </div>
+                        <div className="flex flex-col">
+                            <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Trusted</span>
+                            <span className="text-[10px] font-bold text-slate-800">Agencies</span>
                         </div>
+                    </div>
 
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF]">
-                                <ShieldCheck size={13} strokeWidth={2.5} />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Secure</span>
-                                <span className="text-[10px] font-bold text-slate-800">Transactions</span>
-                            </div>
+                    <div className="flex items-center gap-2 min-w-[120px]">
+                        <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF] shrink-0">
+                            <ShieldCheck size={13} strokeWidth={2.5} />
                         </div>
-
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF]">
-                                <MapPin size={13} strokeWidth={2.5} />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Local</span>
-                                <span className="text-[10px] font-bold text-slate-800">Expertise</span>
-                            </div>
+                        <div className="flex flex-col">
+                            <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Secure</span>
+                            <span className="text-[10px] font-bold text-slate-800">Transactions</span>
                         </div>
+                    </div>
 
+                    <div className="flex items-center gap-2 min-w-[120px]">
+                        <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF] shrink-0">
+                            <MapPin size={13} strokeWidth={2.5} />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[14px] font-black text-slate-900 tracking-tight leading-none">Local</span>
+                            <span className="text-[10px] font-bold text-slate-800">Expertise</span>
+                        </div>
                     </div>
 
                 </div>
-            </section>
+
+            </div>
+        </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
             <section className="max-w-7xl mx-auto px-6 -mt-6 relative z-30">
