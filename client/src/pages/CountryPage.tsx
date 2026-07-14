@@ -174,7 +174,7 @@ export function CountryPage() {
             </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
-            <section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+            <section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
                 <div className="rounded-2xl border border-slate-300 bg-white p-4 sm:p-5 shadow-lg">
 
                     {/* Filter Tabs */}

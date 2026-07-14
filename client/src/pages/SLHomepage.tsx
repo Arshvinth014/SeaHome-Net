@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import { 
-  Search, MapPin, Building2, ShieldCheck, 
-  ThumbsUp, ChevronLeft, ChevronRight, Heart, Eye, 
-  Home, Utensils, Building, LifeBuoy, Star, Mail, ArrowRight, 
-  ChevronDown, Check, HelpCircle as SupportIcon,
+import {
+  Search, MapPin, Building2, ShieldCheck,
+  ThumbsUp, ChevronLeft, ChevronRight, Heart, Eye,
+  Home, Utensils, Building, LifeBuoy, Star, Mail, ArrowRight,
+  ChevronDown, Check,
   Maximize2,
   Bed,
-  Bath
+  Bath,
+  HelpCircle
 } from 'lucide-react';
-import { 
-  propertyCategories, featuredProperties, moreServices, testimonials, popularLocations , POPULAR_SEARCHES
+import {
+  propertyCategories, featuredProperties, moreServices, testimonials, popularLocations, POPULAR_SEARCHES
 } from '../config/SLHomepage';
 
 const IconMapper = ({ name, className }: { name: string; className?: string }) => {
@@ -27,213 +28,210 @@ export function SLHomepage() {
 
   return (
     <div className="bg-[#f8fafc] min-h-screen text-slate-800 font-sans">
-      
+
       {/* HERO SECTION */}
-      <section className="relative min-h-[530px] lg:h-[530px] w-full flex items-center justify-center overflow-hidden py-12 px-4 lg:px-16">
-      
-      {/* 1. Base Sea Coast Backdrop Layer */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="SLHubHero.png" 
-          alt="Sri Lanka Coastline Backdrop" 
-          className="w-full h-full object-cover object-center pointer-events-none select-none"
-        />
-        {/* Transparent overlay tint matching the web layout view */}
-        <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.3px]" />
-      </div>
+      <section className="relative min-h-[530px] lg:h-[530px] w-full flex items-center justify-center overflow-hidden py-10 lg:py-0 px-4 lg:px-16 bg-slate-50">
 
-      {/* Main Content Layout Container */}
-      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-x-4 items-end relative z-10 pt-6">
-        
-        {/* LEFT COMPONENT COLUMN: Heading Stack & Search Panel */}
-        <div className="lg:col-span-9 space-y-6 flex flex-col justify-end">
-          
-          {/* Hero text headers styling block */}
-          <div className="space-y-3 max-w-2xl text-left">
-            <h1 className="text-3xl md:text-[40px] font-black text-[#0B1D3A] tracking-tight leading-[1.15]">
-              Sri Lanka's Home <br />
-              <span className="text-[#0066FF]">Rental & Real Estate Hub</span>
-            </h1>
-            <p className="text-slate-1000/500 text-sm font-semibold max-w-xl leading-relaxed">
-              Find the best rental properties, list your property, discover <br/> restaurants, and book hotels for your special moments.
-            </p>
-          </div>
-
-          {/* Badges strip bar container */}
-          <div className="flex flex-wrap gap-2.5 items-center">
-            <span className="flex items-center gap-1.5 bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#0066FF]" /> 100% Verified Listings
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
-              <ThumbsUp className="w-3.5 h-3.5 text-[#0066FF]" /> Trusted by Sri Lankans
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
-              <Search className="w-3.5 h-3.5 text-[#0066FF]" /> Easy & Secure
-            </span>
-          </div>
-
-          {/* Input Interface Control Box Wrapper */}
-          <div className="relative mt-2 max-w-[940px] w-full pt-[44px]">
-            
-            {/* Context Navigation Tabs positioned floating directly on the card boundary */}
-            <div className="flex items-center gap-1.5 absolute top-[0px] left-0 z-20">
-              <button 
-                onClick={() => setActiveTab('rent')}
-                className={`flex items-center gap-1.5 px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer ${
-                  activeTab === 'rent' 
-                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]' 
-                    : 'bg-white/75 hover:bg-white text-slate-600'
-                }`}
-              >
-                <Building2 className="w-3.5 h-3.5" /> Rent
-              </button>
-              <button 
-                onClick={() => setActiveTab('restaurants')}
-                className={`flex items-center gap-1.5 px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer ${
-                  activeTab === 'restaurants' 
-                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]' 
-                    : 'bg-white/75 hover:bg-white text-slate-600'
-                }`}
-              >
-                <Utensils className="w-3.5 h-3.5" /> Restaurants
-              </button>
-              <button 
-                onClick={() => setActiveTab('hotels')}
-                className={`flex items-center gap-1.5 px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer ${
-                  activeTab === 'hotels' 
-                    ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]' 
-                    : 'bg-white/75 hover:bg-white text-slate-600'
-                }`}
-              >
-                <Building2 className="w-3.5 h-3.5" /> Hotels for Functions
-              </button>
-            </div>
-
-            {/* Central Filter Dashboard Interface Segment Box */}
-            <div className="bg-white border border-slate-100/80 shadow-[0_12px_36px_rgba(0,0,0,0.03)] rounded-b-2xl rounded-tr-2xl p-5 space-y-4 relative z-10">
-              
-              {/* Filter System Input Fields Form Layout */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
-                
-                {/* Search Target String Input */}
-                <div className="lg:col-span-4 flex flex-col gap-1.5">
-                  <label className="font-bold text-slate-700 px-0.5 text-[11px]">What are you looking for?</label>
-                  <div className="relative">
-                    <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-[14px] pointer-events-none" />
-                    <input 
-                      type="text" 
-                      placeholder="Ex: Apartment, House, Room..." 
-                      className="w-full border border-slate-300/90 rounded-xl p-3 pl-10 focus:outline-none focus:border-blue-500 font-medium text-slate-700 placeholder:text-slate-400 bg-white h-[44px]" 
-                    />
-                  </div>
-                </div>
-
-                {/* City/Location Input */}
-                <div className="lg:col-span-3 flex flex-col gap-1.5">
-                  <label className="font-bold text-slate-700 px-0.5 text-[11px]">Location</label>
-                  <div className="relative">
-                    <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-[14px] pointer-events-none" />
-                    <input 
-                      type="text" 
-                      placeholder="Any City or Area" 
-                      className="w-full border border-slate-300/90 rounded-xl p-3 pl-10 focus:outline-none focus:border-blue-500 font-medium text-slate-700 placeholder:text-slate-400 bg-white h-[44px]" 
-                    />
-                  </div>
-                </div>
-
-                {/* Property Type Dropdown Selector */}
-                <div className="lg:col-span-2 flex flex-col gap-1.5">
-                  <label className="font-bold text-slate-700 px-0.5 text-[11px]">Property Type</label>
-                  <div className="relative">
-                    <select className="w-full appearance-none border border-slate-300/90 rounded-xl p-3 pr-8 focus:outline-none font-bold text-slate-600 bg-white h-[44px]">
-                      <option>Any Type</option>
-                    </select>
-                    <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
-                  </div>
-                </div>
-
-                {/* Budget Limit Option Selector */}
-                <div className="lg:col-span-3 flex flex-col gap-1.5">
-                  <label className="font-bold text-slate-700 px-0.5 text-[11px]">Budget</label>
-                  <div className="relative">
-                    <select className="w-full appearance-none border border-slate-300/90 rounded-xl p-3 pr-8 focus:outline-none font-bold text-slate-600 bg-white h-[44px]">
-                      <option>Any Budget</option>
-                    </select>
-                    <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Dynamic tag array looping from SLHomepage array file parameters */}
-              <div className="flex flex-wrap items-center gap-2 pt-6 text-[11px] border-t border-slate-300">
-                <span className="text-slate-500 font-bold">Popular Searches:</span>
-                {POPULAR_SEARCHES.map((term: string, idx: number) => (
-                  <span 
-                    key={idx} 
-                    className="bg-[#EDF4FF] hover:bg-blue-100 text-[#0066FF] font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-colors"
-                  >
-                    {term}
-                  </span>
-                ))}
-              </div>
-
-            </div>
-
-          </div>
+        {/* 1. Base Sea Coast Backdrop Layer (Visible only on Desktop for clean mobile reading layout) */}
+        <div className="hidden lg:block absolute inset-0 z-0">
+          <img
+            src="SLHubHero.png"
+            alt="Sri Lanka Coastline Backdrop"
+            className="w-full h-full object-cover object-center pointer-events-none select-none bg-slate-100"
+          />
+          {/* Transparent overlay tint matching the web layout view */}
+          <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.3px]" />
         </div>
 
-        {/* RIGHT COMPONENT COLUMN: Mascot & Ayubowan floating card container info segment layout */}
-        <div className="lg:col-span-3 flex flex-col items-end justify-end h-full relative min-h-[360px] pb-1">
-          
-          {/* 2. Isolated Mascot Layer overlapping between the containers */}
-          <div className="absolute left-[-230px] lg:left-[-250px] bottom-[159px] w-60 h-60 lg:w-78 lg:h-78 z-20 pointer-events-none">
-            <img 
-              src="JungleFowlBird.png" 
-              alt="Sri Lankan Junglefowl Character Asset" 
-              className="w-full h-full object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.04)]" 
-            />
-          </div>
+        {/* Main Content Layout Container */}
+        <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-4 items-center lg:items-end relative z-10 pt-4 lg:pt-6">
 
-          {/* Ayubowan text box overlay segment aligned flush to right grid edge column border layout */}
-          <div className="bg-white text-slate-800 shadow-[0_12px_40px_rgba(0,0,0,0.05)] border border-slate-100 rounded-2xl p-5 w-[250px] max-w-[250px] lg:max-w-[290px] flex flex-col justify-between h-[350px] relative z-10 pointer-events-auto mb-[90px] right-6.5">
-            
-            <div className="space-y-3">
-              <div className="space-y-0.5">
-                <span className="font-extrabold text-[#0C1E3E] text-[13px] block">Ayubowan!</span>
-                <span className="font-extrabold text-[#0C1E3E] text-[13px] flex items-center gap-1">
-                  I'm Junglefowl    🐓
-                </span>
-              </div>
+          {/* LEFT COMPONENT COLUMN: Heading Stack & Search Panel */}
+          <div className="col-span-1 lg:col-span-9 space-y-6 flex flex-col justify-end">
 
-              <p className="text-[12px] font-bold leading-relaxed text-slate-400 mb-5">
-                Welcome to <span className="font-extrabold text-slate-500">SeaHomeNet.co.lk</span><br/>I'm here to help you find the perfect rental property or list your property with ease.
+            {/* Hero text headers styling block */}
+            <div className="space-y-3 max-w-2xl text-left">
+              <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-black text-[#0B1D3A] tracking-tight leading-[1.15]">
+                Sri Lanka's Home <br />
+                <span className="text-[#0066FF]">Rental & Real Estate Hub</span>
+              </h1>
+              <p className="text-slate-600 lg:text-slate-500 text-sm font-semibold max-w-xl leading-relaxed">
+                Find the best rental properties, list your property, discover <br className="hidden sm:inline" /> restaurants, and book hotels for your special moments.
               </p>
-
-              <ul className="text-[11px] text-slate-600 space-y-1.5 font-bold pt-1.5">
-                <li className="flex items-center gap-2">
-                  <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> List Your Property
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> Find Rentals
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> Trusted Support
-                </li>
-              </ul>
             </div>
 
-            {/* Support button element component interface */}
-            <button className="w-full bg-[#F4F8FF] hover:bg-[#EBF3FF] text-[#0066FF] text-xs font-bold py-2 rounded-xl border border-blue-300/70 flex items-center justify-center gap-1.5 transition-colors cursor-pointer">
-              <SupportIcon className="w-3 h-3 fill-[#0066FF] text-white" /> How Can I Help You?
-            </button>
+            {/* Badges strip bar container */}
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="flex items-center gap-1.5 bg-white/90 lg:bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#0066FF]" /> 100% Verified Listings
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/90 lg:bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
+                <ThumbsUp className="w-3.5 h-3.5 text-[#0066FF]" /> Trusted by Sri Lankans
+              </span>
+              <span className="flex items-center gap-1.5 bg-white/90 lg:bg-white/85 backdrop-blur-xs px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-xs border border-slate-300/40">
+                <Search className="w-3.5 h-3.5 text-[#0066FF]" /> Easy & Secure
+              </span>
+            </div>
+
+            {/* Input Interface Control Box Wrapper */}
+            <div className="relative mt-2 max-w-[940px] w-full pt-[44px]">
+
+              {/* Context Navigation Tabs positioned floating directly on the card boundary */}
+              <div className="flex items-center gap-1 absolute top-[0px] left-0 z-20 w-full overflow-x-auto no-scrollbar">
+                <button
+                  onClick={() => setActiveTab('rent')}
+                  className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'rent'
+                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    }`}
+                >
+                  <Building2 className="w-3.5 h-3.5" /> Rent
+                </button>
+                <button
+                  onClick={() => setActiveTab('restaurants')}
+                  className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'restaurants'
+                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    }`}
+                >
+                  <Utensils className="w-3.5 h-3.5" /> Restaurants
+                </button>
+                <button
+                  onClick={() => setActiveTab('hotels')}
+                  className={`flex items-center gap-1.5 px-4 sm:px-5 rounded-t-xl text-xs font-bold transition-all h-[44px] cursor-pointer whitespace-nowrap ${activeTab === 'hotels'
+                      ? 'bg-white text-[#0066FF] border-t border-x border-slate-300/50 shadow-[0_-4px_12px_rgba(0,0,0,0.01)]'
+                      : 'bg-white/75 hover:bg-white text-slate-600'
+                    }`}
+                >
+                  <Building2 className="w-3.5 h-3.5" /> Hotels for Functions
+                </button>
+              </div>
+
+              {/* Central Filter Dashboard Interface Segment Box */}
+              <div className="bg-white border border-slate-200/80 lg:border-slate-100/80 shadow-[0_12px_36px_rgba(0,0,0,0.05)] rounded-b-2xl rounded-tr-2xl p-5 space-y-4 relative z-10">
+
+                {/* Filter System Input Fields Form Layout */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end text-xs">
+
+                  {/* Search Target String Input */}
+                  <div className="lg:col-span-4 flex flex-col gap-1.5">
+                    <label className="font-bold text-slate-700 px-0.5 text-[11px]">What are you looking for?</label>
+                    <div className="relative">
+                      <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-[14px] pointer-events-none" />
+                      <input
+                        type="text"
+                        placeholder="Ex: Apartment, House, Room..."
+                        className="w-full border border-slate-300/90 rounded-xl p-3 pl-10 focus:outline-none focus:border-blue-500 font-medium text-slate-700 placeholder:text-slate-400 bg-white h-[44px]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* City/Location Input */}
+                  <div className="lg:col-span-3 flex flex-col gap-1.5">
+                    <label className="font-bold text-slate-700 px-0.5 text-[11px]">Location</label>
+                    <div className="relative">
+                      <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-[14px] pointer-events-none" />
+                      <input
+                        type="text"
+                        placeholder="Any City or Area"
+                        className="w-full border border-slate-300/90 rounded-xl p-3 pl-10 focus:outline-none focus:border-blue-500 font-medium text-slate-700 placeholder:text-slate-400 bg-white h-[44px]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Property Type Dropdown Selector */}
+                  <div className="lg:col-span-2 flex flex-col gap-1.5">
+                    <label className="font-bold text-slate-700 px-0.5 text-[11px]">Property Type</label>
+                    <div className="relative">
+                      <select className="w-full appearance-none border border-slate-300/90 rounded-xl p-3 pr-8 focus:outline-none font-bold text-slate-600 bg-white h-[44px]">
+                        <option>Any Type</option>
+                      </select>
+                      <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                    </div>
+                  </div>
+
+                  {/* Budget Limit Option Selector */}
+                  <div className="lg:col-span-3 flex flex-col gap-1.5">
+                    <label className="font-bold text-slate-700 px-0.5 text-[11px]">Budget</label>
+                    <div className="relative">
+                      <select className="w-full appearance-none border border-slate-300/90 rounded-xl p-3 pr-8 focus:outline-none font-bold text-slate-600 bg-white h-[44px]">
+                        <option>Any Budget</option>
+                      </select>
+                      <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Dynamic tag array looping from popular search parameters */}
+                <div className="flex flex-wrap items-center gap-2 pt-6 text-[11px] border-t border-slate-200">
+                  <span className="text-slate-500 font-bold">Popular Searches:</span>
+                  {POPULAR_SEARCHES.map((term: string, idx: number) => (
+                    <span
+                      key={idx}
+                      className="bg-[#EDF4FF] hover:bg-blue-100 text-[#0066FF] font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-colors"
+                    >
+                      {term}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          {/* RIGHT COMPONENT COLUMN: Mascot & Ayubowan floating card container (Hidden completely on mobile) */}
+          <div className="hidden lg:col-span-3 lg:flex flex-col items-end justify-end h-full relative min-h-[360px] pb-1">
+
+            {/* 2. Isolated Mascot Layer overlapping between the containers */}
+            <div className="absolute left-[-230px] lg:left-[-250px] bottom-[159px] w-60 h-60 lg:w-78 lg:h-78 z-20 pointer-events-none">
+              <img
+                src="JungleFowlBird.png"
+                alt="Sri Lankan Junglefowl Character Asset"
+                className="w-full h-full object-contain object-bottom drop-shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+              />
+            </div>
+
+            {/* Ayubowan text box overlay segment aligned flush to right grid edge column border layout */}
+            <div className="bg-white text-slate-800 shadow-[0_12px_40px_rgba(0,0,0,0.05)] border border-slate-100 rounded-2xl p-5 w-[250px] max-w-[250px] lg:max-w-[290px] flex flex-col justify-between h-[350px] relative z-10 pointer-events-auto mb-[90px] right-6.5">
+
+              <div className="space-y-3">
+                <div className="space-y-0.5">
+                  <span className="font-extrabold text-[#0C1E3E] text-[13px] block">Ayubowan!</span>
+                  <span className="font-extrabold text-[#0C1E3E] text-[13px] flex items-center gap-1">
+                    I'm Junglefowl    🐓
+                  </span>
+                </div>
+
+                <p className="text-[12px] font-bold leading-relaxed text-slate-400 mb-5">
+                  Welcome to <span className="font-extrabold text-slate-500">SeaHomeNet.co.lk</span><br />I'm here to help you find the perfect rental property or list your property with ease.
+                </p>
+
+                <ul className="text-[11px] text-slate-600 space-y-1.5 font-bold pt-1.5">
+                  <li className="flex items-center gap-2">
+                    <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> List Your Property
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> Find Rentals
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-3 h-3 text-[#0066FF] stroke-[3.5]" /> Trusted Support
+                  </li>
+                </ul>
+              </div>
+
+              {/* Support button element component interface */}
+              <button className="w-full bg-[#F4F8FF] hover:bg-[#EBF3FF] text-[#0066FF] text-xs font-bold py-2 rounded-xl border border-blue-300/70 flex items-center justify-center gap-1.5 transition-colors cursor-pointer">
+                <HelpCircle className="w-3.5 h-3.5 text-[#0066FF]" /> How Can I Help You?
+              </button>
+
+            </div>
 
           </div>
 
         </div>
-
-      </div>
-    </section>
+      </section>
 
       {/* QUICK ACTIONS RIBBON */}
       <div className="max-w-7xl mx-auto mt-10 relative z-20 px-6">
@@ -314,7 +312,7 @@ export function SLHomepage() {
                   <Heart className="w-3.5 h-3.5" />
                 </button>
               </div>
-              
+
               <div className="h-36 overflow-hidden bg-slate-200 relative">
                 <img src={prop.image} alt={prop.title} className="w-full h-full object-cover" />
                 <div className="absolute bottom-2 right-2 bg-black/50 text-white text-[10px] px-1.5 py-0.5 rounded flex items-center gap-1">
@@ -328,7 +326,7 @@ export function SLHomepage() {
                 <p className="text-[11px] text-slate-500 flex items-center gap-0.5 mt-0.5">
                   <MapPin className="w-3 h-3 text-slate-500" /> {prop.location}
                 </p>
-                
+
                 <div className="grid grid-cols-3 gap-2 border-t border-slate-300 mt-3 pt-2 text-[10px] text-slate-500 text-center font-medium">
                   <div><span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5 text-slate-400" /> {prop.beds} Beds</span></div>
                   <div><span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5 text-slate-400" /> {prop.baths} Baths</span></div>
@@ -342,7 +340,7 @@ export function SLHomepage() {
 
       {/* SERVICES & PROMOTION BLOCK AREA */}
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        
+
         {/* Left Services Block */}
         <div className="lg:col-span-8 flex flex-col justify-between">
           <h2 className="text-xl font-bold text-blue-950 mb-6">More Services for You</h2>
@@ -368,8 +366,8 @@ export function SLHomepage() {
         <div className="lg:col-span-4 bg-gradient-to-br from-blue-50 to-sky-200 border border-blue-50 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
           <div>
             <h2 className="text-xl font-extrabold text-blue-600 leading-tight mt-[30px]">List Your Property <br />for Free!</h2>
-            <p className="text-[13px] text-slate-500 mt-2 max-w-xs font-semibold">Reach thousands of genuine <br/> renters across Sri Lanka.</p>
-            
+            <p className="text-[13px] text-slate-500 mt-2 max-w-xs font-semibold">Reach thousands of genuine <br /> renters across Sri Lanka.</p>
+
             <ul className="mt-9 space-y-4 text-[13px] text-slate-700 font-semibold">
               <li className="flex items-center gap-2 text-emerald-600">✓ 100% Free Listing</li>
               <li className="flex items-center gap-2 text-emerald-600">✓ Verified Tenants</li>
@@ -384,9 +382,9 @@ export function SLHomepage() {
           </div>
 
           <div className="absolute right-[-25px] bottom-20 w-68 h-68 pointer-events-none">
-            <img 
-              src="JungleFowlBird.png" 
-              alt="Promotion Character Placeholder" 
+            <img
+              src="JungleFowlBird.png"
+              alt="Promotion Character Placeholder"
               className="w-full h-full object-contain"
             />
           </div>
@@ -395,7 +393,7 @@ export function SLHomepage() {
 
       {/* WHY CHOOSE & TESTIMONIALS SECTION */}
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Banner Grid Area */}
         <div className="lg:col-span-7 bg-blue-900 rounded-2xl overflow-hidden relative min-h-[240px] flex flex-col justify-end p-6 text-white bg-cover bg-center" style={{ backgroundImage: `url('/TrainSL.jpg')` }}>
           <h2 className="text-2xl font-extrabold mb-12">Why Choose <span className="text-sky-400">SeaHomeNet.co.lk?</span></h2>
@@ -427,7 +425,7 @@ export function SLHomepage() {
             <div key={t.id} className="my-auto">
               <span className="text-3xl text-blue-200 block font-serif -mb-2">“</span>
               <p className="text-xs text-slate-600 italic leading-relaxed pl-2">{t.quote}</p>
-              
+
               <div className="flex items-center gap-3 mt-4 pl-2">
                 <img src={t.avatar} alt={t.author} className="w-8 h-8 rounded-full object-cover" />
                 <div>
@@ -479,7 +477,7 @@ export function SLHomepage() {
 
       {/* BOTTOM NEWSLETTER & CONTACT CTA BAR */}
       <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
-        
+
         {/* Support CTA Callout Box */}
         <div className="bg-blue-100 border border-blue-100 rounded-2xl p-6 flex items-center gap-4 relative h-[170px]">
           <img src="jungleFowlSL.png" alt="Support Agent Illustration" className="w-50 h-50 object-contain z-10 mb-[30px]" />
