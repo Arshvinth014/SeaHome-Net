@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
     Compass,
     ShieldCheck,
@@ -35,6 +36,7 @@ import {
 
 export function JapanRentalPage() {
     const [activeFilterTab, setActiveFilterTab] = useState<'buy' | 'rent' | 'invest'>('buy');
+    const navigate = useNavigate();
 
     const renderIcon = (name: string, className: string = "w-5 h-5 text-blue-600") => {
         switch (name) {
@@ -52,15 +54,23 @@ export function JapanRentalPage() {
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased font-sans">
 
             {/* HERO REGION CONTEXT CONTAINER */}
-            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center z-20 pointer-events-auto">
+            <section className="relative w-full min-h-[520px] lg:min-h-[620px] bg-white overflow-hidden flex items-center z-20 pointer-events-auto">
 
-                <div className="max-w-7xl mx-auto w-full px-4 py-8 lg:py-12 z-10 relative flex flex-col justify-between h-full gap-8">
+                <div className="hidden lg:block absolute inset-0 z-0">
+                    <img
+                        src="/JapanHeroPage.png"
+                        alt=""
+                        className="w-full h-full object-cover object-right select-none"
+                    />
+                </div>
+
+                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 py-8 lg:py-0 lg:max-w-none lg:mx-0 z-10 relative flex flex-col justify-between h-full gap-8">
 
                     {/* Content & Assistant Grid Context Frame */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-5">
+                    <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-0 lg:pt-0">
 
                         {/* Left Narrative Text Block (First on mobile via order-1, first on desktop via lg:order-1) */}
-                        <div className="order-1 lg:order-1 lg:col-span-5 space-y-6 lg:space-y-9 z-20">
+                        <div className="order-1 lg:order-1 lg:col-span-5 space-y-6 lg:space-y-10 z-20">
                             {/* Breadcrumb Navigation Path */}
                             <div className="text-[11px] font-bold text-slate-400 flex flex-wrap items-center gap-1.5 lg:mb-30 lg:mt-[-70px]">
                                 <span className="hover:text-blue-600 cursor-pointer transition-colors">Home</span>
@@ -71,7 +81,7 @@ export function JapanRentalPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] lg:mt-[-40px] tracking-tight leading-tight lg:leading-none">
+                                <h1 className="text-4xl sm:text-[44px] font-semibold text-[#0B1B3D] lg:mt-[5px] tracking-tight leading-tight lg:leading-none">
                                     Japan Properties
                                 </h1>
                                 <h2 className="text-lg font-black text-[#0B1B3D] tracking-tight">
@@ -87,7 +97,10 @@ export function JapanRentalPage() {
                                 <button className="bg-[#0066FF] hover:bg-blue-600 text-white font-black text-[12.5px] px-7 py-3.5 rounded-xl shadow-xs shadow-blue-500/10 transition-all cursor-pointer text-center">
                                     Explore Properties
                                 </button>
-                                <button className="border border-slate-300 bg-white hover:bg-slate-50 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                                <button
+                                    onClick={() => navigate('/home')}
+                                    className="border border-slate-300 bg-white hover:bg-slate-50 text-[#0066FF] font-black text-[12.5px] px-6 py-3.5 rounded-xl shadow-3xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                                >
                                     <Compass size={15} />
                                     Check Rental Properties
                                 </button>
@@ -97,17 +110,8 @@ export function JapanRentalPage() {
                         {/* Right Mascot & Floating Panel Layer Assembly (Second on mobile via order-2, second on desktop via lg:order-2) */}
                         <div className="order-2 lg:order-2 lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[320px] lg:min-h-[400px] z-10">
 
-                            {/* Mascot Fixed Alignment Frame (Hidden on Mobile, Exactly the Same on Desktop) */}
-                            <div className="hidden lg:block absolute right-[-60px] w-360 h-400 z-10 pointer-events-none">
-                                <img
-                                    src="/JapanHeroPage.png"
-                                    alt="Japan Welcome Character Assistant"
-                                    className="w-full h-full object-contain select-none"
-                                />
-                            </div>
-
                             {/* Speech Prompt Card Framework Container */}
-                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[280px] sm:max-w-[250px] h-[320px] sm:h-[300px] flex flex-col justify-between relative z-20 lg:mr-[50px]">
+                            <div className="bg-white/90 backdrop-blur-sm border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[280px] sm:max-w-[250px] h-[320px] sm:h-[300px] flex flex-col justify-between relative z-20 lg:mr-[50px]">
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[12px] font-black text-[#662211] tracking-tight">
@@ -151,7 +155,7 @@ export function JapanRentalPage() {
                     </div>
 
                     {/* 3. Bottom Row Indicators Row Container */}
-                    <div className="flex flex-wrap items-center gap-6 sm:gap-7 pt-6 lg:pt-0 border-t border-slate-300/60 max-w-2xl z-20">
+                    <div className="w-full flex flex-wrap items-center gap-6 sm:gap-7 pt-6 lg:pb-20 border-t border-slate-200/60 max-w-none lg:max-w-none z-20">
 
                         <div className="flex items-center gap-2 min-w-[120px]">
                             <div className="w-9 h-9 rounded-full bg-blue-50/50 border border-blue-600 flex items-center justify-center text-[#0066FF] shrink-0">

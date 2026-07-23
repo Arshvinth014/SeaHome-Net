@@ -13,6 +13,7 @@ import {
   Building2, 
   Coins 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import { INVESTMENT_OPPS } from '../../../config/mockData';
 
@@ -27,9 +28,9 @@ const FEATURED_PROPERTIES = [
 ];
 
 const COUNTRIES = [
-  { id: 1, name: 'Sri Lanka', count: '2,456 Properties', flag: '🇱🇰', image: 'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600' },
-  { id: 2, name: 'Japan', count: '3,892 Properties', flag: '🇯🇵', image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600' },
-  { id: 3, name: 'All Countries', count: '12,540+ Properties', flag: '🌐', image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600' }
+  { id: 1, name: 'Sri Lanka', count: '2,456 Properties', flag: '🇱🇰', image: 'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600', path: '/country/sri-lanka' },
+  { id: 2, name: 'Japan', count: '3,892 Properties', flag: '🇯🇵', image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600', path: '/japan-rental' },
+  { id: 3, name: 'All Countries', count: '12,540+ Properties', flag: '🌐', image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600', path: '/buy' }
 ];
 
 const METRICS = [
@@ -124,7 +125,11 @@ export function PropertySections() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {COUNTRIES.map((country) => (
-            <div key={country.id} className="h-40 sm:h-48 rounded-2xl overflow-hidden relative group shadow-xs cursor-pointer border border-slate-300">
+            <Link
+              key={country.id}
+              to={country.path}
+              className="block h-40 sm:h-48 rounded-2xl overflow-hidden relative group shadow-xs cursor-pointer border border-slate-300"
+            >
               <img src={country.image} alt={country.name} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent"></div>
               
@@ -142,7 +147,7 @@ export function PropertySections() {
                 </div>
                 <p className="text-xs text-slate-300/90 font-light">{country.count}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

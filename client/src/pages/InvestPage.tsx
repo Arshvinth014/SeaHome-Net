@@ -7,9 +7,9 @@ export function InvestPage() {
     return (
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
-            {/* SECTION 1: HERO CONTAINER */}
-            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 overflow-hidden">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+            {/* SECTION 1: HERO CONTAINER - Full width on desktop, padded on mobile */}
+            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-0 overflow-hidden">
+                <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
                     {/* Left Column: Text & Left CTA blocks */}
                     <div className="lg:col-span-4 space-y-6 z-10">

@@ -17,7 +17,7 @@ export function HeroSection() {
     <div className="relative w-full bg-gradient-to-b from-blue-50/30 via-white to-white pb-10 lg:pb-20 font-sans overflow-x-hidden">
 
       {/* 1. Main Hero Content Layout */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-1 items-center">
+      <section className="px-4 sm:px-6 lg:px-12 xl:px-16 pt-6 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-1 items-center">
 
         {/* Column 1: Left Frame Text & Badges (Occupies 4 Columns) */}
         <div className="col-span-1 lg:col-span-3 space-y-5 lg:space-y-7 z-20 pointer-events-auto text-center lg:text-left">

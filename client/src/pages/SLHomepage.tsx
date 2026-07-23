@@ -74,7 +74,7 @@ export function SLHomepage() {
             </div>
 
             {/* Input Interface Control Box Wrapper */}
-            <div className="relative mt-2 max-w-[940px] w-full pt-[44px]">
+            <div className="relative mt-2 max-w-[1080px] w-full pt-[44px] lg:pt-[44px]">
 
               {/* Context Navigation Tabs positioned floating directly on the card boundary */}
               <div className="flex items-center gap-1 absolute top-[0px] left-0 z-20 w-full overflow-x-auto no-scrollbar">
@@ -185,7 +185,7 @@ export function SLHomepage() {
           <div className="hidden lg:col-span-3 lg:flex flex-col items-end justify-end h-full relative min-h-[360px] pb-1">
 
             {/* 2. Isolated Mascot Layer overlapping between the containers */}
-            <div className="absolute left-[-230px] lg:left-[-250px] bottom-[159px] w-60 h-60 lg:w-78 lg:h-78 z-20 pointer-events-none">
+            <div className="absolute left-[-230px] lg:left-[-190px] bottom-[159px] w-60 h-60 lg:w-[320px] lg:h-[320px] z-20 pointer-events-none">
               <img
                 src="JungleFowlBird.png"
                 alt="Sri Lankan Junglefowl Character Asset"
