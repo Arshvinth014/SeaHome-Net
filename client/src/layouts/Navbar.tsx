@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Signup from '../components/Signup';
 import { Link, useLocation } from 'react-router-dom';
-import { Globe, ChevronDown, Menu, X, Bell, Clock, CheckCheck, ArrowRight, Sparkles, ShieldCheck, Info, AlertCircle, CheckCircle, XCircle } from 'lucide-react'; 
+import { Globe, ChevronDown, Menu, X, Bell, Clock, CheckCheck, ArrowRight, Info, AlertCircle, CheckCircle, XCircle } from 'lucide-react'; 
 import { mockNotifications } from '../config/Notifications';
 import type { Notification } from '../config/Notifications';
 
@@ -25,7 +25,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>(mockNotifications);
   const [signupOpen, setSignupOpen] = useState(false);
-  const [isNewUser, setIsNewUser] = useState(true);
+  const [isNewUser] = useState(true);
   
   const [selectedNotification, setSelectedNotification] = useState<Notification | null>(null);
   
