@@ -77,7 +77,7 @@ export function JapanRentalPage() {
                                 <ChevronRight className="w-3 h-3 text-slate-300" />
                                 <span className="hover:text-blue-600 cursor-pointer transition-colors">Countries</span>
                                 <ChevronRight className="w-3 h-3 text-slate-300" />
-                                <span className="text-[#0B1B3D]">Sri Lanka</span>
+                                <span className="text-[#0B1B3D]">Japan-</span>
                             </div>
 
                             <div className="space-y-4">
