@@ -137,7 +137,7 @@ export function ChatBotPopup({ isOpen, onClose }: { isOpen: boolean; onClose: ()
         >
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-[#0066FF] to-[#0052CC] relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+            <div className="absolute inset-0 opacity-10" />
             <div className="flex items-center space-x-3 relative z-10">
               <div className="relative">
                 <img
