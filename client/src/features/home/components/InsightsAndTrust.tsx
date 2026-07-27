@@ -12,8 +12,12 @@ import {
   Shield, 
   TrendingUp
 } from 'lucide-react';
+import { useState } from 'react';
+import { ChatBotPopup } from './ChatBotPopup';
 
 export function InsightsAndTrust() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <div className="w-full bg-white py-12 space-y-16 overflow-hidden">
       
@@ -148,7 +152,7 @@ export function InsightsAndTrust() {
           <div className="flex items-center justify-between gap-3 bg-white border shadow-md shadow-slate-500/50 border-slate-400 rounded-2xl p-3 sm:col-span-2 lg:col-span-1 min-h-[220px] lg:min-h-auto">
             <div className="w-1/2 flex justify-center">
               <img 
-                src="Sora.png" 
+                src="/Sora.png" 
                 alt="SeaHome Assistant Bird Mascot" 
                 className="max-h-[140px] lg:max-h-[160px] object-contain" 
               />
@@ -158,9 +162,9 @@ export function InsightsAndTrust() {
                 <h5 className="text-[12px] font-bold text-slate-800 leading-tight">Not sure where to invest?</h5>
                 <p className="text-[11px] text-slate-600 leading-tight">I can help you find the best opportunities!</p>
               </div>
-              <button className="bg-[#0066FF] hover:bg-blue-600 text-white text-[11px] font-semibold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs w-full mt-2">
-                <MessageSquare size={14} className="fill-white/10 shrink-0" /> Chat
-              </button>
+               <button onClick={() => setIsChatOpen(true)} className="bg-[#0066FF] hover:bg-blue-600 text-white text-[11px] font-semibold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs w-full mt-2">
+                 <MessageSquare size={14} className="fill-white/10 shrink-0" /> Chat
+               </button>
             </div>
           </div>
 
@@ -407,6 +411,9 @@ export function InsightsAndTrust() {
           </button>
         </div>
       </section>
+
+      {/* ChatBot Popup */}
+      <ChatBotPopup isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
 
     </div>
   );
