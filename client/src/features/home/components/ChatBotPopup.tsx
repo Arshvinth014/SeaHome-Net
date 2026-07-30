@@ -150,9 +150,9 @@ export function ChatBotPopup({ isOpen, onClose }: { isOpen: boolean; onClose: ()
 
   return (
     <>
-      <div className="fixed bottom-6 right-20 z-50 lg:bottom-6 lg:right-20">
+      <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100vw-1rem)] max-w-sm -translate-x-1/2 sm:bottom-6 sm:right-20 sm:left-auto sm:w-auto sm:translate-x-0 lg:bottom-6 lg:right-20">
         <div
-          className="chat-popup chat-popup-mobile chat-popup-tablet relative w-full max-w-sm h-[480px] max-h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+          className="chat-popup chat-popup-mobile chat-popup-tablet relative w-full h-[480px] max-h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
           role="dialog"
           aria-label="Chat with Sora Assistant"
           style={{ animation: 'slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
