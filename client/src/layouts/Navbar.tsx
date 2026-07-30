@@ -150,7 +150,7 @@ export function Navbar() {
             </button>
             <div
               id="notifications-dropdown"
-              className={`absolute right-0 top-full mt-3 w-[340px] max-h-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 ${notificationsOpen ? 'block' : 'hidden'}`}
+              className={`absolute right-0 top-full mt-3 w-[min(92vw,340px)] max-h-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 ${notificationsOpen ? 'block' : 'hidden'} sm:w-[340px] sm:max-w-[340px]`}
             >
               {/* Dropdown Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
