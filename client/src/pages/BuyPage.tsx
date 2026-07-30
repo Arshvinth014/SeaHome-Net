@@ -41,7 +41,7 @@ export function BuyPage() {
                     />
                 </div>
 
-                <div className="max-w-[1400px] mx-auto relative z-10">
+                <div className="w-full max-w-[1920px] mx-auto relative z-10 2xl:px-8 3xl:px-12">
 
                     {/* Breadcrumbs Layout */}
                     <div className="text-xs font-semibold text-slate-400 flex items-center gap-1.5 py-2">
@@ -470,7 +470,7 @@ export function BuyPage() {
             </main>
 
             {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
-            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-20px] sm:mt-[-60px] border-t border-slate-300">
+            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-20px] sm:mt-[-60px] border-t border-slate-50">
                 <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-5 sm:p-6 relative overflow-hidden lg:overflow-visible">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32 pb-24 lg:pb-0">
 

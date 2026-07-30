@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-[#030914] text-slate-400 text-xs border-t border-slate-900">
       {/*  Structured Link Columns Grid System */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
 
         {/* Identity Block Info Column */}
         <div className="space-y-4 col-span-1 sm:col-span-2 md:col-span-1">
