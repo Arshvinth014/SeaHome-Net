@@ -1,5 +1,4 @@
 import { 
-  MessageSquare, 
   Globe, 
   CheckSquare, 
   Search, 
@@ -113,61 +112,80 @@ export function InsightsAndTrust() {
           </div>
 
           {/* Card 4: Circle Doughnut Chart Ring */}
-          <div className="bg-white border border-slate-300 p-5 rounded-2xl shadow-xs flex flex-col justify-between min-h-[220px] lg:min-h-auto">
-            <div>
+          <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-5 rounded-2xl shadow-sm flex flex-col justify-between min-h-[220px] lg:min-h-auto">
+            <div className="space-y-1">
               <h4 className="text-[12px] font-bold text-slate-700">Most Searched Property Types</h4>
+              <p className="text-[11px] text-slate-400">Trending searches across buyers and investors</p>
             </div>
-            <div className="flex items-center justify-between gap-1 py-1">
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+            <div className="flex items-center justify-between gap-1 py-5">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0 rounded-full bg-slate-100/80 p-2">
                 <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
                   <circle cx="18" cy="18" r="15.915" fill="none" stroke="#E2E8F0" strokeWidth="3.8" />
-                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#3B82F6" strokeWidth="4" strokeDasharray="45 55" strokeDashoffset="0" />
-                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#0ea5e9" strokeWidth="4" strokeDasharray="30 70" strokeDashoffset="-45" />
-                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#64748B" strokeWidth="4" strokeDasharray="15 85" strokeDashoffset="-75" />
-                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#94A3B8" strokeWidth="4" strokeDasharray="10 90" strokeDashoffset="-90" />
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#3B82F6" strokeWidth="4" strokeLinecap="round" strokeDasharray="45 55" strokeDashoffset="0" />
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#0ea5e9" strokeWidth="4" strokeLinecap="round" strokeDasharray="30 70" strokeDashoffset="-45" />
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#64748B" strokeWidth="4" strokeLinecap="round" strokeDasharray="15 85" strokeDashoffset="-75" />
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" strokeDasharray="10 90" strokeDashoffset="-90" />
                 </svg>
               </div>
-              <div className="text-[11px] font-medium text-slate-500 space-y-1 w-full pl-2 sm:pl-3">
-                <div className="flex justify-between">
-                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block"></span> Apartments</span> 
+              <div className="text-[11px] font-medium text-slate-500 space-y-1.5 w-full pl-2 sm:pl-3">
+                <div className="flex justify-between items-center">
+                  <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block"></span> Apartments</span>
                   <span className="text-slate-700 font-semibold">45%</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-sky-500 inline-block"></span> Houses</span> 
+                <div className="flex justify-between items-center">
+                  <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-sky-500 inline-block"></span> Houses</span>
                   <span className="text-slate-700 font-semibold">30%</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-slate-500 inline-block"></span> Land</span> 
+                <div className="flex justify-between items-center">
+                  <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-slate-500 inline-block"></span> Land</span>
                   <span className="text-slate-700 font-semibold">15%</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-slate-400 inline-block"></span> Comm.</span> 
+                <div className="flex justify-between items-center">
+                  <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-slate-400 inline-block"></span> Comm.</span>
                   <span className="text-slate-700 font-semibold">10%</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Card 5: Bird Agent Assistant Platform Prompt */}
-          <div className="flex items-center justify-between gap-3 bg-white border shadow-md shadow-slate-500/50 border-slate-400 rounded-2xl p-3 sm:col-span-2 lg:col-span-1 min-h-[220px] lg:min-h-auto">
-            <div className="w-1/2 flex justify-center">
-              <img 
-                src="/Sora.png" 
-                alt="SeaHome Assistant Bird Mascot" 
-                className="max-h-[140px] lg:max-h-[160px] object-contain" 
-              />
-            </div>
-            <div className="w-1/2 flex flex-col justify-between h-full py-1 pr-1 space-y-2">
-              <div className="space-y-1">
-                <h5 className="text-[12px] font-bold text-slate-800 leading-tight">Not sure where to invest?</h5>
-                <p className="text-[11px] text-slate-600 leading-tight">I can help you find the best opportunities!</p>
-              </div>
-               <button onClick={() => setIsChatOpen(true)} className="bg-[#0066FF] hover:bg-blue-600 text-white text-[11px] font-semibold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs w-full mt-2">
-                 <MessageSquare size={14} className="fill-white/10 shrink-0" /> Chat
-               </button>
-            </div>
-          </div>
+          {/* Card 5: SoraHome Image Card */}
+          {/* <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs min-h-[220px] lg:min-h-auto flex items-center justify-center">
+            <img 
+              src="/SoraHome.png" 
+              alt="SoraHome - AI Property Assistant" 
+              className="w-full h-auto max-w-full object-contain rounded-xl"
+            />
+          </div> */}
 
+          {/* Card 5: SoraHome Image Card */}
+          <div className="bg-white border border-slate-50 p-5 rounded-2xl shadow-xs min-h-[220px] lg:min-h-auto flex items-center justify-center relative">
+
+            <style>{`
+              @keyframes birdFloat {
+                0% {
+                  transform: translateY(0px) rotate(-2deg);
+                }
+                50% {
+                  transform: translateY(-8px) rotate(2deg);
+                }
+                100% {
+                  transform: translateY(0px) rotate(-2deg);
+                }
+              }
+
+              .bird-animation {
+                animation: birdFloat 2.5s ease-in-out infinite;
+                transform-origin: center bottom;
+              }
+            `}</style>
+
+            <img
+              src="/SoraHome.png"
+              alt="SoraHome - AI Property Assistant"
+              className="bird-animation w-full h-auto max-w-full object-contain rounded-xl"
+            />
+
+          </div>
         </div>
       </section>
 
