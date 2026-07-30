@@ -7,6 +7,7 @@ import { CountryPage } from './pages/CountryPage';
 import { BuyPage } from './pages/BuyPage';
 import { SLHomepage } from './pages/SLHomepage';
 import {JapanRentalPage} from './pages/JapanHomepage';
+import { ChatBotButton } from './components/ChatBotButton';
 
 export default function App() {
   return (
@@ -24,6 +25,9 @@ export default function App() {
       </Routes>
 
       <Footer />
+      
+      {/* Floating Chat Bot Button - appears on all pages */}
+      <ChatBotButton />
     </div>
   );
 }

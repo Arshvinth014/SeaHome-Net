@@ -38,6 +38,27 @@ export function ChatBotPopup({ isOpen, onClose }: { isOpen: boolean; onClose: ()
       .typing-dot:nth-child(3) { animation-delay: 0.4s; }
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* Mobile responsive styles */
+      @media (max-width: 480px) {
+        .chat-popup-mobile {
+          width: calc(100vw - 2rem) !important;
+          max-width: calc(100vw - 2rem) !important;
+          height: 60vh !important;
+          max-height: 60vh !important;
+          bottom: 4.5rem !important;
+          right: 1rem !important;
+          left: 1rem !important;
+          border-radius: 1.5rem !important;
+        }
+      }
+      
+      @media (max-width: 640px) {
+        .chat-popup-tablet {
+          width: 360px !important;
+          max-width: 360px !important;
+        }
+      }
     `;
     document.head.appendChild(style);
     return () => { document.head.removeChild(style); };
@@ -129,11 +150,12 @@ export function ChatBotPopup({ isOpen, onClose }: { isOpen: boolean; onClose: ()
 
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+      <div className="fixed bottom-6 right-20 z-50 lg:bottom-6 lg:right-20">
         <div
-          className="chat-popup relative w-full max-w-sm h-[580px] max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+          className="chat-popup chat-popup-mobile chat-popup-tablet relative w-full max-w-sm h-[480px] max-h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
           role="dialog"
           aria-label="Chat with Sora Assistant"
+          style={{ animation: 'slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
         >
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-[#0066FF] to-[#0052CC] relative overflow-hidden">
