@@ -1,11 +1,7 @@
 export function Footer() {
   return (
     <footer className="w-full bg-[#030914] text-slate-400 text-xs border-t border-slate-900">
-
-      {/* 1. Global Newsletter Form Full Width Banner */}
-      {/* MARKETING NEWSLETTER SIGNUP BANNER */}
-
-      {/* 2. Structured Link Columns Grid System */}
+      {/*  Structured Link Columns Grid System */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
 
         {/* Identity Block Info Column */}
