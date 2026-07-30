@@ -43,9 +43,9 @@ const METRICS = [
 
 export function PropertySections() {
   return (
-    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16 overflow-hidden max-w-[1920px] mx-auto 2xl:px-8 3xl:px-12">
+    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16 overflow-hidden max-w-[1920px] 2xl:max-w-[1600px] mx-auto px-0 2xl:px-8 3xl:px-12">
       {/* SECTION 1: Featured Properties */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2" id="buy">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 pt-2" id="buy">
         <div className="flex justify-between items-center mb-5 gap-2">
           <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight whitespace-nowrap">Featured Properties</h2>
           <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors shrink-0">
@@ -114,7 +114,7 @@ export function PropertySections() {
       </section>
 
       {/* SECTION 2: Explore Properties By Country Layout */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 space-y-5" id="countries">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 space-y-5" id="countries">
         <div className="flex justify-between items-center gap-2">
           <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight whitespace-nowrap">Explore Properties by Country</h2>
           <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 border border-slate-300 bg-white px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors shrink-0">
@@ -167,7 +167,7 @@ export function PropertySections() {
       </section>
 
       {/* SECTION 3: Top Investment Opportunities (Pre-existing Content) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-4" id="invest">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 pt-4" id="invest">
         <div className="flex justify-between items-end mb-5 gap-2">
           <div>
             <h2 className="text-[20px] sm:text-[22px] font-bold text-slate-900 tracking-tight">Top Investment Opportunities</h2>

@@ -17,10 +17,10 @@ export function HeroSection() {
     <div className="relative w-full bg-gradient-to-b from-blue-50/30 via-white to-white pb-10 lg:pb-20 font-sans overflow-x-hidden">
       
       {/* Container wrapper for screens */}
-      <div className="max-w-[1920px] mx-auto">
+      <div className="max-w-[1920px] 2xl:max-w-[1600px] mx-auto 2xl:px-8">
 
         {/* 1. Main Hero Content Layout */}
-        <section className="px-4 sm:px-6 lg:px-12 xl:px-16 pt-6 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-1 items-center">
+        <section className="px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-10 pt-6 lg:pt-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-1 items-center">
 
           {/* Column 1: Left Frame Text & Badges (Occupies 3 Columns on desktop, properly bounded on TV) */}
           <div className="col-span-1 lg:col-span-3 space-y-5 lg:space-y-7 z-20 pointer-events-auto text-center lg:text-left">
@@ -142,7 +142,7 @@ export function HeroSection() {
         </section>
 
         {/* 2. Structured Parameter Search Bar Section Matrix */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 relative z-30">
+        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 mt-12 relative z-30">
           <div className="bg-white rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-300 p-5 space-y-5">
 
             {/* Tab Controls Selector Toggle */}

@@ -70,7 +70,7 @@ export function Navbar() {
   return (
     <>
     <nav className="w-full bg-white border-b border-slate-100 sticky top-0 z-50">
-      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 py-3.5 lg:px-8 xl:px-10 2xl:px-12 3xl:px-16">
+      <div className="w-full max-w-[1920px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 py-3.5 lg:px-8 xl:px-10 2xl:px-10 3xl:px-16">
         <div className="w-full flex items-center justify-between">
           
           {/* Brand Identity */}

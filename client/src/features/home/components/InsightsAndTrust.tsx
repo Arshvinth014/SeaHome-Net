@@ -19,10 +19,10 @@ export function InsightsAndTrust() {
 
   return (
     /* TV Screen Optimization: Added max-w-[1920px] mx-auto wrapper box to lock layout cleanly on large TV screens */
-    <div className="w-full bg-white py-12 space-y-16 overflow-hidden max-w-[1920px] mx-auto 2xl:px-8 3xl:px-12">
+    <div className="w-full bg-white py-12 space-y-16 overflow-hidden max-w-[1920px] 2xl:max-w-[1600px] mx-auto px-0 2xl:px-8 3xl:px-12">
       
       {/*  1. MARKET INSIGHTS & ANALYTICAL TRENDS PANELS LAYOUT*/}
-      <section className="max-w-7xl mx-auto mt-0 lg:mt-[-40px] px-4 sm:px-6 space-y-6">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto mt-0 lg:mt-[-40px] px-4 sm:px-6 2xl:px-10 space-y-6">
         <div>
           <h2 className="text-[22px] font-bold text-[#0F172A] tracking-tight">Market Insights & Trends</h2>
         </div>
@@ -173,7 +173,7 @@ export function InsightsAndTrust() {
       </section>
 
       {/* 2. BRAND VALUE ARCHITECTURE & TESTIMONIAL COMPONENT */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-4">
         
         {/* Why Choose Assets Matrix Box Left Side */}
         <div className="lg:col-span-7 space-y-8">
@@ -283,7 +283,7 @@ export function InsightsAndTrust() {
       </section>
 
       {/* 3. HOW IT WORKS & DOWNLOAD MOBILE APP */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
         
         {/* Left Grid Panel: How It Works Process Tracker Line */}
         <div className="lg:col-span-8 bg-white border border-slate-300 rounded-2xl p-6 flex flex-col justify-between space-y-6">
@@ -390,7 +390,7 @@ export function InsightsAndTrust() {
       </section>
 
       {/* 4. TRUSTED PARTNERS REGISTRY HORIZONTAL STRIP */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 space-y-4 pt-2">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 2xl:px-10 space-y-4 pt-2">
         <h3 className="text-sm font-bold text-slate-800 tracking-tight">Trusted by Top Real Estate Agencies Worldwide</h3>
         
         <div className="flex items-center justify-between border border-slate-300 rounded-xl p-5 bg-white/50 gap-4">
