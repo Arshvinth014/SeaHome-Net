@@ -44,7 +44,7 @@ export function SLHomepage() {
         </div>
 
         {/* Main Content Layout Container */}
-        <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-4 items-center lg:items-end relative z-10 pt-4 lg:pt-6">
+        <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-x-4 items-center lg:items-end relative z-10 pt-4 lg:pt-6">
 
           {/* LEFT COMPONENT COLUMN: Heading Stack & Search Panel */}
           <div className="col-span-1 lg:col-span-9 space-y-6 flex flex-col justify-end">
@@ -234,7 +234,7 @@ export function SLHomepage() {
       </section>
 
       {/* QUICK ACTIONS RIBBON */}
-      <div className="max-w-7xl mx-auto mt-10 relative z-20 px-6">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto mt-10 relative z-20 px-6 2xl:px-10">
         <div className="bg-white rounded-2xl shadow-lg border border-slate-300 p-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
           {[
             { label: 'Rent Properties', sub: 'With Easy Search', icon: <Search className="w-5 h-5 text-blue-600" /> },
@@ -256,7 +256,7 @@ export function SLHomepage() {
       </div>
 
       {/* BROWSE PROPERTY CATEGORIES */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 py-16">
         <div className="flex justify-between items-end mb-6">
           <div>
             <h2 className="text-xl font-bold text-blue-950">Browse Rental Properties</h2>
@@ -281,7 +281,7 @@ export function SLHomepage() {
       </section>
 
       {/* FEATURED RENTAL PROPERTIES */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 relative">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 pb-16 relative">
         <div className="flex justify-between items-end mb-6">
           <div>
             <h2 className="text-xl font-bold text-blue-950">Featured Rental Properties</h2>
@@ -339,7 +339,7 @@ export function SLHomepage() {
       </section>
 
       {/* SERVICES & PROMOTION BLOCK AREA */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
         {/* Left Services Block */}
         <div className="lg:col-span-8 flex flex-col justify-between">
@@ -423,7 +423,7 @@ export function SLHomepage() {
       </section>
 
       {/* WHY CHOOSE & TESTIMONIALS SECTION */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
 
         {/* Banner Grid Area */}
         <div className="lg:col-span-7 bg-blue-900 rounded-2xl overflow-hidden relative min-h-[240px] flex flex-col justify-end p-6 text-white bg-cover bg-center" style={{ backgroundImage: `url('/TrainSL.jpg')` }}>
@@ -482,7 +482,7 @@ export function SLHomepage() {
       </section>
 
       {/* POPULAR LOCATIONS SECTION */}
-      <section className="max-w-7xl mx-auto px-6 pb-16">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 pb-16">
         <div className="flex justify-between items-end mb-6">
           <div>
             <h2 className="text-xl font-bold text-blue-950">Popular Locations</h2>
@@ -507,7 +507,7 @@ export function SLHomepage() {
       </section>
 
       {/* BOTTOM NEWSLETTER & CONTACT CTA BAR */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 pb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {/* Support CTA Callout Box */}
         <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-blue-100 shadow-sm">

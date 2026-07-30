@@ -64,7 +64,7 @@ export function JapanRentalPage() {
                     />
                 </div>
 
-                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 py-8 lg:py-0 lg:max-w-none lg:mx-0 z-10 relative flex flex-col justify-between h-full gap-8">
+                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 py-8 lg:py-0 lg:max-w-none lg:mx-0 2xl:max-w-[1600px] 2xl:mx-auto z-10 relative flex flex-col justify-between h-full gap-8">
 
                     {/* Content & Assistant Grid Context Frame */}
                     <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-0 lg:pt-0">
@@ -203,7 +203,7 @@ export function JapanRentalPage() {
             </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
-            <section className="max-w-7xl mx-auto px-6 -mt-6 relative z-30">
+            <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 -mt-6 relative z-30">
                 <div className="bg-white border border-slate-300 shadow-lg rounded-2xl p-4 space-y-4">
                     <div className="flex items-center gap-2 border-b border-slate-300 pb-3">
                         <button
@@ -324,8 +324,8 @@ export function JapanRentalPage() {
             </section>
 
             {/* 3. HIGH POTENTIAL INVESTMENT PROJECTS */}
-            <section className="w-full py-16 px-4 lg:px-12 bg-slate-300/50 border-y border-slate-300/80">
-                <div className="max-w-[1400px] mx-auto space-y-6">
+            <section className="w-full py-16 px-4 lg:px-12 2xl:px-10 bg-slate-300/50 border-y border-slate-300/80">
+                <div className="max-w-[1400px] 2xl:max-w-[1600px] mx-auto space-y-6">
                     <div className="flex items-center justify-between">
                         <h2 className="text-xl sm:text-2xl font-extrabold text-[#0C1E3E]">Invest in Japan – High Potential Projects</h2>
                         <button className="text-[#0066FF] font-bold text-xs flex items-center gap-0.5 hover:underline">
@@ -399,8 +399,8 @@ export function JapanRentalPage() {
             </section>
 
             {/* 5. JAPAN REAL ESTATE MARKET INSIGHTS SECTION */}
-            <section className="w-full py-12 px-4 lg:px-12 bg-[#FAFCFF]">
-                <div className="max-w-[1400px] mx-auto space-y-6">
+            <section className="w-full py-12 px-4 lg:px-12 2xl:px-10 bg-[#FAFCFF]">
+                <div className="max-w-[1400px] 2xl:max-w-[1600px] mx-auto space-y-6">
                     <div>
                         <h2 className="text-xl sm:text-2xl font-black text-[#0C1E3E] tracking-tight">
                             Japan Real Estate Market Insights
@@ -539,7 +539,7 @@ export function JapanRentalPage() {
             </section>
 
             {/* 6. WHY INVEST IN JAPAN WITH SEAHOMENET */}
-            <section className="w-full py-16 px-4 lg:px-12 max-w-[1400px] mx-auto space-y-8">
+            <section className="w-full py-16 px-4 lg:px-12 2xl:px-10 max-w-[1400px] 2xl:max-w-[1600px] mx-auto space-y-8">
                 <div className="text-center max-w-xl mx-auto space-y-2">
                     <h2 className="text-xl sm:text-2xl font-extrabold text-[#0C1E3E]">
                         Why Invest in Japan with <span className="text-[#0066FF]">SeaHomeNet?</span>
@@ -564,8 +564,8 @@ export function JapanRentalPage() {
             </section>
 
             {/* 7. WHAT OUR INVESTORS SAY (TESTIMONIAL MATRIX) */}
-            <section className="w-full py-16 px-4 lg:px-12 bg-slate-300/40 border-t border-slate-300">
-                <div className="max-w-[1400px] mx-auto space-y-6">
+            <section className="w-full py-16 px-4 lg:px-12 2xl:px-10 bg-slate-300/40 border-t border-slate-300">
+                <div className="max-w-[1400px] 2xl:max-w-[1600px] mx-auto space-y-6">
                     <div className="flex items-center justify-between">
                         <h2 className="text-xl sm:text-2xl font-extrabold text-[#0C1E3E]">What Our Investors Say</h2>
                         <button className="text-[#0066FF] font-bold text-xs flex items-center gap-0.5 hover:underline">
@@ -600,7 +600,7 @@ export function JapanRentalPage() {
             </section>
 
             {/* 8. TRUSTED REAL ESTATE AGENCIES STRIP */}
-            <section className="w-full py-12 px-4 lg:px-12 max-w-[1400px] mx-auto space-y-6">
+            <section className="w-full py-12 px-4 lg:px-12 2xl:px-10 max-w-[1400px] 2xl:max-w-[1600px] mx-auto space-y-6">
                 <div className="flex items-center justify-between">
                     <h2 className="text-sm font-black uppercase tracking-wider text-slate-400">Trusted Real Estate Agencies in Japan</h2>
                     <button className="text-[#0066FF] font-bold text-xs flex items-center gap-0.5 hover:underline">
@@ -616,7 +616,7 @@ export function JapanRentalPage() {
                     ))}
                 </div>
             </section>
-            <section className="w-full px-4 lg:px-12 pb-16 max-w-[1400px] mx-auto">
+            <section className="w-full px-4 lg:px-12 2xl:px-10 pb-16 max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
                 <div className="bg-gradient-to-r from-[#0C1E3E] to-[#16366B] rounded-3xl px-6 lg:px-10 py-8 md:pt-20 md:pb-10 text-white flex flex-col md:flex-row md:items-center justify-between gap-8 md:h-[150px] relative overflow-visible shadow-md">
 
                     {/* Mascot */}
