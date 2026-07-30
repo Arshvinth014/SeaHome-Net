@@ -31,7 +31,7 @@ export function CountryPage() {
         <div className="w-full bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
             {/* HERO REGION CONTEXT CONTAINER */}
-            <section className="relative w-full min-h-[520px] bg-white overflow-hidden flex items-center py-6 sm:py-12 z-20 pointer-events-auto">
+            <section className="relative w-full min-h-[520px] 2xl:min-h-[620px] bg-white overflow-hidden flex items-center py-6 sm:py-12 2xl:py-16 z-20 pointer-events-auto">
 
                 {/* Full-width Background Image & Gradient Overlay (Visible on Desktop - Image 1 Design) */}
                 <div className="absolute inset-0 z-0 hidden lg:block pointer-events-none select-none">
@@ -44,7 +44,7 @@ export function CountryPage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-45% to-transparent" />
                 </div>
 
-                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 z-10 relative flex flex-col justify-between h-full gap-8">
+                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-16 z-10 relative flex flex-col justify-between h-full gap-8 max-w-[1800px] mx-auto">
 
                     {/* 1. Breadcrumb Navigation Path */}
                     <div className="text-[11px] font-bold text-slate-400 flex items-center gap-1.5 flex-wrap">
@@ -56,19 +56,19 @@ export function CountryPage() {
                     </div>
 
                     {/* 2. Content & Assistant Grid Context Frame */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 2xl:gap-10 items-center pt-0">
 
                         {/* Left Narrative Text Block */}
                         <div className="lg:col-span-5 space-y-6 z-20 text-center lg:text-left flex flex-col items-center lg:items-start">
                             <div className="space-y-4 w-full">
-                                <h1 className="text-3xl sm:text-4xl md:text-[44px] font-semibold text-[#0B1B3D] tracking-tight leading-tight lg:leading-none">
+                                <h1 className="text-3xl sm:text-4xl md:text-[44px] 2xl:text-[56px] font-semibold text-[#0B1B3D] tracking-tight leading-tight lg:leading-none">
                                     Sri Lanka Properties
                                 </h1>
-                                <h2 className="text-base sm:text-lg font-black text-[#0B1B3D] tracking-tight">
+                                <h2 className="text-base sm:text-lg 2xl:text-2xl font-black text-[#0B1B3D] tracking-tight">
                                     Invest in Paradise. Live the Potential.
                                 </h2>
                             </div>
-                            <p className="text-slate-500 text-[13px] font-medium leading-relaxed max-w-lg">
+                            <p className="text-slate-500 text-[13px] 2xl:text-[15px] font-medium leading-relaxed max-w-lg">
                                 Discover premium properties and high-potential real estate investment opportunities across Sri Lanka's most promising locations.
                             </p>
 
@@ -88,7 +88,7 @@ export function CountryPage() {
                         <div className="lg:col-span-7 flex items-center justify-center lg:justify-end relative h-full min-h-[220px] lg:min-h-[300px] z-10 w-full">
 
                             {/* Mascot Fixed Alignment Frame (Visible ONLY on Desktop, positioned left of speech card like Image 1) */}
-                            <div className="hidden lg:block absolute right-[210px] xl:right-[250px] w-[280px] xl:w-[350px] z-20 pointer-events-none">
+                            <div className="hidden lg:block absolute right-[210px] xl:right-[250px] 2xl:right-[320px] w-[280px] xl:w-[350px] 2xl:w-[430px] z-20 pointer-events-none">
                                 <img
                                     src="/jungleFowlHero.png"
                                     alt="Sri Lanka Welcome Character Assistant"
@@ -97,7 +97,7 @@ export function CountryPage() {
                             </div>
 
                             {/* Speech Prompt Card Framework Container */}
-                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 w-full max-w-[280px] sm:max-w-[250px] space-y-3 relative z-20 lg:mr-0 mx-auto lg:mx-0">
+                            <div className="bg-white border border-slate-300/80 shadow-xl rounded-2xl p-5 2xl:p-6 w-full max-w-[280px] sm:max-w-[250px] 2xl:max-w-[320px] space-y-3 relative z-20 lg:mr-0 mx-auto lg:mx-0">
                                 <div className="space-y-1.5">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[12px] font-black text-[#662211] tracking-tight">
@@ -186,7 +186,7 @@ export function CountryPage() {
             </section>
 
             {/* SEARCH SYSTEM BAR COMPONENT */}
-            <section className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
+            <section className="relative z-30 max-w-7xl 2xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 -mt-2">
                 <div className="rounded-2xl border border-slate-300 bg-white p-4 sm:p-5 shadow-lg">
 
                     {/* Filter Tabs */}
@@ -317,7 +317,7 @@ export function CountryPage() {
             </section>
 
             {/* FEATURED PORTFOLIO GRID */}
-            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-16 space-y-6">
                 <div className="flex justify-between items-end">
                     <h3 className="text-2xl font-black text-slate-900 tracking-tight">Featured Properties in Sri Lanka</h3>
                     <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
@@ -362,7 +362,7 @@ export function CountryPage() {
             </section>
 
             {/* DEVELOPMENT INVESTMENT PROJECTS */}
-            <section className="max-w-7xl mx-auto px-6 py-4 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-4 space-y-6">
                 <div className="flex justify-between items-end">
                     <h3 className="text-2xl font-black text-slate-900 tracking-tight">Invest in Sri Lanka – Real Estate Projects</h3>
                     <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
@@ -408,7 +408,7 @@ export function CountryPage() {
             </section>
 
             {/* TOP REGIONAL LOCATIONS SECTION */}
-            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-16 space-y-6">
                 <div className="flex justify-between items-end">
                     <h3 className="text-2xl font-black text-slate-900 tracking-tight">Top Locations in Sri Lanka</h3>
                     <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
@@ -433,7 +433,7 @@ export function CountryPage() {
             </section>
 
             {/* REAL ESTATE MARKET INSIGHTS MATRIX */}
-            <section className="max-w-7xl mx-auto px-6 py-4">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-4">
                 <div className="bg-slate-200 border border-slate-200/50 rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
                     <div className="lg:col-span-5 space-y-5">
@@ -496,7 +496,7 @@ export function CountryPage() {
             </section>
 
             {/* WHY INVEST SECTION */}
-            <section className="max-w-7xl mx-auto px-6 py-16 space-y-8 relative">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-16 space-y-8 relative">
                 <div>
                     <h3 className="text-2xl font-black text-slate-900 tracking-tight">
                         Why Invest in Sri Lanka with <span className="text-[#0066FF]">SeaHomeNet?</span>
@@ -560,7 +560,7 @@ export function CountryPage() {
             </section>
 
             {/* WHAT INVESTORS SAY TESTIMONIAL CARDS */}
-            <section className="max-w-7xl mx-auto px-6 py-4 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-4 space-y-6">
                 <div className="flex justify-between items-end">
                     <h3 className="text-2xl font-black text-slate-900 tracking-tight">What Investors Say</h3>
                     <button className="text-xs font-bold text-[#0066FF] flex items-center gap-1 hover:underline cursor-pointer">
@@ -598,7 +598,7 @@ export function CountryPage() {
             </section>
 
             {/* INSTITUTIONAL TRUSTED AGENCIES GRID */}
-            <section className="max-w-7xl mx-auto px-6 py-16 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1500px] mx-auto px-6 2xl:px-10 py-16 space-y-6">
                 <div className="flex justify-between items-end">
                     <h3 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider flex items-center gap-2">
                         <Building2 className="w-4 h-4 text-slate-600" /> Trusted Real Estate Agencies in Sri Lanka

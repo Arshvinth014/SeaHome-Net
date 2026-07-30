@@ -31,7 +31,7 @@ export function BuyPage() {
     return (
         <div className="w-full bg-[#FAFCFF] min-h-screen font-sans text-slate-800 antialiased">
             {/* HERO REGION CONTROLLER BLOCK */}
-            <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 relative overflow-hidden">
+            <section className="w-full bg-gradient-to-b from-[#EBF3FF] via-[#F4F8FF] to-[#FAFCFF] pt-4 pb-12 px-4 lg:px-12 2xl:px-16 relative overflow-hidden">
 
                 <div className="absolute inset-x-0 bottom-0 top-0 z-0 flex items-end justify-center pointer-events-none select-none">
                     <img
@@ -200,7 +200,7 @@ export function BuyPage() {
             </section>
 
             {/* MAIN TWO-COLUMN CONTENT REGION */}
-            <main className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <main className="max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 lg:px-12 2xl:px-16 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                 {/* LEFT COLUMN: FILTERS INTERACTION SIDEBAR MATRIX */}
                 <aside className="lg:col-span-3 bg-white border border-slate-300 rounded-2xl p-5 space-y-6 shadow-2xs self-start">
@@ -470,7 +470,7 @@ export function BuyPage() {
             </main>
 
             {/* TRUST AND VALUE PROPOSITIONS STRIP OVERVIEW */}
-            <section className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8 mt-[-20px] sm:mt-[-60px] border-t border-slate-50">
+            <section className="max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 lg:px-12 2xl:px-16 py-8 mt-[-20px] sm:mt-[-60px] border-t border-slate-50">
                 <div className="bg-white border border-slate-300 shadow-md shadow-blue-900/[0.01] rounded-2xl p-5 sm:p-6 relative overflow-hidden lg:overflow-visible">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pr-0 lg:pr-32 pb-24 lg:pb-0">
 

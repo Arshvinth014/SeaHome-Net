@@ -8,8 +8,8 @@ export function InvestPage() {
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
             {/* SECTION 1: HERO CONTAINER - Full width on desktop, padded on mobile */}
-            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-0 overflow-hidden">
-                <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+            <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-0 2xl:px-8 overflow-hidden">
+                <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto lg:max-w-none lg:mx-0 lg:px-8 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
                     {/* Left Column: Text & Left CTA blocks */}
                     <div className="lg:col-span-4 space-y-6 z-10">
@@ -146,7 +146,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 2: WHY INVEST WITH SEAHOMENET */}
-            <section className="max-w-7xl mx-auto px-6 py-3 space-y-3">
+            <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 py-3 space-y-3">
                 <div>
                     <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
                         Why Invest with <span className="text-[#0066FF]">SeaHomeNet?</span>
@@ -288,7 +288,7 @@ export function InvestPage() {
                 </div>
             </section>
             {/* SECTION 3: HOW IT WORKS */}
-            <section className="max-w-8xl mx-auto px-6 py-10">
+            <section className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 py-10">
                 <div className="bg-white border border-slate-300 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xs relative overflow-hidden">
 
                     {/* Left Side Workflow Framework */}
@@ -434,7 +434,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 6: RESOURCES */}
-            <section className="max-w-7xl mx-auto px-6 py-6 space-y-6">
+            <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 py-6 space-y-6">
                 <div className="flex justify-between items-center">
                     <div>
                         <h2 className="text-xl font-black text-[#0B1B3D] tracking-tight">
@@ -481,7 +481,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 7: CTA RECRUITMENT BANNER */}
-            <section className="max-w-7xl mx-auto px-6 py-4">
+            <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 2xl:px-10 py-4">
                 <div className="bg-white border border-slate-300 rounded-3xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-3xs">
 
                     {/* Left Side Copywriting Elements */}
@@ -543,7 +543,7 @@ export function InvestPage() {
             </section>
 
             {/* SECTION 8: TRUST SECURITY COMPLIANCE FOOTER */}
-            <section className="max-w-7xl mx-auto mt-[10px] px-5 py-5">
+            <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto mt-[10px] px-5 2xl:px-10 py-5">
                 {/* Container Box: Uses dark royal midnight blue background with deep padding */}
                 <div className="bg-[#001E4E] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden text-white shadow-xs">
 
