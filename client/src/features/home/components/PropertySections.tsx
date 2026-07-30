@@ -43,8 +43,7 @@ const METRICS = [
 
 export function PropertySections() {
   return (
-    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16 overflow-hidden">
-      
+    <div className="w-full bg-[#f8fafc]/40 pb-16 space-y-16 overflow-hidden max-w-[1920px] mx-auto 2xl:px-8 3xl:px-12">
       {/* SECTION 1: Featured Properties */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2" id="buy">
         <div className="flex justify-between items-center mb-5 gap-2">

@@ -18,7 +18,8 @@ export function InsightsAndTrust() {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
-    <div className="w-full bg-white py-12 space-y-16 overflow-hidden">
+    /* TV Screen Optimization: Added max-w-[1920px] mx-auto wrapper box to lock layout cleanly on large TV screens */
+    <div className="w-full bg-white py-12 space-y-16 overflow-hidden max-w-[1920px] mx-auto 2xl:px-8 3xl:px-12">
       
       {/*  1. MARKET INSIGHTS & ANALYTICAL TRENDS PANELS LAYOUT*/}
       <section className="max-w-7xl mx-auto mt-0 lg:mt-[-40px] px-4 sm:px-6 space-y-6">
@@ -26,7 +27,7 @@ export function InsightsAndTrust() {
           <h2 className="text-[22px] font-bold text-[#0F172A] tracking-tight">Market Insights & Trends</h2>
         </div>
 
-        {/* 5-Column layout grid optimized exactly like image_5874d9.jpg */}
+        {/* 5-Column layout grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           
           {/* Card 1: Overview */}
@@ -149,30 +150,13 @@ export function InsightsAndTrust() {
           </div>
 
           {/* Card 5: SoraHome Image Card */}
-          {/* <div className="bg-white border border-slate-100 p-5 rounded-2xl shadow-xs min-h-[220px] lg:min-h-auto flex items-center justify-center">
-            <img 
-              src="/SoraHome.png" 
-              alt="SoraHome - AI Property Assistant" 
-              className="w-full h-auto max-w-full object-contain rounded-xl"
-            />
-          </div> */}
-
-          {/* Card 5: SoraHome Image Card */}
           <div className="bg-white border border-slate-50 p-5 rounded-2xl shadow-xs min-h-[220px] lg:min-h-auto flex items-center justify-center relative">
-
             <style>{`
               @keyframes birdFloat {
-                0% {
-                  transform: translateY(0px) rotate(-2deg);
-                }
-                50% {
-                  transform: translateY(-8px) rotate(2deg);
-                }
-                100% {
-                  transform: translateY(0px) rotate(-2deg);
-                }
+                0% { transform: translateY(0px) rotate(-2deg); }
+                50% { transform: translateY(-8px) rotate(2deg); }
+                100% { transform: translateY(0px) rotate(-2deg); }
               }
-
               .bird-animation {
                 animation: birdFloat 2.5s ease-in-out infinite;
                 transform-origin: center bottom;
@@ -184,7 +168,6 @@ export function InsightsAndTrust() {
               alt="SoraHome - AI Property Assistant"
               className="bird-animation w-full h-auto max-w-full object-contain rounded-xl"
             />
-
           </div>
         </div>
       </section>
@@ -203,7 +186,7 @@ export function InsightsAndTrust() {
             </p>
           </div>
           
-          {/* Horizontal Lineup of Core Features matching image icon styles */}
+          {/* Horizontal Lineup of Core Features */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-2">
             <div className="space-y-2 text-center sm:text-left flex flex-col items-center sm:items-start">
               <div className="w-10 h-10 rounded-full bg-blue-300/60 border border-blue-300 flex items-center justify-center text-[#0066FF]">
@@ -290,7 +273,7 @@ export function InsightsAndTrust() {
                   <ChevronLeft size={13} />
                 </button>
                 <button className="w-6 h-6 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-400 hover:text-slate-700 hover:border-slate-300 transition-colors">
-                  <ChevronRight size={13} />
+                  <ChevronRight size={16} />
                 </button>
               </div>
             </div>
@@ -411,7 +394,6 @@ export function InsightsAndTrust() {
         <h3 className="text-sm font-bold text-slate-800 tracking-tight">Trusted by Top Real Estate Agencies Worldwide</h3>
         
         <div className="flex items-center justify-between border border-slate-300 rounded-xl p-5 bg-white/50 gap-4">
-          {/* Static rendering of top institutional real estate partner logotypes */}
           <div className="flex flex-wrap items-center justify-start gap-x-8 gap-y-4 flex-1">
             <span className="text-xs font-black tracking-tighter text-slate-800 font-serif">CENTURY 21</span>
             <span className="text-xs font-black tracking-tight text-red-600 border border-red-500/30 px-1 py-0.5 rounded-sm">ERA <span className="text-[8px] text-slate-400 font-normal block tracking-normal">REAL ESTATE</span></span>
@@ -423,7 +405,6 @@ export function InsightsAndTrust() {
             <span className="text-[10px] font-bold tracking-wider text-slate-600">ENGEL & VÖLKERS</span>
           </div>
 
-          {/* Right slider forward action link */}
           <button className="w-7 h-7 rounded-full border border-slate-300 bg-white shadow-xs flex items-center justify-center text-slate-400 hover:text-slate-800 transition-colors shrink-0">
             <ChevronRight size={16} />
           </button>
