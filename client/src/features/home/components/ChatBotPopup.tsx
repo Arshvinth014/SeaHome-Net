@@ -150,7 +150,7 @@ export function ChatBotPopup({ isOpen, onClose }: { isOpen: boolean; onClose: ()
 
   return (
     <>
-      <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100vw-1rem)] max-w-sm -translate-x-1/2 sm:bottom-6 sm:right-20 sm:left-auto sm:w-auto sm:translate-x-0 lg:bottom-6 lg:right-20">
+      <div className="fixed bottom-4 left-[48%] -translate-x-1/2 z-50 w-[calc(100vw-1rem)] max-w-sm sm:bottom-6 sm:right-25 sm:left-auto sm:w-auto sm:translate-x-0 lg:bottom-6 lg:right-25">
         <div
           className="chat-popup chat-popup-mobile chat-popup-tablet relative w-full h-[480px] max-h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
           role="dialog"
