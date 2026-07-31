@@ -54,17 +54,17 @@ export function JapanRentalPage() {
         <div className="w-full bg-[#FAFCFF] text-slate-800 antialiased font-sans">
 
             {/* HERO REGION CONTEXT CONTAINER */}
-            <section className="relative w-full min-h-[520px] lg:min-h-[620px] bg-white overflow-hidden flex items-center z-20 pointer-events-auto">
+            <section className="relative w-full min-h-[520px] lg:min-h-[620px] bg-white overflow-hidden flex items-center z-20 pointer-events-auto 2xl:py-16">
 
                 <div className="hidden lg:block absolute inset-0 z-0">
                     <img
                         src="/JapanHeroPage.png"
                         alt=""
-                        className="w-full h-full object-cover object-right select-none"
+                        className="w-full h-full object-cover object-center 2xl:object-right select-none"
                     />
                 </div>
 
-                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 py-8 lg:py-0 lg:max-w-none lg:mx-0 2xl:max-w-[1600px] 2xl:mx-auto z-10 relative flex flex-col justify-between h-full gap-8">
+                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-16 py-8 lg:py-0 max-w-[1800px] mx-auto z-10 relative flex flex-col justify-between h-full gap-8">
 
                     {/* Content & Assistant Grid Context Frame */}
                     <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center pt-0 lg:pt-0">

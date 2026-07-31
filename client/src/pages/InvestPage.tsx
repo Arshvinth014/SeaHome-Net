@@ -9,7 +9,7 @@ export function InvestPage() {
 
             {/* SECTION 1: HERO CONTAINER - Full width on desktop, padded on mobile */}
             <section className="relative w-full bg-[#FAFCFF] pt-4 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-0 2xl:px-8 overflow-hidden">
-                <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto lg:max-w-none lg:mx-0 lg:px-8 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+                <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto lg:max-w-none lg:mx-0 2xl:mx-auto lg:px-8 2xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
                     {/* Left Column: Text & Left CTA blocks */}
                     <div className="lg:col-span-4 space-y-6 z-10">
